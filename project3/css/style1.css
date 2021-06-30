@@ -1,0 +1,25 @@
+/* addcompany */
+.heading_company {
+  margin-left: 144px;
+  font-size: 28px;
+  margin-bottom: 31px;
+  margin-top: 28px;
+  font-weight: 700;
+}
+    .textbox_addcompany{
+      margin-left: 188px;
+    }
+    .textbox_addcompany1{
+      margin-left: 188px;
+    }
+    .submit_btn{
+      margin-left: 419px;
+    }
+
+    hr.solid {
+  border-top: 3px solid #bbb;
+}
+.data {
+  font-size: 2rem;
+  margin-top: 100px;
+}
