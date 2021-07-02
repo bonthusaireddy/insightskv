@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root"; // default username for localhost is root
-$password = ""; // default password for localhost is empty
-$dbname = "company"; // database name
+$username = "u265070452_insightskv"; // default username for localhost is root
+$password = "Hkb+g0F+v"; // default password for localhost is empty
+$dbname = "u265070452_panel"; // database name
 
 
 // Create connection
