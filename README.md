@@ -1,2 +1,2 @@
 # insightskv
-testing
+ panel
