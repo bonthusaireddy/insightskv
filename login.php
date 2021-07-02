@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('./includes/imp/server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,9 +23,6 @@
   	<div class="input-group">
   		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
-  	<p>
-  		Not yet Register? <a href="register.php">Sign up</a>
-  	</p>
   </form>
 </body>
 </html>

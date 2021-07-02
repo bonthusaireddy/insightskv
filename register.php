@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('./includes/imp/server.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,31 +15,29 @@
   <form method="post" action="register.php">
   	<?php include('error.php'); ?>
   	<div class="input-group">
-  	  <label>First Name</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  	  <label>Username</label>
+  	  <input type="text" name="username">
   	</div>
 
 	  <div class="input-group">
+  	  <label>First Name</label>
+  	  <input type="text" name="fname">
+  	</div>
+	  <div class="input-group">
   	  <label>Last Name</label>
-  	  <input type="text" name="lname" value="<?php echo $lname; ?>">
+  	  <input type="text" name="lname">
   	</div>
 
 	  <div class="input-group" >
   	  <label>Country</label>
-  	  <!-- <input type="text" name="country" value="<?php echo $country; ?>"> -->
 		<select name="country" style="width: 398px; border-radius: 4px;height: 40px;" class="countries" id="countryId" value="<?php echo $country; ?>">>
     <option value="">Select Country</option>
 </select>
   	</div>
 
-	  <!-- <div class="input-group">
-  	  <label>Zone</label>
-  	  <input type="text" name="zone" value="<?php echo $zone; ?>">
-  	</div> -->
 
 	  <div class="input-group">
   	  <label>State</label>
-  	  <!-- <input type="text" name="state" value="<?php echo $state; ?>"> -->
 		
 		<select name="state" class="states"  style="width: 398px; border-radius: 4px;height: 40px;" id="stateId" alue="<?php echo $state; ?>">>
     <option value="">Select State</option>
@@ -48,7 +46,6 @@
 
 	  <div class="input-group">
   	  <label>City</label>
-  	  <!-- <input type="text" name="city" value="<?php echo $city; ?>"> -->
 		<select name="city" style="width: 398px; border-radius: 4px;height: 40px;" class="cities" value="<?php echo $city; ?>" id="cityId">
     <option value="">Select City</option>
 </select>
@@ -57,12 +54,12 @@
 
 	  <div class="input-group">
   	  <label>Phone Number</label>
-  	  <input type="text" name="phone" value="<?php echo $phone; ?>">
+  	  <input type="text" name="phone"?>
   	</div>
 
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="email" ?>
   	</div>
   	<div class="input-group">
   	  <label>Password</label>
