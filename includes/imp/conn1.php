@@ -1,5 +1,5 @@
 <?php
-$servername='localhost:3306';
+$servername='localhost';
 $username = "u265070452_insightskv";
 $password = "Hkb+g0F+v";
 $dbname = "u265070452_panel";
