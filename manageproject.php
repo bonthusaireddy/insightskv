@@ -18,7 +18,8 @@ $mysqli->close();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Add Project
+            <h6 class="m-0 font-weight-bold text-primary">
+            <!-- Add Project -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addadminprofile">
                     <a href="addproject.php" style="color:white">Add Project</a>
                 </button>
