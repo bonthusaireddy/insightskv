@@ -3,7 +3,13 @@ include('includes/imp/islogin.php');
 include('includes/header.php'); 
 include('includes/navbar.php'); 
 ?>
+<?php
+include "includes/imp/conn.php";
+$sql = "SELECT * FROM projects";
+$result = $conn->query($sql);
+$total_projects =  $result->num_rows;
 
+?>
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
@@ -118,9 +124,9 @@ include('includes/navbar.php');
                 <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
                     aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">ALL Projects <span class="float-right">60%</span></h4>
+            <h4 class="small font-weight-bold">ALL Projects <span class="float-right"><?php echo $total_projects?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+                <div class="progress-bar" role="progressbar" style="width: <?php echo $total_projects/10?>0%" aria-valuenow="60" aria-valuemin="0"
                     aria-valuemax="100"></div>
             </div>
             <!-- <h4 class="small font-weight-bold">Payout Details <span
@@ -185,7 +191,7 @@ include('includes/navbar.php');
 
 
 
-    <?php
+<?php
 include('includes/scripts.php');
 include('includes/footer.php');
 ?>
