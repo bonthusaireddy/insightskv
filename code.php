@@ -43,7 +43,7 @@ include('security.php');
 //             $_SESSION['status_code'] = "warning";
 //             header('Location: register.php');  
 //         }
-//     }
+//     }    
 
 // }
 
@@ -95,8 +95,8 @@ if(isset($_POST['updatebtn']))
 
 if(isset($_POST['updatebtnproject']))
 {
-    $ids = $_POST['edits_id'];
-    $project_name =  $_POST['edit_project_namee'];
+    $ids = $_POST['edit_id'];
+    $project_name =  $_POST['edit_project_name'];
     $client_name =  $_POST['edit_client_name'];
     $types= $_POST['type'];
     $parent_project =  $_POST['parent_project'];
@@ -115,7 +115,7 @@ if(isset($_POST['updatebtnproject']))
     $note =  $_POST['note'];
    
 
-    $query = "UPDATE users SET  project_name='$project_name', client_name='$client_name', types='$type', parent_project='$parent_project', client_name='$client_name', project_manager='$project_manager', country='$country', client_contact='$client_contact',sales_person='$sales_person',req_compelet='$req_compelet',cpc='$cpc', ir='$ir', survey_link='$survey_link',status='$status',loi='$loi',note='$note' WHERE id='$id' ";
+    $query = "UPDATE users SET  project_name='$project_name', client_name='$client_name', type='$type', parent_project='$parent_project', client_name='$client_name', project_manager='$project_manager', country='$country', client_contact='$client_contact',sales_person='$sales_person',req_compelet='$req_compelet',cpc='$cpc', ir='$ir', survey_link='$survey_link',status='$status',loi='$loi',note='$note' WHERE id='$id' ";
     $query_run = mysqli_query($connection, $query);
 
     if($query_run)
@@ -128,7 +128,7 @@ if(isset($_POST['updatebtnproject']))
     {
         $_SESSION['status'] = "Your Data is NOT Updated";
         $_SESSION['status_code'] = "error";
-        header('Location: manageproject.php'); 
+        // header('Location: manageproject.php'); 
     }
 }
 

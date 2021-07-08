@@ -12,8 +12,8 @@ $connection = mysqli_connect($servername, $username, $password, $dbname);
 if(isset($_POST['edit_btn']))
 {
     $ids = $_POST['edit_id'];
-    
-    $query = "SELECT * FROM users WHERE id='$ids' ";
+    echo $ids;
+    $query = "SELECT * FROM projects WHERE id='$ids' ";
     $query_run = mysqli_query($connection, $query);
 
     foreach($query_run as $row)
@@ -161,7 +161,7 @@ if(isset($_POST['edit_btn']))
     </fieldset>
     <div class="btn5">
     <a href="companytype.php" class="btn btn-danger" style="margin-left: 409px;"> CANCEL </a>
-    <input type="submit" name="updatebtnproject" value="update" class="btn btn-primary"
+    <input type="submit" name="updatebtnproject" value="updatebtnproject" class="btn btn-primary"
         style="    margin-bottom: 65px; margin-top: 63px; margin-left: 15px;">
     </div>
 </form>

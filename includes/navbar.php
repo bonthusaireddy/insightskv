@@ -367,7 +367,7 @@
                                Activity Log
                            </a> -->
                            <div class="dropdown-divider"></div>
-                           <span class="mx-2"><a href="index.php?logout='1'" style="color: red;">logout</a></span>
+                           <span class="mx-2"><a href="index.php?logout=1" style="color: red;">logout</a></span>
                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                               
                            </a>

@@ -27,7 +27,8 @@ $mysqli->close();
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Add Company
+            <h6 class="m-0 font-weight-bold text-primary">
+            <!-- Add Company -->
                 <button type="button" class="btn btn-primary">
                   <a href="addcompany.php" style="color:white">  Add Company</a>
                 </button>
@@ -78,8 +79,8 @@ $mysqli->close();
                                 </form>
                             </td>
                             <td>
-                                <form action="" method="post">
-                                    <input type="hidden" name="delete_id" value="">
+                                <form action="deletecompany.php" method="post">
+                                    <input type="hidden" name="delete_id" value="<?php echo $rows['id'];?>">
                                     <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
                                 </form>
                             </td>

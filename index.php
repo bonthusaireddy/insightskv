@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php 
+    if (isset($_GET['logout']) && $_GET['logout'] == 1){  
+        session_start();
+        session_unset();
+        session_destroy();
+    } 
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

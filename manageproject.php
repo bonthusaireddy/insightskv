@@ -8,7 +8,7 @@ include('includes/imp/conn1.php');
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
 // SQL query to select data from database
-$sql = "SELECT * FROM users ORDER BY id DESC ";
+$sql = "SELECT * FROM projects ORDER BY id DESC ";
 $result = $mysqli->query($sql);
 $mysqli->close();
 ?>
@@ -73,15 +73,15 @@ $mysqli->close();
                                 </form> -->
                         
                                 <form action="editproject.php" method="post">
-                                    <input type="hidden" name="edit_id" value="<?php echo $rows['id'];?>">
+                                    <input type="hidden" name="edit_id" value="<?php echo $row['id'];?>">
                                     <button type="submit" name="edit_btn" class="btn btn-success"> EDIT</button>
                                 </form>
                                
                             
                             </td>
                             <td>
-                                <form action="" method="post">
-                                    <input type="hidden" name="delete_id" value="">
+                                <form action="deleteproject.php" method="post">
+                                    <input type="hidden" name="delete_id" value="<?php echo $row['id'];?>">
                                     <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
                                 </form>
                             </td>

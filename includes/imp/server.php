@@ -13,7 +13,7 @@ $phone = "";
 $errors = array(); 
 
 // connect to the database
-include('includes/imp/conn.php');
+include('conn.php');
 $db = mysqli_connect($servername, $username, $password, $dbname);
 
 // REGISTER USER
@@ -72,7 +72,7 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username','$fname','$lname','$country','$state','$city','$phone','$email','$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
+  	$_SESSION["loggedIn"] = true;
   	header('location: dashboard.php');
   }
 }
@@ -95,12 +95,13 @@ if (isset($_POST['login_user'])) {
         $results = mysqli_query($db, $query);
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
-          $_SESSION['success'] = "You are now logged in";
+          $_SESSION['loggedIn'] = true;
           header('location: dashboard.php');
         }else {
             array_push($errors, "Wrong username/password combination");
         }
     }
   }
+
 
 ?>

@@ -8,7 +8,6 @@ include('includes/navbar.php');
 
 <?php
 include('includes/imp/conn.php');
-$connection = mysqli_connect($servername, $username, $password, $dbname);
 
 // $connection = mysqli_connect("localhost","root","","company");
 if(isset($_POST['edit_btn']))
@@ -16,7 +15,7 @@ if(isset($_POST['edit_btn']))
     $id = $_POST['edit_id'];
     
     $query = "SELECT * FROM company_mangement WHERE id='$id' ";
-    $query_run = mysqli_query($connection, $query);
+    $query_run = mysqli_query($conn, $query);
 
     foreach($query_run as $row)
     {
