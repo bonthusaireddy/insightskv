@@ -37,7 +37,7 @@
     <link href="HomePage_Style_js_Img/css/style.css" type="text/css" rel="stylesheet" media="screen" />
 
     <!-- jQuery Library 1.11.0 -->
-    <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script>
+    <script type="text/javascript" src="HomePage_Style_js_Img/js/jquery-1.11.0.min.js"> </script>
 
     <!-- Modernizr v2.7.1 -->
     <script src="HomePage_Style_js_Img/js/modernizr.js" type="text/javascript"> </script>
