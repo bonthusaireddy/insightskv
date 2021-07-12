@@ -7,214 +7,198 @@
         session_destroy();
     } 
 ?>
+
 <head>
+    <title>Insightskv</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Optional JavaScript -->
 
-    <link rel="stylesheet" href="css/style1.css">
-    
-    
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <!-- Pace.js -->
+    <script src="HomePage_Style_js_Img/js/pace.js" type="text/javascript"> </script>
+
+    <!-- Foundations 5 Stylesheet-->
+    <link href="HomePage_Style_js_Img/css/foundation.css" type="text/css" rel="stylesheet" media="screen" />
+
+    <!-- Normalize-->
+    <link href="HomePage_Style_js_Img/css/normalize.css" type="text/css" rel="stylesheet" media="screen" />
+
+    <!-- Source Sans Pro Google Web Font-->
+    <link
+        href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic&subset=latin,vietnamese,latin-ext'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome Web Font Icons-->
+    <link href="HomePage_Style_js_Img/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen" />
+
+    <!-- General Stylesheet-->
+    <link href="HomePage_Style_js_Img/css/style.css" type="text/css" rel="stylesheet" media="screen" />
+
+    <!-- jQuery Library 1.11.0 -->
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"> </script>
+
+    <!-- Modernizr v2.7.1 -->
+    <script src="HomePage_Style_js_Img/js/modernizr.js" type="text/javascript"> </script>
+
+    <!-- Foundations 5 -->
+    <script src="HomePage_Style_js_Img/js/foundation.min.js" type="text/javascript"> </script>
+
+    <!-- Caroufredsel jQuery Plugin -->
+    <script src="HomePage_Style_js_Img/js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"> </script>
+
+    <!-- Isotope jQuery Plugin -->
+    <script src="HomePage_Style_js_Img/js/jquery.isotope.js" type="text/javascript"> </script>
+
+    <!-- Appear Plugin -->
+    <script src="HomePage_Style_js_Img/js/appear.js" type="text/javascript"> </script>
+
+    <!-- General Initialization -->
+    <script src="HomePage_Style_js_Img/js/general.js" type="text/javascript"> </script>
+
 </head>
 
-<body>
-    <nav class="navbar navbar-light bg-light navbar-expand-lg fixed-top">
-        <a href="#" class="navbar-brand">InsightSKV</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
-                <li clas="navbar-item">
-                    <a href="#" class="nav-link">Services</a>
-                </li>
-                <li clas="navbar-item">
-                    <a href="#" class="nav-link">Blog</a>
-                </li>
-                <li clas="navbar-item">
-                    <a href="#" class="nav-link">About</a>
-                </li>
-                <li clas="navbar-item">
-                    <a href="login.php" class="nav-link">Admin Panel</a>
-                </li>
-                <li clas="navbar-item">
-                    <a href="#" class="nav-link">Panel list</a>
-                </li>
-                <li clas="navbar-item">
-                    <a href="login.php" class="nav-link">login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<body id="home">
 
-    <div class="container">
+    <!-- Back to Top Button -->
+    <a href="#home" class="scroll backtotop">
+        <i class="fa fa-angle-up"> </i>
+    </a>
+
+    <!-- Start of Header -->
+    <header>
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="data">
-                    Online Surveys
-                </h2>
+            <div class="large-4 medium-12 column">
+                <div class="logoholder">
+                    <a href="#home" class="scroll"><img src="HomePage_Style_js_Img/images/logo.png" alt="" title=""></a>
+                    <h1 class="head-1" style=" font-size: small;">Insightskv</h1>
+                </div>
+            </div>
+            <div class="large-8 medium-12 column">
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="scroll">Services</a></li>
+                        <li>/</li>
+                        <li><a href="#about" class="scroll">Blog</a></li>
+                        <li>/</li>
+                        <li><a href="#services" class="scroll">About</a></li>
+                        <li>/</li>
+                        <li><a href="login.php" class="scroll">Admin Panel</a></li>
+                        <li>/</li>
+                        <li><a href="#works" class="scroll">Panel List</a></li>
+                        <li>/</li>
+                        <li><a href="login.php" class="scroll">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
 
+            <div class="large-12 column">
+                <div class="sep"> </div>
             </div>
-            <div class="col-md-12">
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
-            </div>
+
         </div>
-    </div>
-    <!-- <div class="container">
+    </header>
+    <!-- End of Header -->
+
+    <!-- Start of About -->
+    <section class="about" id="about">
         <div class="row">
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="future-pacing-mirror-man-success-confidence.jpg">
 
-                    <div class="description">
-                        <p>Occupation</p>
+            <div class="large-8 large-centered column">
+                <div class="title">
+                    <h1>Online Surveys</h1>
+                    <span>...</span>
+                    <p>Text<br />Text</p>
+                </div>
+            </div>
+
+            <div class="large-4 hide-for-medium-only hide-for-small-only column start">
+                <div class="imageholder">
+                    <img src="HomePage_Style_js_Img/images/5.png" alt="Green Path Way" title="Green Path Way">
+                    <div class="text">
+                        <div><span>Quality Craftsmanship</span></div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="image/fina.webp">
 
-                    <div class="description">
-                        <p>Finance</p>
+            <div class="large-8 medium-9 large-uncentered medium-centered small-centered column">
+                <div class="sliderHolder">
+                    <div class="slider">
+                        <div class="slide"><img src="HomePage_Style_js_Img/images/glassesoncomputer.jpg"
+                                alt="Glasses on Computer" title="Glasses on Computer" class="item"></div>
+                        <div class="slide"><img src="HomePage_Style_js_Img/images/macontable.jpg"
+                                alt="Glasses on Computer" title="Glasses on Computer" class="item"></div>
+                    </div>
+                    <div class="bannerNav">
+                        <a href="#" class="prev"> <i class="fa fa-angle-left"> </i></a>
+                        <a href="#" class="next"> <i class="fa fa-angle-right"> </i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="image/lifestyle.jpg">
 
-                    <div class="description">
-                        <p>Lifestyle</p>
+            <div class="large-6 medium-6 column">
+                <article>
+                    <div class="smallTitle">
+                        <h2>ABOUT US</h2>
+                        <span>...</span>
                     </div>
-                </div>
+                    <p>
+                        Soul is a Web and User Interface Design studio based in the sunny island of Malta, focusing on
+                        innovation and new technologies.
+                        <br /><br />
+                        We are a nimble team of designers and developers that have been creating solutions for the web
+                        for quite a while, but that doesn't really matter much to us. We simply thrive to never stop
+                        learning whilst focus on building digital experiences that people love.
+                    </p>
+                    <a href="#" class="cta">GET STARTED</a>
+                </article>
             </div>
+
+            <div class="large-6 medium-6 column">
+                <article>
+                    <div class="smallTitle">
+                        <h2>OUR PHILOSOPHY</h2>
+                        <span>...</span>
+                    </div>
+                    <p>
+                        At Soul we are driven by the idea of quality craftsmanship in all that we do, each pixel
+                        refined, each line of code considered. Having a small structure but best in market knowledge, we
+                        deliver competitive internet services balancing creativity, innovation and business
+                        understanding.
+                        <br /><br />
+                        We are obsessed with beautiful digital experiences, putting the user at the centre of everything
+                        we make. Creativity starts with understanding the context of the design challenge and only then
+                        can one deliver an exceptional graphical experience.
+                    </p>
+                </article>
+            </div>
+
         </div>
+    </section>
+    <!-- End of About -->
+
+
+
+    <!-- Start of Footer -->
+    <footer>
         <div class="row">
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="image/Gadgets & Technology.jpg">
-
-                    <div class="description">
-                        <p>Gadgets & Technology</p>
-                    </div>
-                </div>
+            <div class="large-6 medium-12 column">
+                <ul class="social fa-ul">
+                    <!-- <li><a href="#"><i class="fa fa-li fa-dribbble"> </i> <span>DRIBBLE<span></a></li>-->
+                    <li><a href="#"><i class="fa fa-li fa-twitter"> </i> <span>TWITTER<span></a></li>
+                    <li><a href="#"><i class="fa fa-li fa-skype"> </i> <span>SKYPE<span></a></li>
+                </ul>
             </div>
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="image/healthcare.png" class="img-fluid">
-
-                    <div class="description">
-                        <p>Health</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="last">
-                    <img src="image/Parenting.jpg" class="img-fluid">
-
-                    <div class="description">
-                        <p>Parenting</p>
-                    </div>
+            <div class="large-6 medium-12 column">
+                <div class="copyright">
+                    © Soul 2015. ALL RIGHTS RESERVED Create By <a href="#"> Stock</a>
                 </div>
             </div>
         </div>
-    </div> -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/1.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                    <figcaption>
-                        <h4>Occupation</h4>
-                        <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                            surveys.</p> -->
-                    </figcaption>
-                </div>
-                </figure>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/6.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                        <figcaption>
-                            <h4>Finance</h4>
-                            <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                                surveys.</p> -->
-                        </figcaption>
-                    </div>
-                </figure>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/4.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                        <figcaption>
-                            <h4>Lifestyle</h4>
-                            <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                                surveys.</p> -->
-                        </figcaption>
-                    </div>
-                </figure>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/5.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                    <figcaption>
-                        <h4>Gadgets & Technology</h4>
-                        <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                            surveys.</p> -->
-                    </figcaption>
-                </div>
-                </figure>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/3.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                        <figcaption>
-                            <h4>Health</h4>
-                            <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                                surveys.</p> -->
-                        </figcaption>
-                    </div>
-                </figure>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <figure>
-                    <img src="im/2.png" class="img-fluid" alt="Occupation">
-                    <div class="content">
-                        <figcaption>
-                            <h4>Parenting</h4>
-                            <!-- <p>Share your experience with office products and/or services; Participate in b2b research
-                                surveys.</p> -->
-                        </figcaption>
-                    </div>
-                </figure>
-            </div>
-        </div>
-    </div>
+    </footer>
+    <!-- End of Footer -->
+
 </body>
 
 </html>
