@@ -84,11 +84,11 @@
                         <li>/</li>
                         <li><a href="#services" class="scroll">About</a></li>
                         <li>/</li>
-                        <li><a href="login.php" class="scroll">Admin Panel</a></li>
+                        <li><a href="login.php" class="nav-link">Admin Panel</a></li>
                         <li>/</li>
                         <li><a href="#works" class="scroll">Panel List</a></li>
                         <li>/</li>
-                        <li><a href="login.php" class="scroll">Login</a></li>
+                        <li><a href="login.php" class="nav-link">Login</a></li>
                     </ul>
                 </nav>
             </div>
