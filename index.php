@@ -192,7 +192,7 @@
             </div>
             <div class="large-6 medium-12 column">
                 <div class="copyright">
-                    © Soul 2015. ALL RIGHTS RESERVED Create By <a href="#"> Stock</a>
+                    © Soul 2015. ALL RIGHTS RESERVED Create By <a href="#"> ....</a>
                 </div>
             </div>
         </div>
