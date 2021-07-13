@@ -177,6 +177,7 @@
         </div>
     </section>
     <!-- End of About -->
+
     <div class="main1">
         <div class="ul1">
             <div class="floating">
@@ -256,7 +257,6 @@
             </div>
         </div>
     </div>
-
 
 
     <!-- Start of Footer -->
