@@ -109,7 +109,7 @@
                 <div class="title">
                     <h1>Online Surveys</h1>
                     <span>...</span>
-                    <p>Text<br />Text</p>
+                    <p>Text</p>
                 </div>
             </div>
 
