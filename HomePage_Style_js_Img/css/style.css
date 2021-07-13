@@ -565,21 +565,7 @@ footer .copyright {
   padding: 10px;
 }
 
-.name {
-  position: relative;
-  font-size: 16px;
-  display: inline-block;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    width: calc(100% + 10px);
-    height: 1px;
-    background-color: #000;
-    bottom: -4px;
-    left: 0;
-  }
-}
+
 
 .box {
   position: relative;
