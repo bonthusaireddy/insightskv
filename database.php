@@ -54,7 +54,7 @@ if(isset($_POST['addcompany']) && isset($_POST['company_type'])) {
 		 }
    echo 'vendor';
   }
-  header('location: management.php');
+  header('location: mangement.php');
 }
  echo 'out';
 }

@@ -44,7 +44,7 @@ $mysqli->close();
                         <th>Country</th>
                         <th>Status</th>
                         <th>EDIT </th>
-                        <th>DELETE </th>
+                        <th>VIEW </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,24 +66,24 @@ $mysqli->close();
                         <td><?php echo $row['country']; ?></td>
                         <td><?php echo $row['status']; ?></td>
 
-                     
+                    
                         <td>
                                 <!-- <form action="editproject.php" method="post">
                                     <input type="hidden" name="edits_id" value="">
                                     <button type="submit" name="edit_btns" class="btn btn-success"> EDIT</button>
                                 </form> -->
                         
-                                <form action="editproject.php" method="post">
+                                <form action="projectedit.php" method="get">
                                     <input type="hidden" name="edit_id" value="<?php echo $row['id'];?>">
-                                    <button type="submit" name="edit_btn" class="btn btn-success"> EDIT</button>
+                                    <button type="submit" class="btn btn-success"> EDIT</button>
                                 </form>
-                               
+                            
                             
                             </td>
                             <td>
-                                <form action="deleteproject.php" method="post">
-                                    <input type="hidden" name="delete_id" value="<?php echo $row['id'];?>">
-                                    <button type="submit" name="delete_btn" class="btn btn-danger"> DELETE</button>
+                                <form action="projectview.php" method="get">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                    <button type="submit" class="btn btn-danger"> VIEW</button>
                                 </form>
                             </td>
                     </tr>
