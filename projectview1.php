@@ -425,35 +425,29 @@ mysqli_select_db($link,"company");
 
                                     <td>
                                         <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
+                                            <form action="#" method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" /></div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/120/type/9/name/Internal Company">Redirects
+                                                    href="#">Redirects
                                                     1/0</a>
                                             </form>
                                         </div>
                                         <div id='your-form-block-id' class='completed_link'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
+                                            <form action="#" method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" /></div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/120/type/6/name/Internal Company">Completed
+                                                    href="#">Completed
                                                     0/160</a>
                                             </form>
                                         </div><span id="total_completed_1" style="display: none;">0/160</span>
                                         <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
+                                            <form action="#" method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" /></div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/120/type/7/name/Internal Company">Disqualified
+                                                    href="#">Disqualified
                                                     1</a>
                                             </form>
                                         </div><span id="total_disqualified_1" style="display: none;">1</span>
@@ -463,8 +457,7 @@ mysqli_select_db($link,"company");
                                                 method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
-                                                        name="YII_CSRF_TOKEN" /></div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/120/type/8/name/Internal Company">QF
+                                                        name="YII_CSRF_TOKEN" /></div><a class="class-link" href="#">QF
                                                     : 0</a>
                                             </form>
                                         </div>
@@ -536,53 +529,42 @@ mysqli_select_db($link,"company");
 
                                     <td>
                                         <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
+                                            <form action="#" method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" />
-                                                </div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/129/type/9/name/Bulls Eye Solution">Redirects
+                                                </div><a class="class-link" href="#">Redirects
                                                     15/0</a>
                                             </form>
                                         </div>
                                         <div id='your-form-block-id' class='completed_link'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
+                                            <form action="#" method="post">
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" />
-                                                </div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/129/type/6/name/Bulls Eye Solution">Completed
+                                                </div><a class="class-link" href="#>Completed
                                                     3/9999</a>
                                             </form>
-                                        </div><span id="total_completed_2" style="display: none;">3/9999</span>
-                                        <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
-                                                <div style="display:none"><input type="hidden"
-                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
-                                                        name="YII_CSRF_TOKEN" />
-                                                </div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/129/type/7/name/Bulls Eye Solution">Disqualified
-                                                    2</a>
-                                            </form>
-                                        </div><span id="total_disqualified_2" style="display: none;">2</span>
-                                        <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
-                                                <div style="display:none"><input type="hidden"
-                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
-                                                        name="YII_CSRF_TOKEN" />
-                                                </div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/vid/129/type/8/name/Bulls Eye Solution">QF
-                                                    : 2</a>
-                                            </form>
-                                        </div>
+                                        </div><span id=" total_completed_2" style="display: none;">3/9999</span>
+                                                    <div id='your-form-block-id'>
+                                                        <form action="#" method="post">
+                                                            <div style="display:none"><input type="hidden"
+                                                                    value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                                    name="YII_CSRF_TOKEN" />
+                                                            </div><a class="class-link" href="#">Disqualified
+                                                                2</a>
+                                                        </form>
+                                                    </div><span id="total_disqualified_2"
+                                                        style="display: none;">2</span>
+                                                    <div id='your-form-block-id'>
+                                                        <form action="#" method="post">
+                                                            <div style="display:none"><input type="hidden"
+                                                                    value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                                    name="YII_CSRF_TOKEN" />
+                                                            </div><a class="class-link" href="#">QF
+                                                                : 2</a>
+                                                        </form>
+                                                    </div>
                                     </td>
 
                                     <!-- <td>
@@ -612,10 +594,8 @@ mysqli_select_db($link,"company");
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" />
-                                                </div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/getvendorlink/prjid/43/vpid/129"><input
-                                                        type='image' src='/styles/darkblue/images/link-24.png'
-                                                        alt='' /></a>
+                                                </div><a class="class-link" href="#"><input type='image'
+                                                        src='/styles/darkblue/images/link-24.png' alt='' /></a>
                                             </form>
                                         </div>
                                     </td>
@@ -633,9 +613,8 @@ mysqli_select_db($link,"company");
                                             <div style="display:none"><input type="hidden"
                                                     value="8800c1318919643afe565e026658e13d1fd5627f"
                                                     name="YII_CSRF_TOKEN" /></div>
-                                            <a class="class-link"
-                                                href="/index.php/admin/project/sa/getvendorlink/prjid/43/vpid/134"><input
-                                                    type='image' src='/styles/darkblue/images/link-24.png' alt='' /></a>
+                                            <a class="class-link" href="#"><input type='image'
+                                                    src='/styles/darkblue/images/link-24.png' alt='' /></a>
                                         </form>
                                     </div>
                                 </td>
@@ -705,7 +684,7 @@ mysqli_select_db($link,"company");
                                                 <div style="display:none"><input type="hidden"
                                                         value="8800c1318919643afe565e026658e13d1fd5627f"
                                                         name="YII_CSRF_TOKEN" /></div><a class="class-link"
-                                                    href="/index.php/admin/project/sa/showids/prjid/43/type/blocked/name/IKV147 = IRB- 2031_spain">2</a>
+                                                    href="#">2</a>
                                             </form>
                                         </div>
                                     </td>
@@ -761,8 +740,7 @@ mysqli_select_db($link,"company");
                             </td>
                             <td align="right" width="50">
                                 <!--            <a href="< ?php echo CController::createUrl('admin/project/sa/allids/prjid/' . $project_id) ?>" class="class-link" >-->
-                                <a href="/index.php/admin/project/sa/datefilterpopup/prjid/43/email/download"
-                                    class="class-link">
+                                <a href="#" class="class-link">
                                     <!-- added by vibha 27/7/2016 -->
                                     <input type="button" value="Download" />
                                 </a>
@@ -832,8 +810,7 @@ mysqli_select_db($link,"company");
                                 <div id="output"></div>
                             </td>
                             <td align="right" width="50">
-                                <a href="/index.php/admin/project/sa/translateids/prjid/43" class="class-link"
-                                    id="csvupload">
+                                <a href="#" class="class-link" id="csvupload">
                                     <input type="submit" name="submit" value="Translate" />
                                 </a>
 
