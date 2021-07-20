@@ -58,4 +58,11 @@ if(isset($_POST['addcompany']) && isset($_POST['company_type'])) {
 }
  echo 'out';
 }
+
+if(isset($_POST['addproject']) ) {
+  if(isset($_POST['parent_project']) && $_POST['parent_project'] == '0'){
+    echo 'reached here';
+  }
+  
+}
 ?>

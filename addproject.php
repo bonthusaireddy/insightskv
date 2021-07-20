@@ -1,6 +1,7 @@
 <?php
 include('includes/header.php'); 
 include('includes/navbar.php'); 
+include('includes/imp/conn.php');
 ?>
 
 
@@ -9,7 +10,6 @@ include "test.php";
 
 // if the form's submit button is clicked, we need to process the form
 	if (isset($_POST['submit'])) {
-		// get variables from the form
 	$project_name = $_POST['project_name'];
 	$client_name = $_POST['client_name'];
     $type = $_POST['type'];
@@ -50,40 +50,34 @@ include "test.php";
 
 ?>
 
-<?php
-include('includes/imp/conn.php');
-$link=mysqli_connect($servername, $username, $password);
-mysqli_select_db($link,$dbname);
+<?php 
+$sql = "select id, project_name from parent_projects";
+$result = mysqli_query($conn, $sql);
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($result);
 ?>
 <h1 class="heading_company">Personal information:</h1>
-<form action="" method="POST">
+<form action="database.php" method="POST">
     <!-- <fieldset style="width: 66%;margin-left: 222px;"> -->
     <p style="margin-left: 174px;">
-        <label for="Projectname"> Project name:</label>
-        <input type="text" name="project_name" style="    margin-left: 16px;">
+        <label for="Projectname">Project name:</label>
+        <input type="text" name="project_name" style="margin-left: 16px;">
 
-        <label for="Clientname" style="    margin-left: 107px;">Client name:</label>
-        <input type="text" name="client-name" style="margin-left: 16px;">
+        <label for="project_friendly_name" style="margin-left: 107px;">Project Friendly Name:</label>
+        <input type="text" name="project_friendly_name" style="margin-left: 16px;">
     </p>
 
 
     <p>
-        <label for="type" style="margin-left: 172px;">Type:</label>
-        <input type="radio" name="type" value="vendor" style="margin-left: 78px;">Vendor
-        <input type="radio" name="type" value="client" style="    margin-left: 9px;">Client
-
-
-        <label for="parent_project" name="parent_project" style="    margin-left: 162px;">Parent Project:</label>
+        <label for="parent_project" name="parent_project" style="margin-left: 162px;">Parent Project:</label>
         <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
-       
-            <option value="parent_project" name="parent_project">Select Parent Project</option>
-     
-            <option value="demo0" name="parent_project">demo0</option>
-            <option value="demo1" name="parent_project">demo1</option>
-            <option value="demo2" name="parent_project">demo2</option>
-            <option value="demo3" name="parent_project">demo3</option>
-            <option value="demo4" name="parent_project">demo4</option>
-            <option value="demo5" name="parent_project">demo5</option>
+            <option value="0" name="parent_project">Select Parent Project</option>
+            <option value="0" name="parent_project">No parent project</option>
+            <?php 
+            while($row = mysqli_fetch_assoc($result)) { ?>
+                <option value="<?php echo $row['id']; ?>" name="parent_project"><?php echo $row['project_name']; ?></option>
+            <?php 
+            }?>    
         </select>
     </p>
 
@@ -105,6 +99,7 @@ mysqli_select_db($link,$dbname);
         <select name="project_manager" style=" width: 175px;height: 30px;margin-left: 10px;">
             <option value="" name="project_manager">Select Project Manager</option>
             <option value="demo1" name="project_manager">demo1</option>
+
         </select>
     </p>
     <p>
@@ -161,7 +156,7 @@ mysqli_select_db($link,$dbname);
                         style="  height: 61px; width: 250px;    margin-left: 28px;"><br>
         </div>
         <br>
-        <div class="div2" style="">
+        <div class="div2" >
             <label for="cars">Status</label>
             <select name="status" style="    width: 178px; height: 30px; margin-left: 70px;">
                 <option value="Testing" name="status">Testing</option>
@@ -194,7 +189,7 @@ mysqli_select_db($link,$dbname);
         </div>
     </fieldset>
     <div class="btn5">
-        <input type="submit" name="submit" value="submit" style="    margin-left: 510px;">
+        <input type="submit" name="addproject" value="submit" style="    margin-left: 510px;">
         <button><a href="project.php">Cancel</a></button>
     </div>
 </form>
