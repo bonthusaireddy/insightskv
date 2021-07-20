@@ -222,73 +222,83 @@ mysqli_select_db($link,"company");
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Contacts & Region</h6>
                                 </div>
-                                <label for="parent_project" name="parent_project" style=" margin-top: 20px;"> <span
-                                        class="input-group-text" id="">Client Name</span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                                <div class="card-body">
+                                    <label for="parent_project" name="parent_project" style=" margin-top: 20px;"> <span
+                                            class="input-group-text" id="">Client Name</span></label>
+                                    <select name="parent_project"
+                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
 
-                                    <option value="parent_project" name="parent_project">Select Client Name</option>
+                                        <option value="parent_project" name="parent_project">Select Client Name</option>
 
-                                    <option value="demo0" name="parent_project">demo0</option>
-                                    <option value="demo1" name="parent_project">demo1</option>
-                                </select>
+                                        <option value="demo0" name="parent_project">demo0</option>
+                                        <option value="demo1" name="parent_project">demo1</option>
+                                    </select>
 
-                                <label for="parent_project" name="parent_project"
-                                    style="    margin-left: 50px;   margin-top: 16px;"> <span class="input-group-text"
-                                        id="">Client Contact </span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                                    <label for="parent_project" name="parent_project"
+                                        style="       margin-left: 30px;  margin-top: 16px;"> <span
+                                            class="input-group-text" id="">Client Contact </span></label>
+                                    <select name="parent_project"
+                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
 
-                                    <option value="parent_project" name="parent_project">Select Client Contact </option>
+                                        <option value="parent_project" name="parent_project">Select Client Contact
+                                        </option>
 
-                                    <option value="demo0" name="parent_project">demo0</option>
-                                    <option value="demo1" name="parent_project">demo1</option>
-                                    <option value="demo2" name="parent_project">demo2</option>
-                                    <option value="demo3" name="parent_project">demo3</option>
-                                    <option value="demo4" name="parent_project">demo4</option>
-                                    <option value="demo5" name="parent_project">demo5</option>
-                                </select>
+                                        <option value="demo0" name="parent_project">demo0</option>
+                                        <option value="demo1" name="parent_project">demo1</option>
+                                        <option value="demo2" name="parent_project">demo2</option>
+                                        <option value="demo3" name="parent_project">demo3</option>
+                                        <option value="demo4" name="parent_project">demo4</option>
+                                        <option value="demo5" name="parent_project">demo5</option>
+                                    </select>
 
-                                <label for="parent_project" name="parent_project" style="   margin-top: 50px;"> <span
-                                        class="input-group-text" id="">Project Manager</span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                                    <label for="parent_project" name="parent_project" style="   margin-top: 50px;">
+                                        <span class="input-group-text" id="">Project Manager</span></label>
+                                    <select name="parent_project"
+                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
 
-                                    <option value="parent_project" name="parent_project">Select Project Manager</option>
+                                        <option value="parent_project" name="parent_project">Select Project Manager
+                                        </option>
 
-                                    <option value="demo0" name="parent_project">demo0</option>
-                                    <option value="demo1" name="parent_project">demo1</option>
-                                    <option value="demo2" name="parent_project">demo2</option>
-                                    <option value="demo3" name="parent_project">demo3</option>
-                                    <option value="demo4" name="parent_project">demo4</option>
-                                    <option value="demo5" name="parent_project">demo5</option>
-                                </select>
-                                <label for="parent_project" name="parent_project"
-                                    style="     margin-left: 32px;  margin-top: 16px;"> <span class="input-group-text"
-                                        id="">Sales Person</span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                                        <option value="demo0" name="parent_project">demo0</option>
+                                        <option value="demo1" name="parent_project">demo1</option>
+                                        <option value="demo2" name="parent_project">demo2</option>
+                                        <option value="demo3" name="parent_project">demo3</option>
+                                        <option value="demo4" name="parent_project">demo4</option>
+                                        <option value="demo5" name="parent_project">demo5</option>
+                                    </select>
+                                    <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
+                                        <span style="  margin-left: 10px;" class="input-group-text" id="">Sales
+                                            Person</span></label>
+                                    <select name="parent_project"
+                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
 
-                                    <option value="parent_project" name="parent_project">Select Sales Person</option>
+                                        <option value="parent_project" name="parent_project">Select Sales Person
+                                        </option>
 
-                                    <option value="demo0" name="parent_project">demo0</option>
-                                    <option value="demo1" name="parent_project">demo1</option>
-                                    <option value="demo2" name="parent_project">demo2</option>
-                                    <option value="demo3" name="parent_project">demo3</option>
-                                    <option value="demo4" name="parent_project">demo4</option>
-                                    <option value="demo5" name="parent_project">demo5</option>
-                                </select>
+                                        <option value="demo0" name="parent_project">demo0</option>
+                                        <option value="demo1" name="parent_project">demo1</option>
+                                        <option value="demo2" name="parent_project">demo2</option>
+                                        <option value="demo3" name="parent_project">demo3</option>
+                                        <option value="demo4" name="parent_project">demo4</option>
+                                        <option value="demo5" name="parent_project">demo5</option>
+                                    </select>
 
-                                <label for="parent_project" name="parent_project"
-                                    style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text"
-                                        id="">Country </span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                                    <label for="parent_project" name="parent_project"
+                                        style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text"
+                                            id="">Country </span></label>
+                                    <select name="parent_project"
+                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
 
-                                    <option value="parent_project" name="parent_project">Select Country </option>
+                                        <option value="parent_project" name="parent_project">Select Country </option>
 
-                                    <option value="demo0" name="parent_project">demo0</option>
-                                    <option value="dombivli" name="parent_project">dombivli</option>
-                                    <option value="kalyan" name="parent_project">kalyan</option>
-                                    <option value="demo3" name="parent_project">demo3</option>
-                                    <option value="demo4" name="parent_project">demo4</option>
-                                    <option value="demo5" name="parent_project">demo5</option>
-                                </select>
+                                        <option value="demo0" name="parent_project">demo0</option>
+                                        <option value="dombivli" name="parent_project">dombivli</option>
+                                        <option value="kalyan" name="parent_project">kalyan</option>
+                                        <option value="demo3" name="parent_project">demo3</option>
+                                        <option value="demo4" name="parent_project">demo4</option>
+                                        <option value="demo5" name="parent_project">demo5</option>
+                                    </select>
+                                </div>
                             </fieldset>
 
                             <fieldset>
