@@ -275,8 +275,9 @@ mysqli_select_db($link,"company");
                                     <option value="demo5" name="parent_project">demo5</option>
                                 </select>
 
-                                <label for="parent_project" name="parent_project" style="   margin-top: 50px;"> <span
-                                        class="input-group-text" id="">Country </span></label>
+                                <label for="parent_project" name="parent_project"
+                                    style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text"
+                                        id="">Country </span></label>
                                 <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
 
                                     <option value="parent_project" name="parent_project">Select Country </option>
