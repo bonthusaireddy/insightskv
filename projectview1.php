@@ -363,7 +363,7 @@ mysqli_select_db($link,"company");
                             <input type='hidden' name='requestfor' id='requestfor' value='' />
                             <input type='submit' value='Save' id="save" />
                             <input type='submit' value='Clone' id='clone' />
-                            <a href="/index.php/admin/project/index" class="limebutton">Cancel</a>
+                            <a href="#" class="limebutton">Cancel</a>
                             <input type='hidden' name='action' value='editproject' />
                         </p>
                     </form>
