@@ -60,9 +60,50 @@ if(isset($_POST['addcompany']) && isset($_POST['company_type'])) {
 }
 
 if(isset($_POST['addproject']) ) {
+
   if(isset($_POST['parent_project']) && $_POST['parent_project'] == '0'){
-    echo 'reached here';
+    // $id
+    $project_name = $_REQUEST['project_name'];
+    $project_friendly_name = $_REQUEST['project_friendly_name'];
+    $sql = "INSERT INTO parent_projects(project_name, project_friendly_name) VALUES ('$project_name','$project_friendly_name')";
+    if(mysqli_query($conn, $sql)){} 
+    else{
+			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
+		}
   }
-  
+    $project_name = $_REQUEST['project_name'];
+    $project_friendly_name = $_REQUEST['project_friendly_name'];
+    $client_name = $_REQUEST['client_name'];
+    $parent_project = $_REQUEST['parent_project'];
+    $project_manager = $_REQUEST['project_manager'];
+    $country = $_REQUEST['country'];
+    $client_contact = $_REQUEST['client_contact'];
+    $sales_person = $_REQUEST['sales_person'];
+    $req_complete = $_REQUEST['req_completes'];
+    $cpc = $_REQUEST['cpc'];
+    $ir = $_REQUEST['ir'];
+    $survey_link = $_REQUEST['survey_link'];
+    $status = $_REQUEST['status'];
+    $max_complete = $_REQUEST['max_complete'];
+    $loi = $_REQUEST['loi'];
+    $note = $_REQUEST['note'];
+    $points_to_award = '1';
+    $id = get_id_of_project($conn);
+    $completion_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=111';
+    $disqualify_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=222';
+    $quotafull_link= 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=333';
+    $sql = "INSERT INTO projects(project_name, project_friendly_name, client_name, parent_project, project_manager, country, client_contact, sales_person, req_complete, cpc, ir, survey_link, status, max_complete,loi, note, points_to_award, completion_link, disqualify_link, quotafull_link) VALUES ('$project_name', '$project_friendly_name', '$client_name', '$parent_project', '$project_manager', '$country', '$client_contact', '$sales_person', '$req_complete', '$cpc', '$ir', '$survey_link', '$status', '$max_complete', '$loi', '$note', '$points_to_award', '$completion_link','$disqualify_link','$quotafull_link')";
+    if(mysqli_query($conn, $sql)){} 
+    else{
+			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
+		}
+}
+function get_id_of_project($conn){
+  $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result)){
+    $id = $row['id'];
+    return $id + 1;
+  }
 }
 ?>

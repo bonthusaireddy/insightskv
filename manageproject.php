@@ -35,7 +35,7 @@ $mysqli->close();
                         <th>ID</th>
                         <th>Project Name</th>
                         <th>Client Name</th>
-                        <th>Type</th>
+                        
                         <th>Parent Project</th>
                         <th>Manager Name</th>
                         <th>Sales Name</th>
@@ -58,7 +58,7 @@ $mysqli->close();
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['project_name']; ?></td>
                         <td><?php echo $row['client_name']; ?></td>
-                        <td><?php echo $row['type']; ?></td>
+                        
                         <td><?php echo $row['parent_project']; ?></td>
                         <td><?php echo $row['project_manager']; ?></td>
                         <td><?php echo $row['sales_person']; ?></td>

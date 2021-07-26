@@ -141,7 +141,7 @@ $row = mysqli_fetch_array($result);
     <h1 class="heading_company">Other</h1>
     <fieldset style="width: 66%;margin-left: 176px;">
         <br>
-        Requ. Complete <input type="text" name="req_compelet"><br>
+        Requ. Complete <input type="text" name="req_completes"><br>
         <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;(Must be between 1 to 99,999)</p>
 
         CPC $<input type="text" name="cpc" style="    margin-left: 73px;"><br>
