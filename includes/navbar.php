@@ -112,8 +112,9 @@
            <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                <div class="bg-white py-2 collapse-inner rounded">
                    <h6 class="collapse-header">Company Mangement:</h6>
-                   <a class="collapse-item" href="mangement.php">Manage Company</a>
-                   <a class="collapse-item" href="companytype.php">Manage Company Type</a>
+                   <a class="collapse-item" href="client.php">Manage Client</a>
+                   <a class="collapse-item" href="vendor.php">Manage Vendor</a>
+                   <a class="collapse-item" href="companytype.php">deactivate</a>
 
 
                </div>

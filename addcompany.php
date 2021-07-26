@@ -3,7 +3,7 @@ include('includes/header.php');
 include('includes/navbar.php'); 
 ?>
 <h1 class="heading_company">Company Details</h1>
-<form action="insert.php" method="post">
+<form action="database.php" method="post">
     <p style="margin-left: 174px;">
         <label for="firstName">Company Name</label>
         <input type="text" name="company_name" id="company_name" style="    margin-left: 16px;">
@@ -18,9 +18,9 @@ include('includes/navbar.php');
         <input type="text" name="display_name" id="display_name" style="margin-left:27px;">
 
         <label for="Gender" style="margin-left: 46px;    margin-right: 35px;">Company Type:</label>
-        Client&nbsp;<input type="radio" name="company_type" value="Client" id="Gender"
+        Client&nbsp;<input type="checkbox" name="company_type[]" value="Client" id="Gender"
             style="    margin-left: 10px;">&nbsp;&nbsp;
-        Vendor&nbsp;<input type="radio" name="company_type" value="Vendor" id="Gender">
+        Vendor&nbsp;<input type="checkbox" name="company_type[]" value="Vendor" id="Gender" class="vendordetails">
     </p>
     <hr class="solid">
     <h1 class="heading_company">Region & Contact Details</h1>
@@ -79,16 +79,16 @@ include('includes/navbar.php');
 <input type="radio" name="type" value="Fresher"> Fresher
 <input type="radio" name="type" value="Experienced"> Experienced
 </p> -->
-    <div id="textboxes" style="display: none">
+    <div id="textboxes" style="display: block">
     <h1 class="heading_company">Surveys Redirect Details</h1>
-        <label for="completionlink" style="margin-left: 187px;">Completion link:</label>
-        <input type="text" name="completionlink" style="margin-left: 26px;" />
-        <label for="disqualifylink" style="margin-left: 12px;">Disqualify link:</label>
-        <input type="text" name="disqualifylink" style="margin-left: 56px;">
-        <label for="quotafulllink" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
-        <input type="text" name="quotafulllink" style="margin-left: 42px;">
+        <label for="completion_link" style="margin-left: 187px;">Completion link:</label>
+        <input type="text" name="completion_link" style="margin-left: 26px;" />
+        <label for="disqualify_link" style="margin-left: 12px;">Disqualify link:</label>
+        <input type="text" name="disqualify_link" style="margin-left: 56px;">
+        <label for="quotafull_link" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
+        <input type="text" name="quotafull_link" style="margin-left: 42px;">
     </div>
-    <input type="submit" value="Submit" class="submit_btn" style="    margin-bottom: 65px; margin-top: 36px;">
+    <input type="submit" value="Submit" name="addcompany" class="submit_btn" style="    margin-bottom: 65px; margin-top: 36px;">
 </form>
 
 
