@@ -109,4 +109,36 @@ function get_id_of_project($conn){
     return $id + 1;
   }
 }
+if(isset($_POST['add_project_vendors'])){
+  // $id = 
+  $project_id = $_REQUEST['project_id'];
+  $vendor_id = $_REQUEST['vendor_id'];
+  $redirects = 0;
+  $completed = 0;
+  $disqualified = 0;
+  $qf =  0;
+  $ir = 0;
+  $cpc = 0;
+  $cost_per_complete = $_REQUEST['cost_per_complete'];
+  $req_complete = $_REQUEST['req_complete'];
+  $max_complete = $_REQUEST['max_complete'];
+  $max_redirects = $_REQUEST['max_redirects'];
+  $completion_link = $_REQUEST['completion_link'];
+  $disqualify_link = $_REQUEST['disqualify_link'];
+  $quotafull_link = $_REQUEST['quotafull_link'];
+  $project_status = $_REQUEST['status'];
+  $notes = $_REQUEST['notes'];
+  $survey_link = 'http://insightskv.ml/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
+  // $timestamp = $_REQUEST[''];
+  
+  $sql = "INSERT INTO project_vendors(project_id, vendor_id, redirects, completed, disqualified, qf, ir, cpc,cost_per_complete, req_complete, max_complete, max_redirects, completion_link, disqualify_link, quotafull_link, project_status, notes, survey_link) VALUES ('$project_id','$vendor_id','$redirects','$completed','$disqualified','$qf','$ir','$cpc','$cost_per_complete','$req_complete','$max_complete','$max_redirects','$completion_link','$disqualify_link','$quotafull_link','$project_status','$notes','$survey_link')";
+   if(mysqli_query($conn, $sql)){
+        header("location: projectview.php?id=$project_id");
+		 } else{
+			  echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
+		 }
+
+}
 ?>
+
+

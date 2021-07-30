@@ -12,6 +12,10 @@ $id = $_GET['id'];
 $sql = "SELECT * FROM projects WHERE id = '$id' ";
 $result = mysqli_query($conn, $sql);
 
+$sql2 = "SELECT vendor.vendor_name,survey_link
+FROM vendor
+INNER JOIN project_vendors ON vendor.id = project_vendors.vendor_id WHERE project_vendors.project_id = '$id'";
+$result1 = mysqli_query($conn, $sql2);
 ?>
 
 <!DOCTYPE html>
@@ -156,6 +160,7 @@ $result = mysqli_query($conn, $sql);
                              <tbody>
 
                                 <!--Vendor Row 1-->
+                                <?php foreach($result1 as $row2){ ?>
 
                                 <tr id="vendor_row_1" style=" border: groove;">
                                     <td style="padding:3px;">
@@ -166,7 +171,7 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                     </td>
                                     <td>120</td>
-                                    <td> <span id="company_name_1" class="company_name_info">Internal Company</span> </td>
+                                    <td> <span id="company_name_1" class="company_name_info"><?php echo $row2['vendor_name']?></span> </td>
                                     <!-- use display none to hide -->
                                     <td style="display:none;" id="status_name_1">testing</td>
                                     <td>
@@ -211,6 +216,7 @@ $result = mysqli_query($conn, $sql);
                                 
 
                                 <!--Vendor Row 1 END-->
+                                <?php } ?>
 
                              </tbody>
                         </table>
@@ -219,7 +225,7 @@ $result = mysqli_query($conn, $sql);
 
                     <div style="margin-bottom: 15px;margin-top: 80px;">
                         <span style="height:40px;width:100%">
-                            <form action="database.php" method="post">
+                            <form action="addvendor.php?project_id=<?php echo $id ?>" method="post">
                                 <div style="display:none"><input type="hidden"
                                         value="#" name="#" /></div>
                                 <input type='submit' value='Add Vendor' />
