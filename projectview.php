@@ -207,6 +207,9 @@ $result = mysqli_query($conn, $sql);
                                     </td>
                                 </tr>
 
+
+                                
+
                                 <!--Vendor Row 1 END-->
 
                              </tbody>
@@ -218,7 +221,7 @@ $result = mysqli_query($conn, $sql);
                         <span style="height:40px;width:100%">
                             <form action="database.php" method="post">
                                 <div style="display:none"><input type="hidden"
-                                        value="8800c1318919643afe565e026658e13d1fd5627f" name="YII_CSRF_TOKEN" /></div>
+                                        value="#" name="#" /></div>
                                 <input type='submit' value='Add Vendor' />
                                 <input type='hidden' name="pid" value='43' />
                             </form>
@@ -249,7 +252,7 @@ $result = mysqli_query($conn, $sql);
                     <!-- remove float left -->
                     <div style="border:0; padding: 10px;">
                         <table class='InfoForm' width=100%>
-                            <tbody>
+                            <tbody style="border: groove;">
                                 <tr>
                                     <td colspan=11 style="text-align: left;" class="header">Project Research Statistics
                                     </td>
@@ -283,12 +286,8 @@ $result = mysqli_query($conn, $sql);
                                     <td style=color:red; style="text-align: center">26.36 %</td>
                                     <td style="text-align: center;background: #81BFFF;">
                                         <div id='your-form-block-id'>
-                                            <form
-                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                                                method="post">
-                                                <div style="display:none"><input type="hidden"
-                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
-                                                        name="YII_CSRF_TOKEN" /></div><a class="class-link"
+                                            <form action="#" method="post">
+                                                ><a class="class-link"
                                                     href="#">2</a>
                                             </form>
                                         </div>
@@ -319,10 +318,8 @@ $result = mysqli_query($conn, $sql);
                 </tr>
                 <tr class="odd">
                     <div id='your-form-block-id'>
-                        <form action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
-                            method="post">
-                            <div style="display:none"><input type="hidden"
-                                    value="8800c1318919643afe565e026658e13d1fd5627f" name="YII_CSRF_TOKEN" /></div>
+                        <form action="#" method="post">
+                            
                             <td>
                                 <input style="vertical-align: sub;" type="checkbox" name="askExt" id="askExt"
                                     value="1" />Extension&nbsp; | &nbsp;
@@ -415,7 +412,7 @@ $result = mysqli_query($conn, $sql);
                 </div>
             </div>
             <style>
-            .overlay {
+                .overlay {
                 position: fixed;
                 top: 0;
                 bottom: 0;
@@ -478,6 +475,7 @@ $result = mysqli_query($conn, $sql);
                 }
             }
             </style>
+           
             <?php } ?>
 </body>
 
