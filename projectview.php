@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $sql);
        <div class="input-group">
          <div class="input-group-prepend">
           <span class="input-group-text" id="">Req. Completes</span> </div>
-               <input name="req_completes" type="text" class="form-control" value="<?php echo $row["req_completes"]; ?>">
+               <input name="req_complete" type="text" class="form-control" value="<?php echo $row["req_complete"]; ?>">
                   <span class="input-group-text" style="margin-left: 15px;" id="">CPC/CPI $ :</span> 
                     <input name="cpc" type="text" class="form-control" value="<?php echo $row["cpc"]; ?>">
                         </div>
