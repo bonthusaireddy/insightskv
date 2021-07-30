@@ -26,7 +26,6 @@ $result = mysqli_query($conn, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
 
 
 
@@ -478,7 +477,110 @@ $result = mysqli_query($conn, $sql);
                                         </div>
                                     </td>
                                 </tr>
-                               
+                                <tr id="vendor_row_2" style=" border: groove;">
+                                    <td style="padding:3px;">
+                                        <div class="form">
+                                            <form id="form_129"
+                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyvendor/vid/129"
+                                                method="post">
+                                                <div style="display:none"><input type="hidden"
+                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                        name="YII_CSRF_TOKEN" />
+                                                </div><span class="HelpToolTip SPAN_1"><span
+                                                        class="HelpToolTip_Title SPAN_3" style="display:none;">Contact
+                                                        Person <b>Sales
+                                                            Executive</b></span>
+                                                    <span class="HelpToolTip_Contents SPAN_4"
+                                                        style="display:none;">Status:
+                                                        <b>running</b><br>CPC:
+                                                        <b>15.00</b><br>Req.Completes : <b>9999</b><br>Req.Completes :
+                                                        <b>0</b></span>
+                                                </span> <input type='image' src='/styles/darkblue/images/edit_16.png'
+                                                    alt='' />
+                                                <input type='hidden' name='action' value='modifyvendor' />
+                                                <input type='hidden' name='vendor_project_id' value='129' />
+                                                <input type='hidden' name='project_id' value='43' />
+                                            </form>
+                                        </div>
+                                    </td>
+                                    <td>129</td>
+                                    <td><span id="company_name_2" class="company_name_info">Bulls Eye</span></td>
+                                    <!-- use display none to hide -->
+                                    <td style="display:none;" id="status_name_2">running</td>
+
+                                    <td>
+                                        <div id='your-form-block-id'>
+                                            <form action="#" method="post">
+                                                <div style="display:none"><input type="hidden"
+                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                        name="YII_CSRF_TOKEN" />
+                                                </div><a class="class-link" href="#">Redirects
+                                                    15/0</a>
+                                            </form>
+                                        </div>
+                                        <div id='your-form-block-id' class='completed_link'>
+                                            <form action="#" method="post">
+                                                <div style="display:none"><input type="hidden"
+                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                        name="YII_CSRF_TOKEN" />
+                                                </div><a class="class-link" href="#>Completed
+                                                    3/9999</a>
+                                            </form>
+                                        </div><span id=" total_completed_2" style="display: none;">3/9999</span>
+                                                    <div id='your-form-block-id'>
+                                                        <form action="#" method="post">
+                                                            <div style="display:none"><input type="hidden"
+                                                                    value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                                    name="YII_CSRF_TOKEN" />
+                                                            </div><a class="class-link" href="#">Disqualified
+                                                                2</a>
+                                                        </form>
+                                                    </div><span id="total_disqualified_2"
+                                                        style="display: none;">2</span>
+                                                    <div id='your-form-block-id'>
+                                                        <form action="#" method="post">
+                                                            <div style="display:none"><input type="hidden"
+                                                                    value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                                    name="YII_CSRF_TOKEN" />
+                                                            </div><a class="class-link" href="#">QF
+                                                                : 2</a>
+                                                        </form>
+                                                    </div>
+                                    </td>
+
+                                    <!-- <td>
+                                <div id='your-form-block-id'><form action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject" method="post">
+<div style="display:none"><input type="hidden" value="8800c1318919643afe565e026658e13d1fd5627f" name="YII_CSRF_TOKEN" /></div><a class="class-link" href="/index.php/admin/project/sa/showids/vid/129/type/6/name/Bulls Eye Solution">3/9999</a></form></div><span id="total_completed_2" style="display: none;">3/9999</span> 
+
+                                                                    </td>
+
+                                                                    <td>
+                                <div id='your-form-block-id'><form action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject" method="post">
+<div style="display:none"><input type="hidden" value="8800c1318919643afe565e026658e13d1fd5627f" name="YII_CSRF_TOKEN" /></div><a class="class-link" href="/index.php/admin/project/sa/showids/vid/129/type/7/name/Bulls Eye Solution">2</a></form></div><span id="total_disqualified_2" style="display: none;">2</span> 
+                                                                    </td> -->
+
+                                    <td id="vendor_cpc_2">
+                                        IR : 60.00 % <br />CPC : 15.00 </td>
+
+                                    <!-- <td >%</td> -->
+
+                                    <td>
+                                        <div class='end_point_link' id='your-form-block-id'>
+                                            <form
+                                                action="/index.php/admin/project/sa/modifyproject/project_id/43/action/modifyproject"
+                                                method="post">
+                                                <div class="box">
+                                                    <a class="button" href="#popup1">link</a>
+                                                </div>
+                                                <div style="display:none"><input type="hidden"
+                                                        value="8800c1318919643afe565e026658e13d1fd5627f"
+                                                        name="YII_CSRF_TOKEN" />
+                                                </div><a class="class-link" href="#"><input type='image'
+                                                        src='/styles/darkblue/images/link-24.png' alt='' /></a>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
 
 
 
