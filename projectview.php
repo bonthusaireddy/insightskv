@@ -57,27 +57,27 @@ $result = mysqli_query($conn, $sql);
      <div class="card-header py-3"> <h6 class="m-0 font-weight-bold text-primary">Contacts & Region</h6> </div>
           <div class="card-body">
               <label for="parent_project" name="parent_project" style=" margin-top: 20px;"> <span class="input-group-text" id="">Client Name</span></label>
-                 <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
-                  <option value="parent_project" name="parent_project"><?php echo $row["client_name"]; ?></option>
+                 <select name="client_name" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                  <option value="#" name="client_name"><?php echo $row["client_name"]; ?></option>
                      </select>
                         <label for="parent_project" name="parent_project" style=" margin-left: 30px;  margin-top: 16px;"> 
                             <span class="input-group-text" id="">Client Contact </span></label>
-                                <select name="parent_project" style=" width: 184px;height: 30px;  margin-left: 4px;">
-                                     <option value="#" name="parent_project"><?php echo $row["client_contact"]; ?></option>
+                                <select name="client_contact" style=" width: 184px;height: 30px;  margin-left: 4px;">
+                                     <option value="#" name="client_contact"><?php echo $row["client_contact"]; ?></option>
                                          </select>
                <label for="parent_project" name="parent_project" style="   margin-top: 50px;">
                  <span class="input-group-text" id="">Project Manager</span></label>
-                    <select name="parent_project"  style=" width: 184px;height: 30px;    margin-left: 4px;">
-                        <option value="parent_project" name="parent_project"><?php echo $row["project_manager"]; ?> </option>
+                    <select name="project_manager"  style=" width: 184px;height: 30px;    margin-left: 4px;">
+                        <option value="project_manager" name="parent_project"><?php echo $row["project_manager"]; ?> </option>
                          </select>
                             <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
                                <span style="  margin-left: 10px;" class="input-group-text" id="">Sales Person</span></label>
-                                    <select name="parent_project" style=" width: 184px;height: 30px; margin-left: 4px;">
-                                         <option value="parent_project" name="parent_project"><?php echo $row["sales_person"]; ?> </option>
+                                    <select name="sales_person" style=" width: 184px;height: 30px; margin-left: 4px;">
+                                         <option value="parent_project" name="sales_person"><?php echo $row["sales_person"]; ?> </option>
                                               </select>
                                              <label for="parent_project" name="parent_project" style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text" id="">Country </span></label>
-                                                 <select name="parent_project" style=" width: 184px;height: 30px; margin-left: 4px;">
-                                                     <option value="parent_project" name="parent_project"><?php echo $row["country"]; ?> </option>
+                                                 <select name="country" style=" width: 184px;height: 30px; margin-left: 4px;">
+                                                     <option value="parent_project" name="country"><?php echo $row["country"]; ?> </option>
                                                          </select>
                                                             </div>
                                                                 </fieldset>
@@ -89,40 +89,40 @@ $result = mysqli_query($conn, $sql);
        <div class="input-group">
          <div class="input-group-prepend">
           <span class="input-group-text" id="">Req. Completes</span> </div>
-               <input type="text" class="form-control" value="<?php echo $row["parent_project"]; ?>">
+               <input name="req_completes" type="text" class="form-control" value="<?php echo $row["req_completes"]; ?>">
                   <span class="input-group-text" style="margin-left: 15px;" id="">CPC/CPI $ :</span> 
-                    <input type="text" class="form-control" value="<?php echo $row["cpc"]; ?>">
+                    <input name="cpc" type="text" class="form-control" value="<?php echo $row["cpc"]; ?>">
                         </div>
                            <div class="card-body" style="   margin-left: -19px;">
                               <div style=" margin-top: 50px;" class=" input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="">LOI (Minutes.) :</span></div>
-                                       <input type="text" class="form-control" value="<?php echo $row["loi"]; ?>">
+                                       <input name="loi" type="text" class="form-control" value="<?php echo $row["loi"]; ?>">
                                           <span class="input-group-text" style=" margin-left: 15px;" id="">IR :</span>
-                                           <input type="text" class="form-control" value="<?php echo $row["ir"]; ?>">
+                                           <input type="text" name="ir" class="form-control" value="<?php echo $row["ir"]; ?>">
                                              </div>
                                                  <div class="card-body" style="   margin-left: -19px;">
                                                   <div style=" margin-top: 50px;" class="input-group">
                                                       <div class="input-group-prepend">
                                                     <span class="input-group-text" id=""># of points to award:</span> </div>
-                                                         <input type=" text" class="form-control" value="<?php echo $row["1"]; ?>">
+                                                         <input name="points_to_award" type=" text" class="form-control" value="<?php echo $row["points_to_award"]; ?>">
                                                              <span class="input-group-text" style="margin-left: 15px;" id="">Notes :</span>
                                                               <input type="text" class="form-control" value="<?php echo $row["note"]; ?>">
                                                                  </div>
  <label for="parent_project" name="parent_project" style="margin-top: 50px;">
     <span class="input-group-text" id="">Max. Completes :</span></label>
         <select name="parent_project"style=" width: 184px;height: 30px;    margin-left: 4px;">
-            <option value="parent_project" name="parent_project"><?php echo $row["max_complete"]; ?></option>
+            <option value="parent_project" name="max_complete"><?php echo $row["max_complete"]; ?></option>
                </select>
                  <div class="card-body">
                     <div style=" margin-top: 40px;" class=" input-group">
                       <div class="input-group-prepend">
                          <span class="input-group-text" id="">Survey Likn</span> </div>
-                           <input style="height: 20vh;" type=" text" class="form-control" value="<?php echo $row["survey_link"]; ?>"></div>
+                           <input style="height: 20vh;" type=" text" name="survey_link" class="form-control" value="<?php echo $row["survey_link"]; ?>"></div>
  <label for="parent_project" name="parent_project" style="   margin-top: 30px;">
      <span class="input-group-text" id="">Status</span></label>
-          <select name="parent_project"style=" width: 184px;height: 30px;    margin-left: 4px;">
-             <option value="<?php echo $row["status"]; ?>" name="parent_project"><?php echo $row["status"]; ?> </option>
+          <select name="status"style=" width: 184px;height: 30px;    margin-left: 4px;">
+             <option value="<?php echo $row["status"]; ?>" name="status"><?php echo $row["status"]; ?> </option>
                  </select>
                     </fieldset>
                         </form>
