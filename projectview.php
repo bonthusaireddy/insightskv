@@ -11,337 +11,123 @@ $id = $_GET['id'];
 // SQL query to select data from database
 $sql = "SELECT * FROM projects WHERE id = '$id' ";
 $result = mysqli_query($conn, $sql);
-// foreach($query_run as $row)
-//     {
-//         echo $row['id'];
-//         echo 'asdf';
-//     }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-
-    <title>...</title>
-
-
+    <link rel="stylesheet" href="./css/projectview.css">
+ <title>...</title>
 </head>
-
 <body onload="startTime()">
-    <div id="cnt_outer">
 
+<?php foreach($result as $row){?>
 
-
-        <div class='rightcolumn'>
-
-
-            <style>
-            #mainlist {
-                display: none;
-                list-style: none;
-            }
-
-            #multiprint {
-                list-style: none;
-                display: block;
-                position: absolute;
-                right: 155px;
-            }
-
-            #moreformate {
-                cursor: pointer;
-            }
-
-            #multiprint li a img {
-                height: 20px;
-                width: 15px;
-            }
-
-            #prev {
-                /*transform: rotate(90deg);*/
-            }
-
-            #next {
-                transform: rotate(180deg);
-            }
-
-            #last {
-                transform: rotate(180deg);
-            }
-
-            #btnfind {
-                vertical-align: middle;
-            }
-
-            #navlist {
-                display: none;
-                list-style: none;
-            }
-
-            .navigation {
-                list-style: none;
-                display: block;
-                position: absolute;
-                right: 35px;
-                text-align: left;
-                background-color: white;
-            }
-            </style>
-
-
-
-            <style>
-            table.InfoForm {
-                border: 1px solid #999;
-            }
-
-            .class-link {
-                font-size: 14px;
-                font-weight: bold;
-            }
-
-            #listprojectvendor_length select,
-            .dataTables_filter input[type="text"] {
-                width: 20%;
-            }
-
-            .paging_full_numbers {
-                width: 250px;
-                height: 22px;
-                line-height: 22px;
-                padding-top: 9%;
-            }
-
-            .dataTables_info {
-                width: 40%;
-                float: left;
-                padding-top: 7%;
-                padding-bottom: -26px;
-                padding-left: 10px;
-                color: #000;
-            }
-
-            .td_short {
-                width: 206px;
-                white-space: nowrap;
-            }
-            </style>
-
-            <div>
-
-                <div style="width: 61%; float: left;border: groove;">
-                    <form id="newprojectform" enableClientValidation="1"
-                        action="/index.php/admin/project/sa/modproject/action/editproject" method="post">
-                        <div style="display:none"><input type="hidden" value="8800c1318919643afe565e026658e13d1fd5627f"
-                                name="YII_CSRF_TOKEN" /></div>
+<div id="cnt_outer">
+    <div class='rightcolumn'>
+              <div>
+                 <div style="width: 61%; float: left;border: groove;">
+                    <form id="newprojectform" enableClientValidation="1" action="#" method="post">
                         <form action="post">
                             <fieldset>
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Personal information:</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" aid="">Project
-                                                Name</span>
-                                        </div>
-                                        <input name="project_name" type=" text" class="form-control">
-                                        <span class="input-group-text" style="margin-left: 26px;" id="">Client
-                                            Name</span>
-                                        <input name="client_name" type=" text" class="form-control">
-                                    </div>
-
-                                    <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
-                                        <span class="input-group-text" id="">Parent Project</span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                        <option value="parent_project" name="parent_project">Select Parent Project
-                                        </option>
-
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="demo1" name="parent_project">demo1</option>
-                                        <option value="demo2" name="parent_project">demo2</option>
-                                        <option value="demo3" name="parent_project">demo3</option>
-                                        <option value="demo4" name="parent_project">demo4</option>
-                                        <option value="demo5" name="parent_project">demo5</option>
-                                    </select>
-                                    <label for="parent_project" name="parent_project"
-                                        style=" margin-top: 54px; margin-left: 53px;">
-                                        <span class="input-group-text" id="">Parent Name:= <a
-                                                href="">frhgrh</a></span></label>
-
+                             <div class="card-header py-3"><h6 class="m-0 font-weight-bold text-primary">Personal information:</h6></div>
+                             <div class="card-body">
+                             <div class="input-group">
+                             <div class="input-group-prepend">
+                             <span class="input-group-text" aid="">Project Name</span>
+                             </div>
+                             <input name="project_name" type=" text" class="form-control" value="<?php echo $row["project_name"]; ?>">
+                             <span class="input-group-text" style="margin-left: 26px;" id="">Client Name</span>
+                              <input name="client_name" type=" text" class="form-control" value="<?php echo $row["client_name"]; ?>">
+                              </div>
+                              <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
+                              <span class="input-group-text" id="">Parent Project</span></label>
+                              <select name="parent_project" style=" width: 184px;height: 30px;margin-left: 4px;">
+                              <option value="<?php echo $row["parent_project"]; ?>" name="parent_project"><?php echo $row["parent_project"]; ?> </option>
+                              </select>
+                             <label for="parent_project" name="parent_project"  style=" margin-top: 54px; margin-left: 53px;">
+                             <span class="input-group-text" id="">Parent Name:= <a href="">example.com</a></span></label>
                             </fieldset>
 
-                            <fieldset>
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Contacts & Region</h6>
-                                </div>
-                                <div class="card-body">
-                                    <label for="parent_project" name="parent_project" style=" margin-top: 20px;"> <span
-                                            class="input-group-text" id="">Client Name</span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
+<fieldset>
+     <div class="card-header py-3"> <h6 class="m-0 font-weight-bold text-primary">Contacts & Region</h6> </div>
+          <div class="card-body">
+              <label for="parent_project" name="parent_project" style=" margin-top: 20px;"> <span class="input-group-text" id="">Client Name</span></label>
+                 <select name="parent_project" style=" width: 184px;height: 30px;    margin-left: 4px;">
+                  <option value="parent_project" name="parent_project"><?php echo $row["client_name"]; ?></option>
+                     </select>
+                        <label for="parent_project" name="parent_project" style=" margin-left: 30px;  margin-top: 16px;"> 
+                            <span class="input-group-text" id="">Client Contact </span></label>
+                                <select name="parent_project" style=" width: 184px;height: 30px;  margin-left: 4px;">
+                                     <option value="#" name="parent_project"><?php echo $row["client_contact"]; ?></option>
+                                         </select>
+               <label for="parent_project" name="parent_project" style="   margin-top: 50px;">
+                 <span class="input-group-text" id="">Project Manager</span></label>
+                    <select name="parent_project"  style=" width: 184px;height: 30px;    margin-left: 4px;">
+                        <option value="parent_project" name="parent_project"><?php echo $row["project_manager"]; ?> </option>
+                         </select>
+                            <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
+                               <span style="  margin-left: 10px;" class="input-group-text" id="">Sales Person</span></label>
+                                    <select name="parent_project" style=" width: 184px;height: 30px; margin-left: 4px;">
+                                         <option value="parent_project" name="parent_project"><?php echo $row["sales_person"]; ?> </option>
+                                              </select>
+                                             <label for="parent_project" name="parent_project" style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text" id="">Country </span></label>
+                                                 <select name="parent_project" style=" width: 184px;height: 30px; margin-left: 4px;">
+                                                     <option value="parent_project" name="parent_project"><?php echo $row["country"]; ?> </option>
+                                                         </select>
+                                                            </div>
+                                                                </fieldset>
 
-                                        <option value="parent_project" name="parent_project">Select Client Name</option>
 
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="demo1" name="parent_project">demo1</option>
-                                    </select>
-
-                                    <label for="parent_project" name="parent_project"
-                                        style="       margin-left: 30px;  margin-top: 16px;"> <span
-                                            class="input-group-text" id="">Client Contact </span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                        <option value="parent_project" name="parent_project">Select Client Contact
-                                        </option>
-
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="demo1" name="parent_project">demo1</option>
-                                        <option value="demo2" name="parent_project">demo2</option>
-                                        <option value="demo3" name="parent_project">demo3</option>
-                                        <option value="demo4" name="parent_project">demo4</option>
-                                        <option value="demo5" name="parent_project">demo5</option>
-                                    </select>
-
-                                    <label for="parent_project" name="parent_project" style="   margin-top: 50px;">
-                                        <span class="input-group-text" id="">Project Manager</span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                        <option value="parent_project" name="parent_project">Select Project Manager
-                                        </option>
-
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="demo1" name="parent_project">demo1</option>
-                                        <option value="demo2" name="parent_project">demo2</option>
-                                        <option value="demo3" name="parent_project">demo3</option>
-                                        <option value="demo4" name="parent_project">demo4</option>
-                                        <option value="demo5" name="parent_project">demo5</option>
-                                    </select>
-                                    <label for="parent_project" name="parent_project" style="   margin-top: 16px;">
-                                        <span style="  margin-left: 10px;" class="input-group-text" id="">Sales
-                                            Person</span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                        <option value="parent_project" name="parent_project">Select Sales Person
-                                        </option>
-
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="demo1" name="parent_project">demo1</option>
-                                        <option value="demo2" name="parent_project">demo2</option>
-                                        <option value="demo3" name="parent_project">demo3</option>
-                                        <option value="demo4" name="parent_project">demo4</option>
-                                        <option value="demo5" name="parent_project">demo5</option>
-                                    </select>
-
-                                    <label for="parent_project" name="parent_project"
-                                        style=" margin-left: 50px;  margin-top: 50px;"> <span class="input-group-text"
-                                            id="">Country </span></label>
-                                    <select name="parent_project"
-                                        style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                        <option value="parent_project" name="parent_project">Select Country </option>
-
-                                        <option value="demo0" name="parent_project">demo0</option>
-                                        <option value="dombivli" name="parent_project">dombivli</option>
-                                        <option value="kalyan" name="parent_project">kalyan</option>
-                                        <option value="demo3" name="parent_project">demo3</option>
-                                        <option value="demo4" name="parent_project">demo4</option>
-                                        <option value="demo5" name="parent_project">demo5</option>
-                                    </select>
-                                </div>
-                            </fieldset>
-
-                            <fieldset>
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Others:</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="">Req. Completes</span>
-                                        </div>
-                                        <input type="text" class="form-control">
-                                        <span class="input-group-text" style="margin-left: 15px;" id="">CPC/CPI $
-                                            :</span> <input type="text" class="form-control">
-
-                                    </div>
-                                    <div class="card-body" style="   margin-left: -19px;">
-                                        <div style=" margin-top: 50px;" class=" input-group">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="">LOI (Minutes.) :</span>
-                                            </div>
-                                            <input type="text" class="form-control">
-                                            <span class="input-group-text" style=" margin-left: 15px;" id="">IR
-                                                :</span> <input type="text" class="form-control">
-
-                                        </div>
-                                        <div class="card-body" style="   margin-left: -19px;">
-                                            <div style=" margin-top: 50px;" class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id=""># of
-                                                        points to award:</span>
-                                                </div>
-                                                <input type=" text" class="form-control">
-                                                <span class="input-group-text" style="margin-left: 15px;" id="">Notes
-                                                    :</span> <input type="text" class="form-control">
-                                            </div>
-                                            <label for="parent_project" name="parent_project"
-                                                style="   margin-top: 50px;">
-                                                <span class="input-group-text" id="">Max. Completes :</span></label>
-                                            <select name="parent_project"
-                                                style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                                <option value="parent_project" name="parent_project">Select Max.
-                                                    Completes :
-                                                </option>
-
-                                                <option value="0" name="parent_project">0</option>
-                                                <option value="1" name="parent_project">1</option>
-                                                <option value="2" name="parent_project">2</option>
-                                                <option value="demo3" name="parent_project">3</option>
-                                                <option value="demo4" name="parent_project">demo4</option>
-                                                <option value="demo5" name="parent_project">demo5</option>
-                                            </select>
-                                            <div class="card-body">
-                                                <div style=" margin-top: 40px;" class=" input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="">Survey Likn</span>
-                                                    </div>
-                                                    <input style="    height: 20vh;" type=" text" class="form-control">
-                                                </div>
-                                                <label for="parent_project" name="parent_project"
-                                                    style="   margin-top: 30px;">
-                                                    <span class="input-group-text" id="">Status</span></label>
-                                                <select name="parent_project"
-                                                    style=" width: 184px;height: 30px;    margin-left: 4px;">
-
-                                                    <option value="parent_project" name="parent_project">Select
-                                                        Status
-                                                    </option>
-
-                                                    <option value="demo0" name="parent_project">demo0</option>
-                                                    <option value="Tesingt" name="parent_project">Tesingt</option>
-                                                    <option value="Complete" name="parent_project">Complete</option>
-                                                    <option value="Full" name="parent_project">Full</option>
-                                                </select>
-
-                            </fieldset>
+ <fieldset>
+   <div class="card-header py-3"> <h6 class="m-0 font-weight-bold text-primary">Others:</h6> </div>
+     <div class="card-body">
+       <div class="input-group">
+         <div class="input-group-prepend">
+          <span class="input-group-text" id="">Req. Completes</span> </div>
+               <input type="text" class="form-control" value="<?php echo $row["parent_project"]; ?>">
+                  <span class="input-group-text" style="margin-left: 15px;" id="">CPC/CPI $ :</span> 
+                    <input type="text" class="form-control" value="<?php echo $row["cpc"]; ?>">
+                        </div>
+                           <div class="card-body" style="   margin-left: -19px;">
+                              <div style=" margin-top: 50px;" class=" input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="">LOI (Minutes.) :</span></div>
+                                       <input type="text" class="form-control" value="<?php echo $row["loi"]; ?>">
+                                          <span class="input-group-text" style=" margin-left: 15px;" id="">IR :</span>
+                                           <input type="text" class="form-control" value="<?php echo $row["ir"]; ?>">
+                                             </div>
+                                                 <div class="card-body" style="   margin-left: -19px;">
+                                                  <div style=" margin-top: 50px;" class="input-group">
+                                                      <div class="input-group-prepend">
+                                                    <span class="input-group-text" id=""># of points to award:</span> </div>
+                                                         <input type=" text" class="form-control" value="<?php echo $row["1"]; ?>">
+                                                             <span class="input-group-text" style="margin-left: 15px;" id="">Notes :</span>
+                                                              <input type="text" class="form-control" value="<?php echo $row["note"]; ?>">
+                                                                 </div>
+ <label for="parent_project" name="parent_project" style="margin-top: 50px;">
+    <span class="input-group-text" id="">Max. Completes :</span></label>
+        <select name="parent_project"style=" width: 184px;height: 30px;    margin-left: 4px;">
+            <option value="parent_project" name="parent_project"><?php echo $row["max_complete"]; ?></option>
+               </select>
+                 <div class="card-body">
+                    <div style=" margin-top: 40px;" class=" input-group">
+                      <div class="input-group-prepend">
+                         <span class="input-group-text" id="">Survey Likn</span> </div>
+                           <input style="height: 20vh;" type=" text" class="form-control" value="<?php echo $row["survey_link"]; ?>"></div>
+ <label for="parent_project" name="parent_project" style="   margin-top: 30px;">
+     <span class="input-group-text" id="">Status</span></label>
+          <select name="parent_project"style=" width: 184px;height: 30px;    margin-left: 4px;">
+             <option value="<?php echo $row["status"]; ?>" name="parent_project"><?php echo $row["status"]; ?> </option>
+                 </select>
+                    </fieldset>
                         </form>
                         <p style="padding-top: 1em;text-align: center;">
                             <!--                 attr name='submit' removed due to submit event failuer -->
-                            <input type='hidden' name='requestfor' id='requestfor' value='' />
                             <input type='submit' value='Save' id="save" />
                             <input type='submit' value='Clone' id='clone' />
                             <a href="#" class="limebutton">Cancel</a>
@@ -363,12 +149,7 @@ $result = mysqli_query($conn, $sql);
                                     <th>Panel</th>
                                     <th style="display: none;">Status</th>
                                     <th>Redirects</th>
-                                    <!-- 
-                            <th>Completed</th>
-                            <th>Disqualified</th> -->
-
                                     <th>IR/CPC</th>
-                                    <!-- // <th>IR</th> -->
                                     <th>Link</th>
                                 </tr>
                             </thead>
@@ -388,7 +169,6 @@ $result = mysqli_query($conn, $sql);
                                     <td> <span id="company_name_1" class="company_name_info">Internal Company</span> </td>
                                     <!-- use display none to hide -->
                                     <td style="display:none;" id="status_name_1">testing</td>
-
                                     <td>
                                         <div id='your-form-block-id'>
                                             <form action="#" method="post">
@@ -447,7 +227,7 @@ $result = mysqli_query($conn, $sql);
                 </div>
 
 
-            <?php foreach($result as $row){?>
+            
                 <section>
                     <h1>Redirects links</h1>
                     <div class="container">
@@ -458,7 +238,7 @@ $result = mysqli_query($conn, $sql);
                         </div>
                     </div>
                 </section>
-                <?php } ?>
+                
 
 
 
@@ -577,44 +357,7 @@ $result = mysqli_query($conn, $sql);
                 </tr>
             </table>
             <br />
-            <style>
-            /* prograss bar */
-
-            legend {
-                margin-bottom: 1px;
-                width: auto;
-            }
-
-            #progressbox {
-                border: 1px solid #CAF2FF;
-                padding: 1px;
-                position: relative;
-                width: 400px;
-                border-radius: 3px;
-                margin: 10px;
-                display: none;
-                text-align: left;
-            }
-
-            #progressbar {
-                height: 20px;
-                border-radius: 3px;
-                background-color: #CAF2FF;
-                width: 1%;
-            }
-
-            #statustxt {
-                top: 3px;
-                left: 50%;
-                position: absolute;
-                display: inline-block;
-                color: #FFFFFF;
-            }
-
-            .completed_link a {
-                color: #1278E0;
-            }
-            </style>
+           
             <!-- <table style="float:right;margin-top: -1.5%;width: 49%;visibility: hidden;diplay:none;" border="0"
                 class="InfoForm">
                 <tr>
@@ -735,6 +478,7 @@ $result = mysqli_query($conn, $sql);
                 }
             }
             </style>
+            <?php } ?>
 </body>
 
 </html>

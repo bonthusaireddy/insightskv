@@ -115,11 +115,11 @@ $row = mysqli_fetch_array($result);
 
         <!-- <div class="div2" style="position:relative; float:right;"> -->
         <label for="cars" style="margin-left: 114px;">Client Contact</label>
-        <select name="client_contact" style="    width: 178px;height: 30px;margin-left: 24px">
+        <select name="client_contact"  style=" width: 178px;height: 30px;margin-left: 24px">
             <option value="contact">Select Contact</option>
             <option value="" name="client_contact">Saab</option>
-            <option value="" name="client_contact">Opel</option>
-            <option value="" name="client_contact">Audi</option>
+            <option value="Opel" name="client_contact">Opel</option>
+            <option value="Audi" name="client_contact">Audi</option>
         </select>
     </p>
     <!-- </div> -->
