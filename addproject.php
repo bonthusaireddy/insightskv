@@ -151,9 +151,8 @@ $row = mysqli_fetch_array($result);
         <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;%(Must be between 1 to 100)</p>
 
         <div class="survey">
-            <label style="    margin-right: 12px;"> Survey Link :<label>
-                    <input type="text" name="survey_link"
-                        style="  height: 61px; width: 250px;    margin-left: 28px;"><br>
+            <label class="lable-1"> Survey Link :</label>
+                   <textarea name="survey_link" id="survey_link" cols="28" rows="3"></textarea><br>
         </div>
         <br>
         <div class="div2" >
@@ -183,16 +182,39 @@ $row = mysqli_fetch_array($result);
             <input type="text" name="loi" style="margin-right: -52px;">
         </div>
         <br>
-        <div class="survey" style="position:relative; float:right;left: -10px; bottom: 19vh;">
-            <label style="   margin-right: 71px;"> Note :</label>
-            <input type="text" name="note" style="height: 61px;width: 250px;    margin-right: -72px;"><br>
-        </div>
+        <div class="p-bot" >
+            <label class="bot1"  for="Address">Note</label>
+        <div class="form-group mt-3">
+                <textarea  id="note" name="note" placeholder="note" ></textarea>
+              </div>
+            </div>
     </fieldset>
     <div class="btn5">
         <input type="submit" name="addproject" value="submit" style="    margin-left: 510px;">
         <button><a href="project.php">Cancel</a></button>
     </div>
 </form>
+
+<style>
+    .p-bot{
+        width: auto;
+    position: relative;
+    float: right;
+    left: 400px;
+    bottom: 244px;
+    }
+    .bot1{
+        position: relative;
+    top: 63px;
+    right: 52px;
+    }
+    .lable-1{
+        margin-right: 12px;
+    position: relative;
+    bottom: 36px;
+    }
+
+</style>
 
 <?php
 include('includes/scripts.php');
