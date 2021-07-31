@@ -366,14 +366,9 @@ else
     echo "data entered";
     $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
     $query_run = mysqli_query($conn, $sql2);
-    foreach($query_run as $row)
-    { ?>
-    <?php echo $row['survey_link'];?>
-    <?php echo 'aasdf';?>
 
-    <?php }?>
 
-    header("location: '$surveylink'");
+    echo 'asdf';
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
