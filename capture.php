@@ -320,7 +320,7 @@
 	
 
     $pid = $_GET['pid'];
-
+    $client_resp_id = $pid;
     $gid = $_GET['gid']; //project id
     $vid = $_GET['vid']; // vendor id
 
@@ -360,7 +360,7 @@ else
 		
 	}
 
-	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$pid')";
+	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$client_resp_id')";
     if(isset($_GET['gid']) && isset($_GET['vid']) ){
         if ($conn->query($sql) === TRUE) {
             echo "data entered";
@@ -368,8 +368,11 @@ else
             $query_run = mysqli_query($conn, $sql2);
             echo 'asdf';
             foreach($query_run as $row2)
-                { ?>
-                <?php echo $row2['survey_link']; ?>
+                { $survey = $row2['survey_link'] .$client_resp_id;
+                    
+                    ?>
+                <?php echo $survey ?>
+
                 <?php } 
     }
 } 
