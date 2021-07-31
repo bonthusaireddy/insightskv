@@ -363,10 +363,10 @@ else
 	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$client_resp_id')";
     if(isset($_GET['gid']) && isset($_GET['vid']) ){
         if ($conn->query($sql) === TRUE) {
-            echo "data entered";
+            // echo "data entered";
             $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid' LIMIT 1";
             $query_run = mysqli_query($conn, $sql2);
-            echo 'asdf';
+            // echo 'asdf';
             foreach($query_run as $row2)
                 { $survey = $row2['survey_link'] .$client_resp_id;
                     ?>
