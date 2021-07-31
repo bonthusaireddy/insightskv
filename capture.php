@@ -373,8 +373,10 @@ else
                 <?php echo $survey; ?>
 
                 <?php } 
-            header('location: manageproject.php');
-            exit();
+            
+            echo "<script>window.location.href='target.php';</script>";
+            exit;
+        
             
     }
 } 
