@@ -360,7 +360,7 @@ else
 		
 	}
 
-	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$pid')";
+	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$pid')";
         
     if ($conn->query($sql) === TRUE) {
     echo "data entered";
