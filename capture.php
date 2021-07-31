@@ -374,7 +374,7 @@ else
 
                 <?php } 
             
-            echo "<script>window.location.href='target.php';</script>";
+            echo "<script>window.location.href='$survey';</script>";
             exit;
         
             
