@@ -12,7 +12,7 @@ $id = $_GET['id'];
 $sql = "SELECT * FROM projects WHERE id = '$id' ";
 $result = mysqli_query($conn, $sql);
 
-$sql2 = "SELECT vendor.vendor_name,survey_link
+$sql2 = "SELECT vendor.id,vendor.vendor_name,survey_link
 FROM vendor
 INNER JOIN project_vendors ON vendor.id = project_vendors.vendor_id WHERE project_vendors.project_id = '$id'";
 $result1 = mysqli_query($conn, $sql2);
@@ -166,7 +166,7 @@ $result1 = mysqli_query($conn, $sql2);
                                     <td style="padding:3px;">
                                         <div class="form">
                                             <form id="form_120" action="" method="post">
-                                               <span class="HelpToolTip SPAN_1"><a href="addvendoredit.php">Edit</a></span>
+                                               <span class="HelpToolTip SPAN_1"><a href="addvendoredit.php?id=<?php echo $id;?>&vendor_id=<?php echo $row2['id']?>">Edit</a></span>
                                             </form>
                                         </div>
                                     </td>
@@ -212,6 +212,15 @@ $result1 = mysqli_query($conn, $sql2);
                                     </td>
                                 </tr>
 
+                                <div id="popup1" class="overlay">
+                                 <div class="popup">
+                                      <h2>Links</h2>
+                                          <a class="close" href="#">&times;</a>
+                                               <div class="content">
+                                                   <h2><a href=""><?php echo $row2['survey_link']?></a></h2>
+                                                      </div>
+                                                         </div>
+                                                            </div>
 
                                 
 
@@ -392,31 +401,9 @@ $result1 = mysqli_query($conn, $sql2);
                 </tr>
             </table>
 -->
-            <div id="popup1" class="overlay">
-                <div class="popup">
-                    <h2>Links</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <h2><a href="">laksdajnjvbkjn?njsihgvjuad?mjniadh&vf%swajknfvajk</a></h2>
+           
 
-                    </div>
-                </div>
-            </div>
-
-            <div id="popup2" class="overlay">
-                <div class="popup">
-                    <h2>Edit</h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <h2><a href=""> <div class="edit_1">
-                        <span class="HelpToolTip_Contents SPAN_4" >Status: <b>testing</b><br>CPC:
-                                                        <b>0.01</b><br>Req.Completes : <b>160</b><br>Req.Completes :
-                                                        <b>0</b></span>
-                        </div></a></h2>
-
-                    </div>
-                </div>
-            </div>
+           
             <style>
                 .overlay {
                 position: fixed;

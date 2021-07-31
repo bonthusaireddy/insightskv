@@ -22,7 +22,7 @@ function recp(id) {
     link_type:1
     },
     success:function(response){
-        $('#Completion_link').val(response);
+        $('#completion_link').val(response);
     }
     });
   $.ajax({

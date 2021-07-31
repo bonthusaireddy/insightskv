@@ -81,17 +81,30 @@ include('includes/navbar.php');
 </p> -->
     <div id="textboxes" style="display: block">
     <h1 class="heading_company">Surveys Redirect Details</h1>
-        <label for="completion_link" style="margin-left: 187px;">Completion link:</label>
-        <input type="text" name="completion_link" style="margin-left: 26px;" />
-        <label for="disqualify_link" style="margin-left: 12px;">Disqualify link:</label>
-        <input type="text" name="disqualify_link" style="margin-left: 56px;">
-        <label for="quotafull_link" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
-        <input type="text" name="quotafull_link" style="margin-left: 42px;">
+
+        <label class="car" for="completion_link" style="margin-left: 187px;">Completion link:</label>
+        <textarea name="completion_link" id="completion_link" ></textarea>
+
+        <label class="car" for="disqualify_link" style="margin-left: 183px;">Disqualify link:</label>
+        <textarea name="disqualify_link" id="disqualify_link"></textarea>
+<div class="car2">
+        <label class="car" for="quotafull_link" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
+        <textarea name="quotafull_link" id="quotafull_link" style="margin-left: 16px;" ></textarea>
+        </div>
     </div>
+
     <input type="submit" value="Submit" name="addcompany" class="submit_btn" style="    margin-bottom: 65px; margin-top: 36px;">
 </form>
 
-
+<style>
+    .car{
+        position: relative;
+    bottom: 23px;
+    }
+    .car2{
+        margin-top: 25px;
+        }
+</style>
 
 <?php
 include('includes/scripts.php');

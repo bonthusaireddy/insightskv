@@ -104,16 +104,16 @@ if(isset($_REQUEST['id']))
     </p>
     <hr class="solid">
   
-    <div id="textboxes" style="display: none">
+    <div id="textboxes" style="">
         <h1 class="heading_company">Surveys Redirect Details</h1>
         <label for="completionlink" style="margin-left: 187px;">Completion link:</label>
-        <input type="text" name="edit_completionlink" value="<?php echo $row['completionlink'] ?>"
+        <input type="text" name="edit_completion_link" value="<?php echo $row['completion_link'] ?>"
             style="margin-left: 26px;" />
         <label for="disqualifylink" style="margin-left: 12px;">Disqualify link:</label>
-        <input type="text" name="edit_disqualifylink" value="<?php echo $ow['disqualifylink'] ?>"
+        <input type="text" name="edit_disqualify_link" value="<?php echo $ow['disqualify_link'] ?>"
             style="margin-left: 56px;">
         <label for="quotafulllink" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
-        <input type="text" name="edit_quotafulllink" value="<?php echo $row['quotafulllink'] ?>"
+        <input type="text" name="edit_quotafull_link" value="<?php echo $row['quotafull_link'] ?>"
             style="margin-left: 42px;">
     </div>
     <a href="companytype.php" class="btn btn-danger" style="margin-left: 409px;"> CANCEL </a>
