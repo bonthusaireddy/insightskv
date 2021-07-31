@@ -369,11 +369,12 @@ else
             echo 'asdf';
             foreach($query_run as $row2)
                 { $survey = $row2['survey_link'] .$client_resp_id;
-                    header('location: manageproject.php');
                     ?>
                 <?php echo $survey ?>
 
                 <?php } 
+            header('location: manageproject.php');
+            
     }
 } 
 else {
