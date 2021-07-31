@@ -364,12 +364,12 @@ else
     if(isset($_GET['gid']) && isset($_GET['vid']) ){
         if ($conn->query($sql) === TRUE) {
             echo "data entered";
-            $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
+            $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid' LIMIT 1";
             $query_run = mysqli_query($conn, $sql2);
             echo 'asdf';
-            foreach($query_run as $row)
+            foreach($query_run as $row2)
                 { ?>
-                <?php echo 'entered in for loop'; ?>
+                <?php echo $row2['survey_link']; ?>
                 <?php } 
     }
 } 
