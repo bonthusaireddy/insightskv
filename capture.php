@@ -362,14 +362,18 @@ else
 
 	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$pid')";
     if(isset($_POST['gid']) && isset($_POST['vid']) ){
-    if ($conn->query($sql) === TRUE) {
-    echo "data entered";
-    $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
-    $query_run = mysqli_query($conn, $sql2);
-
-
-    echo 'asdf';
-}} else {
+        if ($conn->query($sql) === TRUE) {
+            echo "data entered";
+            $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
+            $query_run = mysqli_query($conn, $sql2);
+            echo 'asdf';
+            foreach($query_run as $row)
+                { ?>
+                <?php echo 'entered in for loop'; ?>
+                <?php } 
+    }
+} 
+else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
