@@ -252,12 +252,39 @@ $result1 = mysqli_query($conn, $sql2);
                     <h1>Redirects links</h1>
                     <div class="container">
                         <div class="row">
-                            <div><?php echo $row['completion_link'] ?> <button>Copy</button></div>
-                            <div><?php echo $row['disqualify_link'] ?> <button>Copy</button></div>
-                            <div><?php echo $row['quotafull_link'] ?> <button>Copy</button></div>
+                            <div><div id ="div"><?php echo $row['completion_link'] ?></div> <button id='copy'>Copy</button></div>
+                            <div><?php echo $row['disqualify_link'] ?> <button >Copy</button></div>
+                            <div><?php echo $row['quotafull_link'] ?> <button >Copy</button></div>
                         </div>
                     </div>
                 </section>
+
+
+                <script>
+let copyBtn = document.getElementById('copy');
+
+copyBtn.addEventListener('click', copyText);
+
+function copyText(ev){
+  console.log("hi");
+  let div = document.getElementById('div');
+  let text = div.innerText;
+  let textArea  = document.createElement('textarea');
+  textArea.width  = "1px"; 
+  textArea.height = "1px";
+  textArea.background =  "transparents" ;
+  textArea.value = text;
+  document.body.append(textArea);
+  textArea.select();
+  document.execCommand('copy');   //No i18n
+  document.body.removeChild(textArea);
+}
+
+</script>
+
+
+
+
                 
 
 
