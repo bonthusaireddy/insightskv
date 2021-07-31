@@ -368,8 +368,8 @@ else
     $query_run = mysqli_query($conn, $sql2);
     foreach($query_run as $row)
     { ?>
-    <?php echo $row['survey_link']?>
-    <?php echo 'aasdf'?>
+    <?php echo $row['survey_link'];?>
+    <?php echo 'aasdf';?>
 
     <?php }?>
 
