@@ -91,7 +91,7 @@ function recp(id) {
     </p>
     <p class="textbox_addcompany">
         <label for="Address">Max. Completes :</label>&nbsp;&nbsp;
-        <input type="text" name="max_complete" id="Address_three" style="margin-left: 35px;" value="<?php echo $row['max_complete'] ?>">
+        <input type="text" name="max_complete" id="Address_three" value="<?php echo $row['max_complete'] ?>">
         
     </p>
     </hr>
@@ -99,19 +99,19 @@ function recp(id) {
     <h1 class="heading_company">  Surveys Redirect Details</h1>
   
     <p class="textbox_addcompany">
-        <label for="Address">Max. Redirects:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-         <input style="margin-left: 36px;" type="text" name="max_redirects" id="Address_three" value="<?php echo $row['max_redirects'] ?>">
+        <label for="Address" style="position: relative; bottom: 49px;">Max. Redirects:</label>
+         <input style="margin-left: 36px; bottom: 49px; position: relative;" type="text" name="max_redirects" id="Address_three" value="<?php echo $row['max_redirects'] ?>">
 
-        <label for="Address" style="margin-left: 41px;">Completion link :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="text" name="completion_link" id="Completion_link" value="<?php echo $row['completion_link'] ?>" style="height: 81px;margin-left: 44px;">
+        <label for="Address" style=" margin-left: 119px;position: relative;bottom: 35px;">Completion link :</label>
+        <textarea name="quotafull_link" id="quotafull_link" cols="30" rows="3"><?php echo $row['quotafull_link'] ?></textarea>
       
     </p>
     <p class="textbox_addcompany1">
-        <label for="Address">Disqualify link :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="disqualify_link" id="disqualify_link" value="<?php echo $row['disqualify_link'] ?>" style="margin-left: 9px;height: 81px;">
+        <label for="Address" style="bottom: 35px; position: relative;">Disqualify link :</label>
+        <textarea name="quotafull_link" id="quotafull_link" cols="30" rows="3"><?php echo $row['quotafull_link'] ?></textarea>
 
-        <label for="Address" style="    margin-left: 38px;">Quotafull link:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="text" name="quotafull_link" id="quotafull_link" value="<?php echo $row['quotafull_link'] ?>" style="margin-left: 37px;height: 81px;">
+        <label for="Address" style=" bottom: 35px; position: relative;  margin-left: 38px;">Quotafull link:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <textarea name="quotafull_link" id="quotafull_link" cols="30" rows="3"><?php echo $row['quotafull_link'] ?></textarea>
     </p>
 
     
@@ -123,9 +123,9 @@ function recp(id) {
          </select>
        
         <label for="notes" style="margin-left: 36px;">Notes :</label>
-        <input type="text" name="notes" value="<?php echo $row['notes'] ?>" style="margin-left: 130px;">
+        <input type="text" name="notes" value="<?php echo $row['notes'] ?>" >
        
-        <a href="editproject.php" class="btn btn-danger" style="margin-left: 409px;"> CANCEL </a>
+        <a href="editproject.php" class="btn btn-danger" style="margin-left: 520px;"> CANCEL </a>
     <input type="submit" name="add_project_vendors" value="Submit" class="btn btn-primary" style="    margin-bottom: 65px; margin-top: 64px;width: 100px;">
 </form>
 

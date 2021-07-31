@@ -106,21 +106,39 @@ if(isset($_REQUEST['id']))
   
     <div id="textboxes" style="">
         <h1 class="heading_company">Surveys Redirect Details</h1>
-        <label for="completionlink" style="margin-left: 187px;">Completion link:</label>
-        <input type="text" name="edit_completion_link" value="<?php echo $row['completion_link'] ?>"
-            style="margin-left: 26px;" />
-        <label for="disqualifylink" style="margin-left: 12px;">Disqualify link:</label>
-        <input type="text" name="edit_disqualify_link" value="<?php echo $ow['disqualify_link'] ?>"
-            style="margin-left: 56px;">
-        <label for="quotafulllink" style="margin-left: 184px;margin-top: 17px;">Quotafull link:</label>
-        <input type="text" name="edit_quotafull_link" value="<?php echo $row['quotafull_link'] ?>"
-            style="margin-left: 42px;">
+        <label  class="car4" for="completion_link">Disqualify link:</label>
+        <textarea name="completion_link" id="completion_link" cols="30" rows="2"><?php echo $row['completion_link'] ?></textarea>
+
+        <label  class="car3" for="disqualify_link" style="margin-left: 70px;">Disqualify link:</label>
+        <textarea name="disqualify_link" id="disqualify_link" cols="30" rows="2"><?php echo $row['disqualify_link'] ?></textarea>
+
+        <label class="car3" for="quotafulllink" >Quotafull link:</label>
+        <textarea name="quotafull_link" id="quotafull_link" cols="30" rows="2"><?php echo $row['quotafull_link'] ?></textarea>
+
     </div>
     <a href="companytype.php" class="btn btn-danger" style="margin-left: 409px;"> CANCEL </a>
     <input type="submit" name="updatebtn" value="update" class="btn btn-primary"
         style="    margin-bottom: 65px; margin-top: 63px; margin-left: 15px;">
 
 </form>
+
+<style>
+    .car3{
+        margin-left: 400px; 
+        margin-top: 90px;
+         position: 
+         relative;
+         bottom: 19px;
+    }
+    .car4{
+        margin-left: 160px;
+         
+        margin-top: 90px;
+         position: 
+         relative;
+         bottom: 19px;
+    }
+</style>
 <?php
    } 
   }

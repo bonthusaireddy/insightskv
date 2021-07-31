@@ -122,10 +122,12 @@ $result1 = mysqli_query($conn, $sql2);
                     <div style=" margin-top: 40px;" class=" input-group">
                       <div class="input-group-prepend">
                          <span class="input-group-text" id="">Survey Likn</span> </div>
-                           <input style="height: 20vh;" type=" text" name="survey_link" class="form-control" value="<?php echo $row["survey_link"]; ?>"></div>
+
+                          <textarea name="" id="" cols="60" rows="5"  value="<?php echo $row["survey_link"]; ?>"><?php echo $row["survey_link"]; ?></textarea>
+
  <label for="parent_project" name="parent_project" style="   margin-top: 30px;">
      <span class="input-group-text" id="">Status</span></label>
-          <select name="status"style=" width: 184px;height: 30px;    margin-left: 4px;">
+          <select name="status"style=" width: 184px;height: 30px;  margin-top: 30px;   margin-left: 4px;">
              <option value="<?php echo $row["status"]; ?>" name="status"><?php echo $row["status"]; ?> </option>
                  </select>
                     </fieldset>

@@ -113,7 +113,7 @@ function recp(id) {
         <div class="p-bot" style="width: auto; position: relative; float: right;right: 174px; bottom: 123px;">
             <label class="bot" for="Address">Quotafull link:</label>
         <div class="form-group mt-3">
-                <textarea  class="form-control" id="quotafull_link" name="quotafull_link" placeholder="Link" ></textarea>
+                <textarea  class="form-control" id="quotafull_link"  name="quotafull_link" placeholder="Link" ></textarea>
               </div>
             </div>
         
@@ -134,12 +134,12 @@ function recp(id) {
             
             </select>
        
-            <div class="p-bot" style="width: auto; position: relative; float: right;right: 174px; bottom: 60px;">
+            <div class="p-bot" style="width: auto; position: relative;float: right;">
             <label class="bot1"  for="Address">Note</label><input type="text" name="note" id="note">
         
             </div>
        
-        <a href="editproject.php" class="btn btn-danger" style="margin-left: 409px;"> CANCEL </a>
+        <a href="editproject.php" class="btn btn-danger" style="margin-left: 520px;"> CANCEL </a>
     <input type="submit" name="add_project_vendors" value="Submit" class="btn btn-primary" style="    margin-bottom: 65px; margin-top: 64px;width: 100px;">
 </form>
 
