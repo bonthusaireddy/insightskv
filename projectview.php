@@ -252,32 +252,21 @@ $result1 = mysqli_query($conn, $sql2);
                     <h1>Redirects links</h1>
                     <div class="container">
                         <div class="row">
-                            <div><div id ="div"><?php echo $row['completion_link'] ?></div> <button id='copy'>Copy</button></div>
-                            <div><?php echo $row['disqualify_link'] ?> <button >Copy</button></div>
-                            <div><?php echo $row['quotafull_link'] ?> <button >Copy</button></div>
+                            <div><div id="p1"><?php echo $row['completion_link'] ?></div> <button onclick="copyToClipboard('#p1')">Copy</button></div>
+                            <div><div id="p2"><?php echo $row['disqualify_link'] ?> </div><button onclick="copyToClipboard('#p2')">Copy</button></div>
+                            <div><div id="p3"><?php echo $row['quotafull_link'] ?> </div><button onclick="copyToClipboard('#p3')">Copy</button></div>
                         </div>
                     </div>
                 </section>
 
 
                 <script>
-let copyBtn = document.getElementById('copy');
-
-copyBtn.addEventListener('click', copyText);
-
-function copyText(ev){
-  console.log("hi");
-  let div = document.getElementById('div');
-  let text = div.innerText;
-  let textArea  = document.createElement('textarea');
-  textArea.width  = "1px"; 
-  textArea.height = "1px";
-  textArea.background =  "transparents" ;
-  textArea.value = text;
-  document.body.append(textArea);
-  textArea.select();
-  document.execCommand('copy');   //No i18n
-  document.body.removeChild(textArea);
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
 }
 
 </script>
