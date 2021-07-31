@@ -361,7 +361,7 @@ else
 	}
 
 	$sql = "INSERT INTO surveys(project_id,vendor_id,status,ip_address,vendor_resp_id,client_resp_id) VALUES ('$gid','$vid','start','$ip','$pid','$pid')";
-    if(isset($_POST['gid']) && isset($_POST['vid']) ){
+    if(isset($_GET['gid']) && isset($_GET['vid']) ){
         if ($conn->query($sql) === TRUE) {
             echo "data entered";
             $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
