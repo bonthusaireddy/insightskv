@@ -63,21 +63,21 @@ if(isset($_REQUEST['id']))
     </p>
     <p class="textbox_addcompany">
         <label for="Address">Country:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-        <select name="edit_country" class="countries" id="countryId"
-            style="    width: 188px;height: 33px; margin-left: 36px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <option value="">Select Country</option>
+        <select name="edit_country" class="countries" id="#"
+            style=" width: 188px;height: 33px; margin-left: 36px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <option value=""><?php echo $row['country'] ?></option>
         </select>&nbsp;&nbsp;&nbsp;
         <label for="Address" style="margin-left: 41px;">State:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <select name="edit_state" class="states" id="stateId"
-            style="    width: 188px;height: 33px;     margin-left: 66px;">
-            <option value="">Select State</option>
+            style=" width: 188px;height: 33px; margin-left: 66px;">
+            <option value=""><?php echo $row['state'] ?></option>
         </select>
     </p>
     <p class="textbox_addcompany1">
         <label for="Address">City:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <select name="edit_city" class="cities" id="cityId"
             style="    width: 188px;height: 33px;margin-left: 37px;">&nbsp;&nbsp;&nbsp;&nbsp;
-            <option value="">Select City</option>
+            <option value=""><?php echo $row['city'] ?></option>
         </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         <label for="Address"

@@ -166,7 +166,7 @@ $result1 = mysqli_query($conn, $sql2);
                                     <td style="padding:3px;">
                                         <div class="form">
                                             <form id="form_120" action="" method="post">
-                                               <span class="HelpToolTip SPAN_1"><a href="#popup2">Edit</a></span>
+                                               <span class="HelpToolTip SPAN_1"><a href="addvendoredit.php">Edit</a></span>
                                             </form>
                                         </div>
                                     </td>
