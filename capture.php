@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Complete</title>
+	<title>start</title>
     <link rel="shortcut icon" href="flogo.png">
     
     <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
@@ -370,10 +370,11 @@ else
             foreach($query_run as $row2)
                 { $survey = $row2['survey_link'] .$client_resp_id;
                     ?>
-                <?php echo $survey ?>
+                <?php echo $survey; ?>
 
                 <?php } 
             header('location: manageproject.php');
+            exit();
             
     }
 } 
