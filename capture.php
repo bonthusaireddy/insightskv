@@ -364,7 +364,7 @@ else
         
     if ($conn->query($sql) === TRUE) {
     echo "data entered";
-    $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id where surveys.project_id = '$gid'";
+    $sql2 = "SELECT survey_link FROM surveys INNER JOIN projects ON surveys.project_id = projects.id WHERE surveys.project_id = '$gid'";
     $query_run = mysqli_query($conn, $sql2);
     foreach($query_run as $row)
     { ?>
