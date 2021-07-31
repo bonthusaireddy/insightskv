@@ -316,7 +316,7 @@
 
 
 <?php
- 	include('includes/imp/conn.php')
+ 	include('includes/imp/conn.php');
 	
 
     $pid = $_GET['pid'];
