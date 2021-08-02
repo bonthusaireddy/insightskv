@@ -64,7 +64,7 @@ $row = mysqli_fetch_array($result);
         <input type="text" name="project_name" style="margin-left: 16px;">
 
         <label for="project_friendly_name" style="margin-left: 107px;">Project Friendly Name:</label>
-        <input type="text" name="project_friendly_name" style="margin-left: 16px;">
+        <input id="project_friendly_name" type="text" name="project_friendly_name" style="margin-left: 16px;">
     </p>
 
 
