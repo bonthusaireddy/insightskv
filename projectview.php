@@ -280,9 +280,47 @@ $result1 = mysqli_query($conn, $sql2);
                                     <td>
                                         <div id='your-form-block-id'>
                                             <form action="#" method="post">
-                                                <a class="class-link" href="#">Redirects 1/0</a>
+                                                <a class="class-link" href="#popup5">Redirects 1/0</a>
                                             </form>
                                         </div>
+
+                                        <!--redirect Pop-up-->
+                                     <div id="popup5" class="overlay">
+                                        <div class="popup5">
+                                            <h2>Links <a class="close" href="#">&times;</a></h2>
+                                             <div class="content">
+                                                <div class="container">
+                                                <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th">
+                                                    <th> ID</th>
+                                                    <th>Status</th>
+                                                    <th>previous Status</th>
+                                                    <th>Reason</th>
+                                                    <th>Resp Id</th>
+                                                    <th>Time</th>
+                                                    <th>IP</th>
+                                                     </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                     <tr>
+                                                   <td>232</td>
+                                                   <td>complete</td>
+                                                   <td>Hold</td>
+                                                   <td>No</td>
+                                                   <td>100</td>
+                                                   <td>2/4/2021</td>
+                                                   <td>10.10.10</td>
+                                                 </tr>
+                                                 </tbody>
+                                                 </table> 
+                                                 </div>
+                                              </div>
+                                              </div>
+                                           </div>
+                                         <!--redirect Pop-up-->
+
+
                                         <div id='your-form-block-id' class='completed_link'>
                                             <form action="#" method="post">
                                                 <a class="class-link" href="#">Completed</a> <br>
@@ -291,9 +329,47 @@ $result1 = mysqli_query($conn, $sql2);
                                         </div>
                                         <div id='your-form-block-id'>
                                             <form action="#" method="post">
-                                              <a class="class-link" href="#">Disqualified 1</a>
+                                              <a class="class-link" href="#popup6">Disqualified 1</a>
                                             </form>
                                         </div>
+
+
+                                        <!--DIsqulify Pop-up-->
+                                        <div id="popup6" class="overlay">
+                                        <div class="popup5">
+                                            <h2>Links <a class="close" href="#">&times;</a></h2>
+                                             <div class="content">
+                                                <div class="container">
+                                                <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th">
+                                                    <th> ID</th>
+                                                    <th>Status</th>
+                                                    <th>previous Status</th>
+                                                    <th>Reason</th>
+                                                    <th>Resp Id</th>
+                                                    <th>Time</th>
+                                                    <th>IP</th>
+                                                     </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                     <tr>
+                                                   <td>1</td>
+                                                   <td>complete</td>
+                                                   <td>Hold</td>
+                                                   <td>No</td>
+                                                   <td>2</td>
+                                                   <td>21/4/2021</td>
+                                                   <td>10.12.10.10</td>
+                                                 </tr>
+                                                 </tbody>
+                                                 </table> 
+                                                 </div>
+                                              </div>
+                                              </div>
+                                           </div>
+                                           <!--End Pop-Up-->
+
                                         <div id='your-form-block-id'>
                                             <form  action="#" method="post">
                                                 <a class="class-link" href="#">QF :</a> 
@@ -535,11 +611,13 @@ function copyToClipboard(element) {
                 transition: opacity 500ms;
                 visibility: hidden;
                 opacity: 0;
+                cursor: pointer;
             }
 
             .overlay:target {
                 visibility: visible;
                 opacity: 1;
+                overflow: scroll;
             }
 
             .popup {
@@ -551,6 +629,18 @@ function copyToClipboard(element) {
                 position: relative;
                 transition: all 5s ease-in-out;
             }
+            .popup5 {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 80%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.th{
+    text-align: center;
+}
 
             .popup h2 {
                 margin-top: 0;
