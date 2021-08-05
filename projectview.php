@@ -287,10 +287,31 @@ $result1 = mysqli_query($conn, $sql2);
                                         <!--redirect Pop-up-->
                                      <div id="popup5" class="overlay">
                                         <div class="popup5">
-                                            <h2>Links <a class="close" href="#">&times;</a></h2>
+                                            <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                                              <div class="content">
                                                 <div class="container">
+                                                    <br>
+                                                    <div class="download">
+                                                        <button class="download">Download</button>
+                                                    </div>
+                                                    <br>
                                                 <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th1">
+                                                    <th><span class="show">Show</span><select name="country" class="form-control">
+                                                     <option value="50" name="show_val">50</option>
+                                                     <option value="100" name="country">100</option>
+                                                     <option value="500" name="country">500</option>
+                                                     <option value="10000" name="country">1000</option>
+                                                     </select></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th><span class="show">Search</span> <input type="text"></th>
+                                                    <th><input class="pop_up_btn" value="Search" type="button"></th>
+                                                     </tr>
+                                                     </thead>
                                                 <thead>
                                                   <tr class="th">
                                                     <th> ID</th>
@@ -302,8 +323,9 @@ $result1 = mysqli_query($conn, $sql2);
                                                     <th>IP</th>
                                                      </tr>
                                                      </thead>
+
                                                      <tbody>
-                                                     <tr>
+                                                     <tr class="tr">
                                                    <td>232</td>
                                                    <td>complete</td>
                                                    <td>Hold</td>
@@ -313,6 +335,7 @@ $result1 = mysqli_query($conn, $sql2);
                                                    <td>10.10.10</td>
                                                  </tr>
                                                  </tbody>
+                                                 
                                                  </table> 
                                                  </div>
                                               </div>
@@ -323,24 +346,40 @@ $result1 = mysqli_query($conn, $sql2);
 
                                         <div id='your-form-block-id' class='completed_link'>
                                             <form action="#" method="post">
-                                                <a class="class-link" href="#">Completed</a> <br>
+                                                <a class="class-link" href="#popup6">Completed</a> <br>
                                                 <a class="class-link" href="#"> 0/160</a>
                                             </form>
                                         </div>
-                                        <div id='your-form-block-id'>
-                                            <form action="#" method="post">
-                                              <a class="class-link" href="#popup6">Disqualified 1</a>
-                                            </form>
-                                        </div>
 
 
-                                        <!--DIsqulify Pop-up-->
+                                        <!--Completed Pop-up-->
                                         <div id="popup6" class="overlay">
                                         <div class="popup5">
-                                            <h2>Links <a class="close" href="#">&times;</a></h2>
+                                        <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                                              <div class="content">
                                                 <div class="container">
+                                                    <br>
+                                                    <div class="download">
+                                                        <button class="download">Download</button>
+                                                    </div>
+                                                    <br>
                                                 <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th1">
+                                                    <th><span class="show">Show</span><select name="country" class="form-control">
+                                                     <option value="50" name="show_val">50</option>
+                                                     <option value="100" name="country">100</option>
+                                                     <option value="500" name="country">500</option>
+                                                     <option value="10000" name="country">1000</option>
+                                                     </select></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th><span class="show">Search</span> <input type="text"></th>
+                                                    <th><input class="pop_up_btn" value="Search" type="button"></th>
+                                                     </tr>
+                                                     </thead>
                                                 <thead>
                                                   <tr class="th">
                                                     <th> ID</th>
@@ -353,7 +392,73 @@ $result1 = mysqli_query($conn, $sql2);
                                                      </tr>
                                                      </thead>
                                                      <tbody>
-                                                     <tr>
+                                                     <tr class="tr">
+                                                   <td>1</td>
+                                                   <td>complete</td>
+                                                   <td>Hold</td>
+                                                   <td>No</td>
+                                                   <td>2</td>
+                                                   <td>21/4/2021</td>
+                                                   <td>10.12.10.10</td>
+                                                 </tr>
+                                                 </tbody>
+                                                 </table> 
+                                                 </div>
+                                              </div>
+                                              </div>
+                                           </div>
+                                           <!--End Pop-Up-->
+                                        
+
+
+                                        <div id='your-form-block-id'>
+                                            <form action="#" method="post">
+                                              <a class="class-link" href="#popup7">Disqualified 1</a>
+                                            </form>
+                                        </div>
+
+
+                                        <!--DIsqulify Pop-up-->
+                                        <div id="popup7" class="overlay">
+                                        <div class="popup5">
+                                        <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
+                                             <div class="content">
+                                                <div class="container">
+                                                    <br>
+                                                    <div class="download">
+                                                        <button class="download">Download</button>
+                                                    </div>
+                                                    <br>
+                                                <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th1">
+                                                    <th><span class="show">Show</span><select name="country" class="form-control">
+                                                     <option value="50" name="show_val">50</option>
+                                                     <option value="100" name="country">100</option>
+                                                     <option value="500" name="country">500</option>
+                                                     <option value="10000" name="country">1000</option>
+                                                     </select></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th><span class="show">Search</span> <input type="text"></th>
+                                                    <th><input class="pop_up_btn" value="Search" type="button"></th>
+                                                     </tr>
+                                                     </thead>
+                                                <thead>
+                                                  <tr class="th">
+                                                    <th> ID</th>
+                                                    <th>Status</th>
+                                                    <th>previous Status</th>
+                                                    <th>Reason</th>
+                                                    <th>Resp Id</th>
+                                                    <th>Time</th>
+                                                    <th>IP</th>
+                                                     </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                     <tr class="tr">
                                                    <td>1</td>
                                                    <td>complete</td>
                                                    <td>Hold</td>
@@ -372,10 +477,69 @@ $result1 = mysqli_query($conn, $sql2);
 
                                         <div id='your-form-block-id'>
                                             <form  action="#" method="post">
-                                                <a class="class-link" href="#">QF :</a> 
+                                                <a class="class-link" href="#popup8">QF :</a> 
                                                 <a class="class-link" href="#">0</a>
                                             </form>
                                         </div>
+
+                                        
+                                        <!--Quota-Full Pop-up-->
+                                        <div id="popup8" class="overlay">
+                                        <div class="popup5">
+                                        <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
+                                             <div class="content">
+                                                <div class="container">
+                                                    <br>
+                                                    <div class="download">
+                                                        <button class="download">Download</button>
+                                                    </div>
+                                                    <br>
+                                                <table class="table table-bordered">
+                                                <thead>
+                                                  <tr class="th1">
+                                                    <th><span class="show">Show</span><select name="country" class="form-control">
+                                                     <option value="50" name="show_val">50</option>
+                                                     <option value="100" name="country">100</option>
+                                                     <option value="500" name="country">500</option>
+                                                     <option value="10000" name="country">1000</option>
+                                                     </select></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th><span class="show">Search</span> <input type="text"></th>
+                                                    <th><input class="pop_up_btn" value="Search" type="button"></th>
+                                                     </tr>
+                                                     </thead>
+                                                <thead>
+                                                  <tr class="th">
+                                                    <th> ID</th>
+                                                    <th>Status</th>
+                                                    <th>previous Status</th>
+                                                    <th>Reason</th>
+                                                    <th>Resp Id</th>
+                                                    <th>Time</th>
+                                                    <th>IP</th>
+                                                     </tr>
+                                                     </thead>
+                                                     <tbody>
+                                                     <tr class="tr">
+                                                   <td>1</td>
+                                                   <td>complete</td>
+                                                   <td>Hold</td>
+                                                   <td>No</td>
+                                                   <td>2</td>
+                                                   <td>21/4/2021</td>
+                                                   <td>10.12.10.10</td>
+                                                 </tr>
+                                                 </tbody>
+                                                 </table> 
+                                                 </div>
+                                              </div>
+                                              </div>
+                                           </div>
+                                           <!--End Pop-Up-->
+
                                     </td>
                                     <td style=color:#1278E0; id="vendor_cpc_1"> IR : 0.00 % <br />N.A </td> 
 
@@ -662,11 +826,30 @@ function copyToClipboard(element) {
             .popup .close:hover {
                 color: #06D85F;
             }
+            .pop_up_btn{
+                width: 80px;
+                 border-radius: 14px;
+            }
+            .download{
+                border-radius: 11px;
+              
+            }
+            .th1{
+                background-color: lightskyblue;
+            }
+            .tr{
+                text-align: center;
+            }
+           
 
             .popup .content {
                 max-height: 30%;
                 overflow: auto;
             }
+            .show{
+                color: black;
+            }
+           
 
             @media screen and (max-width: 700px) {
                 .box {
