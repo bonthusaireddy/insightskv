@@ -80,7 +80,7 @@ $mysqli->close();
                                 </form>
                             </td>
                             <td>
-                                <form action="vendorview.php" method="get">
+                                <form action="vendoredit.php" method="get">
                                     <input type="hidden" name="id" value="<?php echo $rows['id'];?>">
                                     <button type="submit" class="btn btn-danger">VIEW </button>
                                 </form>

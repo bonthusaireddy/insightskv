@@ -73,8 +73,8 @@ $mysqli->close();
                                     <button type="submit" name="edit_btns" class="btn btn-success"> EDIT</button>
                                 </form> -->
                         
-                                <form action="projectedit.php" method="get">
-                                    <input type="hidden" name="edit_id" value="<?php echo $row['id'];?>">
+                                <form action="projectview.php" method="get">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                     <button type="submit" class="btn btn-success"> EDIT</button>
                                 </form>
                             
