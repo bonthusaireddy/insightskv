@@ -547,7 +547,7 @@ $result1 = mysqli_query($conn, $sql2);
                                         <div class='end_point_link' id='#'>
                                             <form action="#" method="post">
                                                 <div class="box">
-                                                    <a class="button" href="#popup1">link</a>
+                                                    <a class="button" href="#popup<?php echo $row2['id']?>">link</a>
                                                 </div>
                                               <a class="class-link" href="#"> <input type='image' src='#' alt=''/></a>
                                             </form>
@@ -555,7 +555,7 @@ $result1 = mysqli_query($conn, $sql2);
                                     </td>
                                 </tr>
 
-                                <div id="popup1" class="overlay">
+                                <div id="popup<?php echo $row2['id']?>" class="overlay">
                                  <div class="popup">
                                       <h2>Links</h2>
                                           <a class="close" href="#">&times;</a>
