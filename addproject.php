@@ -24,7 +24,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Project name:</span>
-    			        <input class="form-control"type="text" name="project_name"/>
+    			        <input class="form-control"type="text" name="project_name" require/>
     		        </div>  
                 </div>
                 <div class="col-sm-6">

@@ -138,9 +138,10 @@ $result1 = mysqli_query($conn, $sql2);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Country</span>
-                                <select name="country" class="form-control">
-                                     <option value="parent_project" name="country"><?php echo $row["country"]; ?> </option>
-                                 </select>
+               <input type="text" name='country' value="<?php echo $row['country']?>" >
+                                <!-- <select name="country" class="form-control">
+                                     <option value="<?php echo $row["country"]; ?>" name="country"><?php echo $row["country"]; ?> </option>
+                                 </select> -->
     		        </div>  
                 </div>
 	       </div>
@@ -207,9 +208,10 @@ $result1 = mysqli_query($conn, $sql2);
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Max. Completes </span>
-                         <select name="max_complete" class="form-control">
+            <input type="text" name="max_complete" value="<?php echo $row["max_complete"]; ?>" class="form-control">
+                         <!-- <select name="max_complete" class="form-control">
                             <option value="parent_project" name="max_complete"><?php echo $row["max_complete"]; ?></option>
-                         </select>
+                         </select> -->
     		        </div>
                 </div>
 	       </div>
@@ -230,8 +232,13 @@ $result1 = mysqli_query($conn, $sql2);
            <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Status </span>
-                             <select name="status" class="form-control">
-                                 <option value="<?php echo $row["status"]; ?>" name="status"><?php echo $row["status"]; ?> </option>
+                   <select name="status" class="form-control">
+                     <option value="<?php echo $row["status"]; ?>" name="status"><?php echo $row["status"]; ?> </option>
+                     <option value="Testing" name="status">Testing</option>
+                     <option value="Running" name="status">Running</option>
+                     <option value="Hold" name="status">Hold</option>
+                     <option value="Complete" name="status">Complete</option>
+                     <option value="Closed" name="status">Closed</option>
                              </select>
     		        </div>
                 </div>
