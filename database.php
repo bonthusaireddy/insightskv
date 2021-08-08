@@ -79,14 +79,14 @@ if(isset($_POST['addproject']) ) {
     $country = $_REQUEST['country'];
     $client_contact = $_REQUEST['client_contact'];
     $sales_person = $_REQUEST['sales_person'];
-    $req_complete = $_REQUEST['req_completes'];
+    $req_complete = $_REQUEST['req_complete'];
     $cpc = $_REQUEST['cpc'];
     $ir = $_REQUEST['ir'];
     $survey_link = $_REQUEST['survey_link'];
     $status = $_REQUEST['status'];
     $max_complete = $_REQUEST['max_complete'];
     $loi = $_REQUEST['loi'];
-    $note = $_REQUEST['note'];
+    $note = '0'; //$_REQUEST['note'];
     $points_to_award = '1';
     $id = get_id_of_project($conn);
     $completion_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=111';
@@ -99,8 +99,8 @@ if(isset($_POST['addproject']) ) {
     } 
     else{
 			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
-		}
-    
+		}    
+}
     function get_id_of_project($conn){
       $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";
       $result = mysqli_query($conn, $sql);
@@ -109,7 +109,6 @@ if(isset($_POST['addproject']) ) {
         return $id + 1;
       }
     }
-}
 
 if(isset($_POST['add_project_vendors'])){
   // $id = 
@@ -228,5 +227,31 @@ if(isset($_POST['edit_add_project_vendors'])){
 		}
 }
 
+if(isset($_POST['editprojectview'])){
+    $id = $_REQUEST['id'];
+    $project_name = $_REQUEST['project_name'];
+    $project_friendly_name = $_REQUEST['project_friendly_name'];
+    $project_manager = $_REQUEST['project_manager'];
+    $country = $_REQUEST['country'];
+    $client_contact = $_REQUEST['client_contact'];
+    $sales_person = $_REQUEST['sales_person'];
+    $req_complete = $_REQUEST['req_complete'];
+    $cpc = $_REQUEST['cpc'];
+    $ir = $_REQUEST['ir'];
+    $survey_link = $_REQUEST['survey_link'];
+    $status = $_REQUEST['status'];
+    $max_complete = $_REQUEST['max_complete'];
+    $loi = $_REQUEST['loi'];
+    $note = $_REQUEST['note'];
+    $points_to_award = $_REQUEST['points_to_award'];
+    $sql = "update projects set project_name='$project_name', project_friendly_name='$project_friendly_name', client_contact='$client_contact', project_manager='$project_manager', sales_person='$sales_person', country = '$country', req_complete = '$req_complete',cpc = '$cpc',loi = '$loi',ir = '$ir',points_to_award = '$points_to_award',note = '$note',max_complete = '$max_complete',survey_link='$survey_link',status = '$status' where id='$id'";
+    if(mysqli_query($conn, $sql)){
+     $_POST = array();
+     echo 'eeditprojectview <br>';
+     header("refresh:1; url=projectview.php?id=$id");
+		  }else{
+			  echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
+		  }
+}
 echo 'Last';
 ?>

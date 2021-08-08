@@ -37,8 +37,9 @@ $result1 = mysqli_query($conn, $sql2);
     <div class='rightcolumn'>
               <div>
                  <div style="width: 61%; float: left;border: groove;">
-                    <form id="newprojectform" enableClientValidation="1" action="#" method="post">
-                        <form action="post">
+                    <form id="newprojectform" enableClientValidation="1" action="database.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $row['id'] ?>"/>
+                        
                      <div class="container">
     <h2>Personal Information</h2>
 	<div class="row">
@@ -52,8 +53,11 @@ $result1 = mysqli_query($conn, $sql2);
                 </div>
                 <div class="col-sm-6">
                     <div class="input-group">
-    			     <span class="input-group-text">Client Name</span>
-    			        <input class="form-control" name="client_name" type=" text"  value="<?php echo $row["client_name"]; ?>"/>
+    			     <span class="input-group-text">Friendly name</span>
+    			        <input class="form-control" name="project_friendly_name" type=" text"  value="<?php echo $row["project_friendly_name"]; ?>"/>
+                        <!-- <select name="project_friendly_name" id="project_friendly_name" class="form-control">
+                         <option value="<?php echo $row["project_friendly_name"]; ?>" name="project_friendly_name"><?php echo $row["project_friendly_name"]; ?></option>
+                        </select> -->
     		        </div>
                 </div>
 	       </div>
@@ -71,12 +75,12 @@ $result1 = mysqli_query($conn, $sql2);
                               </select>
     		        </div>  
                 </div>
-                <div class="col-sm-6">
+                <!-- <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Parent Name</span>
     			        <input class="form-control" name="client_name" type=" text"  value="example.com"/>
     		        </div>
-                </div>
+                </div> -->
 	       </div>
 		</div>
 	</div>
@@ -99,9 +103,10 @@ $result1 = mysqli_query($conn, $sql2);
                 <div class="col-sm-6">
                     <div class="input-group">
     			         <span class="input-group-text">Client Contact</span>
-                             <select name="client_contact" class="form-control">
+                <input type="text" name="client_contact" class="form-control" value="<?php echo $row["client_contact"]; ?>">
+                             <!-- <select name="client_contact" class="form-control">
                                      <option value="#" name="client_contact"><?php echo $row["client_contact"]; ?></option>
-                            </select>
+                            </select> -->
     		        </div>
                 </div>
 	       </div>
@@ -114,17 +119,19 @@ $result1 = mysqli_query($conn, $sql2);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Project Manager</span>
-                             <select name="project_manager" class="form-control">
-                                 <option value="project_manager" name="parent_project"><?php echo $row["project_manager"]; ?> </option>
-                             </select>
+               <input type="text" name="project_manager" value="<?php echo $row["project_manager"]; ?>" class="form-control">
+                             <!-- <select name="project_manager" class="form-control">
+                                 <option value="<?php echo $row["project_manager"]; ?>" name="parent_project"><?php echo $row["project_manager"]; ?> </option>
+                             </select> -->
     		        </div>  
                 </div>
                 <div class="col-sm-6">
                     <div class="input-group">
     			         <span class="input-group-text">Sales Person</span>
-                                <select name="sales_person"  class="form-control">
+                <input type="text" name="sales_person" value='<?php echo $row["sales_person"]; ?>' class="form-control">
+                                <!-- <select name="sales_person"  class="form-control">
                                      <option value="#" id="sales_person" name="sales_person"><?php echo $row["sales_person"]; ?> </option>
-                                </select>
+                                </select> -->
     		        </div>
                 </div>
                 <br><br><br>
@@ -193,14 +200,14 @@ $result1 = mysqli_query($conn, $sql2);
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Notes</span>
-    			        <input type="text" class="form-control" value="<?php echo $row["note"]; ?>"/>
+    			        <input type="text" name='note' class="form-control" value="<?php echo $row["note"]; ?>"/>
     		        </div>
                 </div>
                 <br><br><br>
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Max. Completes </span>
-                         <select name="parent_project" class="form-control">
+                         <select name="max_complete" class="form-control">
                             <option value="parent_project" name="max_complete"><?php echo $row["max_complete"]; ?></option>
                          </select>
     		        </div>
@@ -232,10 +239,10 @@ $result1 = mysqli_query($conn, $sql2);
 	</div>
 </div>
 <br><br>
-                         </form>
+                         
                         <p style="padding-top: 1em;text-align: center;">
                             <!--                 attr name='submit' removed due to submit event failuer -->
-                            <input type='submit' value='Save' id="save" />
+                            <input name = 'editprojectview' type='submit' value='Save' id="save" />
                             <input type='submit' value='Clone' id='clone' />
                             <a href="#" class="limebutton">Cancel</a>
                             <input type='hidden' name='action' value='editproject' />
@@ -623,7 +630,7 @@ function copyToClipboard(element) {
 
 
 
-                <div style="">
+                <div >
                     <!-- remove float left -->
                     <div style="border:0; padding: 10px;">
                         <table class='InfoForm' width=100%>
