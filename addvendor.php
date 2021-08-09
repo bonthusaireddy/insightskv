@@ -51,13 +51,21 @@ function recp(id) {
 </script>
 
 
-<h1 class="heading_company">Project Vendor Details</h1>
 <form action="database.php" method="post">
-    <input type="hidden" name="project_id" value="<?php echo $project_id; ?>">
-    <p style="margin-left: 174px;">
-        <label for="firstName">Project Vendor :</label>
-        <!-- <input type="text" name="company_name" id="company_name" style="    margin-left: 16px;"> -->
-        <select name="vendor_id" id="vendor_id" style=" width: 189px;height: 34px;    margin-left: 49px;"  onchange="recp(this.value);">
+<input type="hidden" name="project_id" value="<?php echo $project_id; ?>">
+<div class="container">
+   <div class="container">
+       <div class="container">
+           <div class="container">
+           <h2>Project Vendor Details</h2>
+           <br><br>
+	<div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Project Vendor</span>
+                        <select name="vendor_id" id="vendor_id" class="form-control"  onchange="recp(this.value);">
           <option value="parent_project" name="parent_project">Select Vendor</option>
             <?php 
             while($row = mysqli_fetch_row($result)) { ?>
@@ -65,65 +73,124 @@ function recp(id) {
             <?php 
             }?>  
             </select>
-
-
-        <label for="lastName" style="    margin-left: 47px;">Vendor Contact :</label>
-        <!-- <input type="text" name="parent_company_name" id="parent_company" style="    margin-left: 17px;"> -->
-        <select name="vendor_contact" id="vendor_contact" style=" width: 189px;height: 34px;    margin-left: 59px;">
-          <option value="parent_project" name="parent_project">Select Contact</option>
-             <option value="demo0" name="parent_project">default</option>
+    		        </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			     <span class="input-group-text">Vendor Contact:</span>
+                     <select name="vendor_contact" id="vendor_contact" class="form-control">
+          <option value="parent_project" name="vendor_contact">Select Contact</option>
+             <option value="demo0" name="vendor_contact">default</option>
             
             </select>
-    </p>
+    		        </div>
+                </div>
+	       </div>
+		</div>
+	</div>
+   </div>
+ </div>
+ </div>
+</div>
 
-   
-    <hr class="solid">
-    <h1 class="heading_company">Cost & Completes</h1>
-    <p class="textbox_addcompany">
-        <label for="Address">Cost Per Complete :</label>&nbsp;&nbsp;
-        <input type="text" name="cost_per_complete" id="cost_per_complete" style="    margin-left: 9px;">&nbsp;&nbsp;&nbsp;&nbsp;
-
-        <label for="Address" style="margin-left: 23px;">Req. Completes :</label>&nbsp;&nbsp;
-        <input type="text" name="req_complete" id="req_complete" style=" margin-left: 49px;">
-       
-    </p>
-    <p class="textbox_addcompany">
-        <label for="Address">Max. Completes :</label>&nbsp;&nbsp;
-        <input type="text" name="max_complete" id="max_complete" style="margin-left: 35px;">
-        
-    </p>
-    </hr>
-    <hr class="solid">
-    <h1 class="heading_company">  Surveys Redirect Details</h1>
-  
-    <p class="textbox_addcompany">
-        <label for="Address">Max. Redirects:</label>&nbsp;&nbsp;&nbsp;&nbsp;
-         <input type="text" id="max_redirects" name="max_redirects" id="Address_three" style="    margin-left: 36px;">
-
-
-        <label for="Address" style="margin-left: 41px;">Completion link :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <textarea style="position: relative;left: 390px;" id="completion_link" class="form-control" name="completion_link" placeholder="Link" ></textarea>
-       </p>
-       
-    <p class="textbox_addcompany1">
-        <label for="Address">Disqualify link :</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <textarea  class="form-control" id="disqualify_link" name="disqualify_link" placeholder="Link" ></textarea>
-
-        </p>
-        <div class="p-bot" style="width: auto; position: relative; float: right;right: 174px; bottom: 123px;">
-            <label class="bot" for="Address">Quotafull link:</label>
-        <div class="form-group mt-3">
-                <textarea  class="form-control" id="quotafull_link"  name="quotafull_link" placeholder="Link" ></textarea>
-              </div>
-            </div>
-        
+<br><br><hr class="solid"><br>
+<div class="container">
+   <div class="container">
+       <div class="container">
+           <div class="container">
+           <h2>Cost & Completes</h2>
+           <br><br>
+	<div class="row">
+    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Cost Per Complete : </span>
+    			        <input class="form-control"type="text"name="cost_per_complete" id="cost_per_complete"/>
+    		        </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			     <span class="input-group-text">Req.Completes:</span>
+    			        <input class="form-control" type="text"  name="req_complete" id="req_complete" />
+    		        </div>
+                </div>
+	       </div>
+		</div>
+	</div>
+    <br><br>
+    <div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Max.Completes:</span>
+               <input type="text"name="max_complete" id="max_complete"  class="form-control">
+    		        </div>  
+                </div>
+	       </div>
+		</div>
+	</div>
+ </div>
+</div>  
+</div>
+</div>
+<br><br><hr class="solid"><br>
+<div class="container">
+   <div class="container">
+       <div class="container">
+           <div class="container">
+           <h2>Surveys Redirect Details</h2>
+           <br><br>
+	<div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Max.Redirects:</span>
+    			        <input class="form-control" type="text" id="max_redirects" name="max_redirects" id="Address_three"/>
+                 </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			     <span class="input-group-text">Completion link:</span>
+                     <textarea  id="completion_link" class="form-control" name="completion_link" placeholder="Link" ></textarea>
+    		        </div>
+                </div>
+	       </div>
+		</div>
+	</div>
+    <br><br>
+    <div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Disqualify link:</span>
+                        <textarea  class="form-control" id="disqualify_link" name="disqualify_link" placeholder="Link" ></textarea>
+                    </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Quotafull link:</span>
+    			        <textarea  class="form-control" id="quotafull_link"  name="quotafull_link" placeholder="Link" ></textarea>
+                </div>
+	       </div>
+		</div>
+	</div>
+    </div>
     
-
-    
-    <hr class="solid">
-    <h1 class="heading_company">Vendor Project Status</h1>
-        <label for="completion_link" style="margin-left: 187px;">Vendor Project Status :</label>
-        <select name="status" id="status" style=" width: 189px;height: 34px;    margin-left: 8px;">
+<br><hr class="solid"><br><br>
+<div class="container">
+ <h2>Project Vendor Details</h2>
+ <br><br>
+	<div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			        <span class="input-group-text">Vendor Project Status:</span>
+                        <select name="status" id="status" class="form-control">
           <option value="0" id="status" name="status">Select status</option>
 
              <option value="Testing" name="status">Testing</option>
@@ -133,39 +200,47 @@ function recp(id) {
                 <option value="Closed" name="status">Closed</option>
             
             </select>
-       
-            <div class="p-bot" style="width: auto; position: relative;float: right;">
-            <label class="bot1"  for="Address">Note</label><input type="text" name="note" id="note">
-        
-            </div>
-       
-        <a href="editproject.php" class="btn btn-danger" style="margin-left: 520px;"> CANCEL </a>
-    <input type="submit" name="add_project_vendors" value="Submit" class="btn btn-primary" style="    margin-bottom: 65px; margin-top: 64px;width: 100px;">
-</form>
+    		        </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+    			     <span class="input-group-text">Note</span>
+                     <input type="text" name="note" id="note">
+    		        </div>
+                </div>
+	       </div>
+		</div>
+        <br><br><br>
+     <div class="container">
+     <div class="row">
+	    <div class="col-sm-12">
+             <div class="input-group">
+                <div class="col-sm-6">
+                    <div style="text-align: end;">
+                    <a href="editproject.php" class="btn btn-danger" > CANCEL </a>
+                    </div>  
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+                    <input type="submit" name="add_project_vendors" value="Submit" class="btn btn-primary">
+                </div>
+	       </div>
+		</div>
+	</div>
+    </div>
+     </div>
+	</div>
+   </div>
+ </div>
+ </div>
 
-<style>
-    .form-control{
-        margin-top: 0px;
-    margin-bottom: 0px;
-    /* height: 84px; */
-    width: 232px;
-    margin-left: 152px;
-    top: -45px;
-    position: relative;
-    }
-    .bot{
-        margin-left: 21px;
-         top: 14px;
-          position: relative;
-}
-.bot1{
-    position: relative;
-    top: 2px;
-    
-    right: 15px;
-}
-    
-</style>
+
+ 
+  </div>
+       </div>
+   
+
+</form>
 
 <?php
 include('includes/scripts.php');
