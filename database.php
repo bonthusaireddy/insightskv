@@ -216,7 +216,7 @@ if(isset($_POST['edit_add_project_vendors'])){
   $project_status = $_REQUEST['status'];
   $notes = $_REQUEST['notes'];
 
-  $sql = "update project_vendors set cost_per_complete='$cost_per_complete', req_complete='$req_complete', max_complete='$max_complete',max_redirects='$max_redirects',completion_link='$completion_link',quotafull_link='$quotafull_link', project_status='$project_status', notes='$notes' where project_id='$project_id' and vendor_id='$vendor_id'";
+  $sql = "update project_vendors set cost_per_complete='$cost_per_complete', req_complete='$req_complete', max_complete='$max_complete',max_redirects='$max_redirects',completion_link='$completion_link', disqualify_link='$disqualify_link', quotafull_link='$quotafull_link', project_status='$project_status', notes='$notes' where project_id='$project_id' and vendor_id='$vendor_id'";
   
   if(mysqli_query($conn, $sql)){
     $_POST = array();
