@@ -89,9 +89,9 @@ if(isset($_POST['addproject']) ) {
     $note = '0'; //$_REQUEST['note'];
     $points_to_award = '1';
     $id = get_id_of_project($conn);
-    $completion_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=111';
-    $disqualify_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=222';
-    $quotafull_link= 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=333';
+    $completion_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=1';
+    $disqualify_link = 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=2';
+    $quotafull_link= 'http://insightskv.ml/endcapture.php?cada='.$id.'&st=3';
     $sql = "INSERT INTO projects(project_name, project_friendly_name, client_name, parent_project, project_manager, country, client_contact, sales_person, req_complete, cpc, ir, survey_link, status, max_complete,loi, note, points_to_award, completion_link, disqualify_link, quotafull_link) VALUES ('$project_name', '$project_friendly_name', '$client_name', '$parent_project', '$project_manager', '$country', '$client_contact', '$sales_person', '$req_complete', '$cpc', '$ir', '$survey_link', '$status', '$max_complete', '$loi', '$note', '$points_to_award', '$completion_link','$disqualify_link','$quotafull_link')";
     if(mysqli_query($conn, $sql)){
       echo 'addproject <br>';
