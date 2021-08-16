@@ -18,6 +18,7 @@ $result2 = mysqli_query($conn, $sql);
        <div class="container">
            <div class="container">
            <h2>Personal Information</h2>
+           <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -63,12 +64,13 @@ $result2 = mysqli_query($conn, $sql);
    
    </div>
 </div>
-<br><br><br>
+<br><br><hr class="solid"><br>
 <div class="container">
    <div class="container">
        <div class="container">
            <div class="container">
            <h2>Contact & Region</h2>
+           <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -150,12 +152,13 @@ $result2 = mysqli_query($conn, $sql);
    
    </div>
 </div>
-<br><br><br>
+<br><br><hr class="solid"><br>
 <div class="container">
    <div class="container">
        <div class="container">
            <div class="container">
            <h2>Others</h2>
+           <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -214,7 +217,7 @@ $result2 = mysqli_query($conn, $sql);
 		</div>
 	</div>
     </div>
-    <br><br>
+    <br>
     <div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -225,7 +228,7 @@ $result2 = mysqli_query($conn, $sql);
     		        </div>  
                 </div>
 	       </div>
-           <br><br><br>
+           <br><br>
            <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Status </span>
@@ -251,6 +254,7 @@ $result2 = mysqli_query($conn, $sql);
    
    </div>
 </div>
+<hr class="solid">
 </form>
 <?php
 include('includes/scripts.php');

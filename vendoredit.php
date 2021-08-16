@@ -116,7 +116,7 @@ if(isset($_REQUEST['id']))
     </p>
     <hr class="solid">
   
-    <div id="textboxes" style="">
+    <div id="textboxes">
         <h1 class="heading_company">Surveys Redirect Details</h1>
         <label  class="car4" for="completion_link">Complete link:</label>
         <textarea name="completion_link" id="completion_link" cols="30" rows="2"><?php echo $row['completion_link'] ?></textarea>

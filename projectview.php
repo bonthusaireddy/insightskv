@@ -42,6 +42,7 @@ $result1 = mysqli_query($conn, $sql2);
                         
                      <div class="container">
     <h2>Personal Information</h2>
+    <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -86,9 +87,10 @@ $result1 = mysqli_query($conn, $sql2);
 	</div>
 </div>
 
-<br><br>
+<br><hr class="solid"><br>
 <div class="container">
     <h2>Contacts & Region</h2>
+    <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -148,9 +150,10 @@ $result1 = mysqli_query($conn, $sql2);
 		</div>
 	</div>
 </div>
-<br><br>
+<br><hr class="solid"><br>
 <div class="container">
     <h2>Others</h2>
+    <br>
 	<div class="row">
 	    <div class="col-sm-12">
              <div class="input-group">
@@ -245,7 +248,7 @@ $result1 = mysqli_query($conn, $sql2);
 		</div>
 	</div>
 </div>
-<br><br>
+<br><hr class="solid"><br>
                          
                         <p style="padding-top: 1em;text-align: center;">
                             <!--                 attr name='submit' removed due to submit event failuer -->
