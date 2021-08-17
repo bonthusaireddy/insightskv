@@ -297,68 +297,70 @@ $result1 = mysqli_query($conn, $sql2);
                                     <td>
                                         <div id='your-form-block-id'>
                                             <form action="#" method="post">
-                                                <a class="class-link" href="#popup5">Redirects 1/0</a>
+                                                <a class="class-link" href="#completed">Redirects 1/0</a>
                                             </form>
                                         </div>
 
-                                        <!--redirect Pop-up-->
-                                     <div id="popup5" class="overlay">
-                                        <div class="popup5">
-                                            <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
-                                             <div class="content">
-                                                <div class="container">
-                                                    <br>
-                                                    <div class="download">
-                                                        <button class="download">Download</button>
-                                                    </div>
-                                                    <br>
-                                                <table class="table table-bordered">
-                                                <thead>
-                                                  <tr class="th1">
-                                                    <th><span class="show">Show</span><select name="country" class="form-control">
-                                                     <option value="50" name="show_val">50</option>
-                                                     <option value="100" name="country">100</option>
-                                                     <option value="500" name="country">500</option>
-                                                     <option value="10000" name="country">1000</option>
-                                                     </select></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th><span class="show">Search</span> <input type="text"></th>
-                                                    <th><input class="pop_up_btn" value="Search" type="button"></th>
-                                                     </tr>
-                                                     </thead>
-                                                <thead>
-                                                  <tr class="th">
-                                                    <th> ID</th>
-                                                    <th>Status</th>
-                                                    <th>previous Status</th>
-                                                    <th>Reason</th>
-                                                    <th>Resp Id</th>
-                                                    <th>Time</th>
-                                                    <th>IP</th>
-                                                     </tr>
-                                                     </thead>
+                    <!--redirect Pop-up-->
+                     <div id="completed" class="overlay">
+                      <div class="popup5">
+                       <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
+                        <div class="content">
+                         <div class="container">
+                          <br>
+                          <div class="download">
+                           <button class="download">Download</button>
+                          </div>
+                          <br>
+                          <table class="table table-bordered">
+                            <thead>
+                            <tr class="th1">
+                            <th>
+                             <span class="show">Show</span>
+                             <select name="country" class="form-control">
+                              <option value="50" name="show_val">50</option>
+                              <option value="100" name="country">100</option>
+                              <option value="500" name="country">500</option>
+                              <option value="10000" name="country">1000</option>
+                              </select>
+                            </th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th><span class="show">Search</span> <input type="text"></th>
+                            <th><input class="pop_up_btn" value="Search" type="button"></th>
+                            </tr>
+                            </thead>
 
-                                                     <tbody>
-                                                     <tr class="tr">
-                                                   <td>232</td>
-                                                   <td>complete</td>
-                                                   <td>Hold</td>
-                                                   <td>No</td>
-                                                   <td>100</td>
-                                                   <td>2/4/2021</td>
-                                                   <td>10.10.10</td>
-                                                 </tr>
-                                                 </tbody>
-                                                 
-                                                 </table> 
-                                                 </div>
-                                              </div>
-                                              </div>
-                                           </div>
-                                         <!--redirect Pop-up-->
+                            <thead>
+                             <tr class="th">
+                              <th> ID</th>
+                              <th>Status</th>
+                              <th>previous Status</th>
+                              <th>Reason</th>
+                              <th>Resp Id</th>
+                              <th>Time</th>
+                              <th>IP</th>
+                              </tr>
+                            </thead>
+                           <tbody>
+                            <tr class="tr">
+                             <td>232</td>
+                             <td>complete</td>
+                             <td>Hold</td>
+                             <td>No</td>
+                             <td>100</td>
+                             <td>2/4/2021</td>
+                             <td>10.10.10</td>
+                            </tr>
+                           </tbody>
+                          </table> 
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                            <!--redirect Pop-up-->
 
 
                                         <div id='your-form-block-id' class='completed_link'>
