@@ -10,7 +10,7 @@ $result = $conn->query($sql);
 $total_projects =  $result->num_rows;
 
 ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
@@ -144,52 +144,138 @@ $total_projects =  $result->num_rows;
         </div>
     </div>
 
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Top 5 Vendors</h6>
-        </div>
-        <div class="card-body">
-            <div class="card mb-4 py-3 border-left-primary">
-                <div class="card-body">
-                    demo
+<div class="card shadow mb-4" style="width: 60%;">
+    <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Top 5 Vendor</h6>
+     </div>
+    <div class="card-body">
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Vendor 1</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">87 
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="card mb-4 py-3 border-left-primary">
-                <div class="card-body">
-                    demo
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Vendor 2</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">100 
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="card mb-4 py-3 border-left-primary">
-                <div class="card-body">
-                    demo
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Vendor 3</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">23 
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="card mb-4 py-3 border-left-primary">
-                <div class="card-body">
-                    demo
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Vendor 4</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">56 
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
         </div>
-        <div class="card-body">
-            <div class="card mb-4 py-3 border-left-primary">
-                <div class="card-body">
-                    demo
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Vendor 5</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">36
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
         </div>
+        <div class="list-group-item list-group-item-action">
+            <div class="media">
+                <div class="media-body text-truncate">
+                    <div class="media-body text-truncate">
+                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
+                        <strong class="text-primary">
+                             <span>Total Completes of these top 5 Vendors</span>
+                        </strong>
+                    </p>
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <p class="text-primary" style="padding: 0px;margin: 0px;">2456 
+                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
+                </div>
+            </div>
+        </div>       
     </div>
+</div>
+<br><br><br>
+
+
+<!--Chart-->
+<div class="card shadow mb-4" >
+    <div class="card-header py-3">
+     <h6 class="m-0 font-weight-bold text-primary"><h2>Project Revenue V/S Vendor Expense</h2></h6>
+    </div>
+     <canvas id="barChart" style="width:100%;max-width:800px"></canvas>
+</div>
+
+
+    
 
 
 
-
-
-
+<br><br><br>
+<script src="./js/chart.js"></script>
 
 <?php
 include('includes/scripts.php');

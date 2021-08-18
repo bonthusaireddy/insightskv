@@ -42,13 +42,12 @@ include('includes/navbar.php');
                     <span class="input-group-text">Company Type</span>&nbsp;&nbsp;
         Client&nbsp;<input type="checkbox" name="company_type[]" value="Client" id="Gender"
             style=" position: relative;top: 6px; margin-left: 10px;">&nbsp;&nbsp;
-        Vendor&nbsp;<input type="checkbox" name="company_type[]" value="Vendor" id="Gender" class="vendordetails" style=" position: relative;top: 6px;">
+        Vendor&nbsp;<input type="checkbox" name="company_type[]" value="Vendor" id="chkPassport" onclick="ShowHideDiv(this)" class="vendordetails" style=" position: relative;top: 6px;">
     		        </div>
                 </div>
 	       </div>
 		</div>
 	</div>
-
            </div>
        </div>
    
@@ -188,11 +187,11 @@ include('includes/navbar.php');
    </div>
 </div>
 <br><br><hr class="solid"><br>
-<div class="container">
+<div class="container" id="dvPassport" style="display: none">
    <div class="container">
        <div class="container">
            <div class="container">
-           <h2>Personal Information</h2>
+           <h2>Links</h2>
            <br>
 	<div class="row">
     <div class="col-sm-12">
@@ -227,14 +226,15 @@ include('includes/navbar.php');
 	</div>
     <br>
     <hr class="solid"><br>
-    <input type="submit" value="Submit" name="addcompany" class="submit_btn" style="margin-bottom: 65px; margin-top: 36px;">
            </div>
        </div>
    
    </div>
 </div>
+<input type="submit" value="Submit" name="addcompany" class="submit_btn" style="margin-bottom: 65px; margin-top: 36px;">
 </form>
 
+<script src="./js/hide_show_event.js"></script>
 <?php
 include('includes/scripts.php');
 include('includes/footer.php');
