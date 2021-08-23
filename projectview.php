@@ -298,11 +298,14 @@ $result1 = mysqli_query($conn, $sql2);
                   <td>
                   <div id='your-form-block-id'>
                    <form action="#" method="post">
-                    <a class="class-link" href="#redirected">Redirects 1/0</a>
+                    <a class="class-link" href="#redirected<?php echo $row2['id']?>">Redirects 1/0</a>
                    </form>
                   </div>
+                   <?php 
+                   // add the code here;
+                   ?>
                     <!--redirect Pop-up-->
-                     <div id="redirected" class="overlay">
+                     <div id="redirected<?php echo $row2['id']?>" class="overlay">
                       <div class="popup5">
                        <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                         <div class="content">
@@ -347,18 +350,18 @@ $result1 = mysqli_query($conn, $sql2);
                            
                            <?php 
                             $vendor_id = $row2['id'];
-                            // echo '<h1 class="zzz">'.$vendor_id.'<h1>';
-                            $sql = "SELECT id FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id";
+                            $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='0'";
+                            // echo '<h1 class="zzz">'.$sql.'<h1>';
                             $result3 = $conn->query($sql);
                             foreach($result3 as $row3){?>
                             <tr class="tr">
                              <td><?php echo $row3['id']?></td>
-                             <td>complete</td>
+                             <td>Redirected</td>
                              <td>Hold</td>
                              <td>No</td>
-                             <td>100</td>
-                             <td>2/4/2021</td>
-                             <td>10.10.10</td>
+                             <td><?php echo $row3['vendor_resp_id']; ?></td>
+                             <td><?php echo $row3['start_time']?></td>
+                             <td><?php echo $row3['ip_address']; ?></td>
                             </tr>
                             
                             <?php } ?>
