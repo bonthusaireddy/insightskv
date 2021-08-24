@@ -298,7 +298,7 @@ $result1 = mysqli_query($conn, $sql2);
                   <td>
                   <div id='your-form-block-id'>
                    <form action="#" method="post">
-                    <a class="class-link" href="#redirected<?php echo $row2['id']?>">Redirects 1/0</a>
+                    <a class="class-link" href="#redirected<?php echo $row2['id']?>">Redirects </a>
                    </form>
                   </div>
                    <?php 
@@ -357,8 +357,8 @@ $result1 = mysqli_query($conn, $sql2);
                             <tr class="tr">
                              <td><?php echo $row3['id']?></td>
                              <td>Redirected</td>
-                             <td>Hold</td>
-                             <td>No</td>
+                             <td>-</td>
+                             <td>-</td>
                              <td><?php echo $row3['vendor_resp_id']; ?></td>
                              <td><?php echo $row3['start_time']?></td>
                              <td><?php echo $row3['ip_address']; ?></td>
@@ -375,13 +375,13 @@ $result1 = mysqli_query($conn, $sql2);
 
                      <div id='your-form-block-id' class='completed_link'>
                       <form action="#" method="post">
-                       <a class="class-link" href="#completed">Completed 1/999</a> <br>
+                       <a class="class-link" href="#completed<?php echo $row2['id']?>">Completed</a> <br>
                         <!-- <a class="class-link" href="#"> 0/160</a> -->
                       </form>
                      </div>
 
                      <!--Completed Pop-up-->
-                      <div id="completed" class="overlay">
+                      <div id="completed<?php echo $row2['id']?>" class="overlay">
                        <div class="popup5">
                         <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                          <div class="content">
@@ -423,16 +423,22 @@ $result1 = mysqli_query($conn, $sql2);
                             </tr>
                            </thead>
 
-                           <!-- loop completed -->
+                          <?php 
+                            $vendor_id = $row2['id'];
+                            $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='1'";
+                            // echo '<h1 class="zzz">'.$sql.'<h1>';
+                            $result3 = $conn->query($sql);
+                            foreach($result3 as $row3){?>
                            <tr class="tr">
-                            <td>1</td>
+                            <td><?php echo $row3['id']?></td>
                             <td>complete</td>
-                            <td>Hold</td>
-                            <td>No</td>
-                            <td>2</td>
-                            <td>21/4/2021</td>
-                            <td>10.12.10.10</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><?php echo $row3['vendor_resp_id']; ?></td>
+                             <td><?php echo $row3['start_time']?></td>
+                             <td><?php echo $row3['ip_address']; ?></td>
                            </tr>
+                           <?php } ?>
                            
                           </table> 
                          </div>
@@ -443,12 +449,12 @@ $result1 = mysqli_query($conn, $sql2);
 
                      <div id='your-form-block-id'>
                       <form action="#" method="post">
-                       <a class="class-link" href="#disqualified">Disqualified 1/999</a>
+                       <a class="class-link" href="#disqualified<?php echo $row2['id']?>">Disqualified </a>
                       </form>
                      </div>
 
                      <!--Disqulify Pop-up-->
-                      <div id="disqualified" class="overlay">
+                      <div id="disqualified<?php echo $row2['id'] ?>" class="overlay">
                        <div class="popup5">
                         <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                          <div class="content">
@@ -493,15 +499,22 @@ $result1 = mysqli_query($conn, $sql2);
                               </thead>
 
                               <tbody>
+                              <?php 
+                            $vendor_id = $row2['id'];
+                            $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='2'";
+                            // echo '<h1 class="zzz">'.$sql.'<h1>';
+                            $result3 = $conn->query($sql);
+                            foreach($result3 as $row3){?>
                                <tr class="tr">
-                                <td>1</td>
-                                <td>complete</td>
-                                <td>Hold</td>
-                                <td>No</td>
-                                <td>2</td>
-                                <td>21/4/2021</td>
-                                <td>10.12.10.10</td>
+                                <td><?php echo $row3['id']?></td>
+                                <td>Disqualified</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><?php echo $row3['vendor_resp_id']; ?></td>
+                                <td><?php echo $row3['start_time']?></td>
+                                <td><?php echo $row3['ip_address']; ?></td>
                                </tr>
+                               <?php }?>
                               </tbody>
                              </table> 
                             </div>
@@ -512,13 +525,13 @@ $result1 = mysqli_query($conn, $sql2);
 
                      <div id='your-form-block-id'>
                       <form  action="#" method="post">
-                       <a class="class-link" href="#quotafull">QF : 1/999</a> 
+                       <a class="class-link" href="#quotafull<?php echo $row2['id']?>">QF </a> 
                        <!-- <a class="class-link" href="#">0</a> -->
                       </form>
                      </div>
                      
                      <!--Quota-Full Pop-up-->
-                      <div id="quotafull" class="overlay">
+                      <div id="quotafull<?php echo $row2['id']?>" class="overlay">
                        <div class="popup5">
                         <h2>Company Name & Vendor ID <a class="close" href="#">&times;</a></h2>
                          <div class="content">
@@ -565,15 +578,22 @@ $result1 = mysqli_query($conn, $sql2);
                            </tr>
                           </thead>
                           <tbody>
+                           <?php 
+                            $vendor_id = $row2['id'];
+                            $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='3'";
+                            // echo '<h1 class="zzz">'.$sql.'<h1>';
+                            $result3 = $conn->query($sql);
+                            foreach($result3 as $row3){?>
                            <tr class="tr">
-                            <td>1</td>
+                            <td><?php echo $row3['id']?></td>
                             <td>complete</td>
                             <td>Hold</td>
                             <td>No</td>
-                            <td>2</td>
-                            <td>21/4/2021</td>
-                            <td>10.12.10.10</td>
+                            <td><?php echo $row3['vendor_resp_id']; ?></td>
+                            <td><?php echo $row3['start_time']?></td>
+                            <td><?php echo $row3['ip_address']; ?></td>
                             </tr>
+                            <?php }?>
                            </tbody>
                           </table> 
                          </div>
