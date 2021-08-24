@@ -291,7 +291,7 @@ $result1 = mysqli_query($conn, $sql2);
                     </form>
                    </div>
                   </td>
-                  <td>120</td>
+                  <td><?php echo $row2['id']?></td>
                   <td> <span id="company_name_1" class="company_name_info"><?php echo $row2['vendor_name']?></span> </td>
                   <!-- use display none to hide -->
                   <td style="display:none;" id="status_name_1">testing</td>
