@@ -296,14 +296,8 @@ $result1 = mysqli_query($conn, $sql2);
                   <!-- use display none to hide -->
                   <td style="display:none;" id="status_name_1">testing</td>
                   <td>
-                  <div id='your-form-block-id'>
-                   <form action="#" method="post">
-                    <a class="class-link" href="#redirected<?php echo $row2['id']?>">Redirects </a>
-                   </form>
-                  </div>
-                   <?php 
-                   // add the code here;
-                   ?>
+
+
                     <!--redirect Pop-up-->
                      <div id="redirected<?php echo $row2['id']?>" class="overlay">
                       <div class="popup5">
@@ -351,8 +345,8 @@ $result1 = mysqli_query($conn, $sql2);
                            <?php 
                             $vendor_id = $row2['id'];
                             $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='0'";
-                            // echo '<h1 class="zzz">'.$sql.'<h1>';
                             $result3 = $conn->query($sql);
+                            $count_redirects = mysqli_num_rows($result3);
                             foreach($result3 as $row3){?>
                             <tr class="tr">
                              <td><?php echo $row3['id']?></td>
@@ -373,12 +367,15 @@ $result1 = mysqli_query($conn, $sql2);
                       </div>
                      <!--redirect Pop-up-->
 
-                     <div id='your-form-block-id' class='completed_link'>
-                      <form action="#" method="post">
-                       <a class="class-link" href="#completed<?php echo $row2['id']?>">Completed</a> <br>
-                        <!-- <a class="class-link" href="#"> 0/160</a> -->
-                      </form>
-                     </div>
+                  <div id='your-form-block-id'>
+                   <form action="#" method="post">
+                    <a class="class-link" href="#redirected<?php echo $row2['id']?>">Redirects <?php echo $count_redirects;?></a>
+                   </form>
+                  </div>
+                   <?php 
+                   // add the code here;
+                   ?>
+                    
 
                      <!--Completed Pop-up-->
                       <div id="completed<?php echo $row2['id']?>" class="overlay">
@@ -426,8 +423,8 @@ $result1 = mysqli_query($conn, $sql2);
                           <?php 
                             $vendor_id = $row2['id'];
                             $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='1'";
-                            // echo '<h1 class="zzz">'.$sql.'<h1>';
                             $result3 = $conn->query($sql);
+                            $count_completed = mysqli_num_rows($result3);
                             foreach($result3 as $row3){?>
                            <tr class="tr">
                             <td><?php echo $row3['id']?></td>
@@ -447,12 +444,14 @@ $result1 = mysqli_query($conn, $sql2);
                       </div>
                      <!--End Pop-Up-->
 
-                     <div id='your-form-block-id'>
+                     <div id='your-form-block-id' class='completed_link'>
                       <form action="#" method="post">
-                       <a class="class-link" href="#disqualified<?php echo $row2['id']?>">Disqualified </a>
+                       <a class="class-link" href="#completed<?php echo $row2['id']?>">Completed <?php echo $count_completed; ?> </a><br>
+                        <!-- <a class="class-link" href="#"> 0/160</a> -->
                       </form>
                      </div>
 
+                     
                      <!--Disqulify Pop-up-->
                       <div id="disqualified<?php echo $row2['id'] ?>" class="overlay">
                        <div class="popup5">
@@ -502,8 +501,8 @@ $result1 = mysqli_query($conn, $sql2);
                               <?php 
                             $vendor_id = $row2['id'];
                             $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='2'";
-                            // echo '<h1 class="zzz">'.$sql.'<h1>';
                             $result3 = $conn->query($sql);
+                            $count_disqualified = mysqli_num_rows($result3);
                             foreach($result3 as $row3){?>
                                <tr class="tr">
                                 <td><?php echo $row3['id']?></td>
@@ -524,12 +523,11 @@ $result1 = mysqli_query($conn, $sql2);
                      <!--End Pop-Up-->
 
                      <div id='your-form-block-id'>
-                      <form  action="#" method="post">
-                       <a class="class-link" href="#quotafull<?php echo $row2['id']?>">QF </a> 
-                       <!-- <a class="class-link" href="#">0</a> -->
+                      <form action="#" method="post">
+                       <a class="class-link" href="#disqualified<?php echo $row2['id']?>">Disqualified <?php echo $count_disqualified; ?></a>
                       </form>
                      </div>
-                     
+
                      <!--Quota-Full Pop-up-->
                       <div id="quotafull<?php echo $row2['id']?>" class="overlay">
                        <div class="popup5">
@@ -581,8 +579,8 @@ $result1 = mysqli_query($conn, $sql2);
                            <?php 
                             $vendor_id = $row2['id'];
                             $sql = "SELECT id,vendor_resp_id, ip_address,start_time FROM surveys WHERE project_id = $id AND vendor_id =$vendor_id AND status='3'";
-                            // echo '<h1 class="zzz">'.$sql.'<h1>';
                             $result3 = $conn->query($sql);
+                            $count_quotafull = mysqli_num_rows($result3);
                             foreach($result3 as $row3){?>
                            <tr class="tr">
                             <td><?php echo $row3['id']?></td>
@@ -601,6 +599,15 @@ $result1 = mysqli_query($conn, $sql2);
                        </div>
                       </div>
                      <!--End Pop-Up-->
+
+                     <div id='your-form-block-id'>
+                      <form  action="#" method="post">
+                       <a class="class-link" href="#quotafull<?php echo $row2['id']?>">QF <?php echo $count_quotafull; ?></a> 
+                       <!-- <a class="class-link" href="#">0</a> -->
+                      </form>
+                     </div>
+                     
+                     
 
                      </td>
                      <td style=color:#1278E0; id="vendor_cpc_1"> IR : 0.00 % <br />N.A </td> 
