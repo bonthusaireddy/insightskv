@@ -1,4 +1,5 @@
 <?php
+include('includes/imp/islogin.php');
 include('includes/header.php'); 
 include('includes/navbar.php'); 
 include('includes/imp/conn.php');

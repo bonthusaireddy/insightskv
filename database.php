@@ -1,5 +1,6 @@
 <?php 
 include ('includes/imp/conn.php');
+include('includes/imp/islogin.php');
 
 
 if(isset($_POST['addcompany']) && isset($_POST['company_type'])) {
