@@ -62,7 +62,13 @@ $mysqli->close();
                         <td><?php echo $row['parent_project']; ?></td>
                         <td><?php echo $row['project_manager']; ?></td>
                         <td><?php echo $row['sales_person']; ?></td>
-                        <td><?php echo $row['max_complete']; ?></td>
+                        <?php 
+                         $project_id = $row['id'];
+                         $sql_for_complete = "SELECT COUNT(project_id) as complete_count from surveys where status = 1 and project_id = $project_id ";
+                         $sql_complete = $conn->query($sql_for_complete);
+                         $complete_count = mysqli_fetch_assoc($sql_complete);
+                        ?>
+                        <td><?php echo $complete_count['complete_count'] ?></td>
                         <td><?php echo $row['country']; ?></td>
                         <td><?php echo $row['status']; ?></td>
 
