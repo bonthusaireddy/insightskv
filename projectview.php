@@ -659,9 +659,9 @@ $result1 = mysqli_query($conn, $sql2);
                     <h1>Redirects links</h1>
                     <div class="container">
                         <div class="row">
-                            <div><div id="p1"><?php echo $row['completion_link'] ?></div> <button onclick="copyToClipboard('#p1')">Copy</button></div>
-                            <div><div id="p2"><?php echo $row['disqualify_link'] ?> </div><button onclick="copyToClipboard('#p2')">Copy</button></div>
-                            <div><div id="p3"><?php echo $row['quotafull_link'] ?> </div><button onclick="copyToClipboard('#p3')">Copy</button></div>
+                            <div><div id="p1">http://insightskv.ml/endcapture.php?st=1</div> <button onclick="copyToClipboard('#p1')">Copy</button></div>
+                            <div><div id="p2">http://insightskv.ml/endcapture.php?st=2</div><button onclick="copyToClipboard('#p2')">Copy</button></div>
+                            <div><div id="p3">http://insightskv.ml/endcapture.php?st=3</div><button onclick="copyToClipboard('#p3')">Copy</button></div>
                         </div>
                     </div>
                 </section>
