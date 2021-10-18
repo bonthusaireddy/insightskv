@@ -80,7 +80,7 @@
                     <ul>
                         <li><a href="#home" class="scroll">Services</a></li>
                         <li>/</li>
-                        <li><a href="#about" class="scroll">Blog</a></li>
+                        <li><a href="#about" class="scroll">Blogs</a></li>
                         <li>/</li>
                         <li><a href="#services" class="scroll">About</a></li>
                         <li>/</li>
