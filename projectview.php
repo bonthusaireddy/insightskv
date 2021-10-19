@@ -438,22 +438,8 @@ $result2 = mysqli_query($conn, $sql3);
                              <td><?php echo $row3['ip_address']; ?></td>
                            </tr>
                            <?php } ?>
-                           <tr>
-                    <?php foreach($result2 as $row4){   ?>    
-                    <td style="padding:3px;">
-                   <div class="form">
-                    <form id="form_120" action="" method="post">
-                     <span class="HelpToolTip SPAN_1">
-                      <a href="addvendoredit.php?id=<?php echo $id;?>&vendor_id=<?php echo $row4['id']?>">Edit</a>
-                     </span>
-                     </form>
-                     </div>
-                    </td>
-                    <td><?php echo $row4['id']?></td>
-                    <td> <span id="company_name_1" class="company_name_info"><?php echo $row4['vendor_name']?></span> </td>
-                    <!-- use display none to hide -->
-                     <td style="display:none;" id="status_name_1">testing</td> 
-                    </tr>    
+                          
+                   
                            
                           </table> 
                          </div>
