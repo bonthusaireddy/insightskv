@@ -16,7 +16,8 @@ $result = mysqli_query($conn, $sql);
 $sql2 = "SELECT vendor.id,vendor.vendor_name,survey_link FROM vendor INNER JOIN project_vendors ON vendor.id = project_vendors.vendor_id WHERE project_vendors.project_id = '$id'";
 $result1 = mysqli_query($conn, $sql2);
 
-
+$sql3 = "SELECT * FROM vendor WHERE id = '1' ";
+$result2 = mysqli_query($conn, $sql3);
 ?>
 
 <!DOCTYPE html>
