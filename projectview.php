@@ -16,6 +16,8 @@ $result = mysqli_query($conn, $sql);
 $sql2 = "SELECT vendor.id,vendor.vendor_name,survey_link FROM vendor INNER JOIN project_vendors ON vendor.id = project_vendors.vendor_id WHERE project_vendors.project_id = '$id'";
 $result1 = mysqli_query($conn, $sql2);
 
+$sql3 = "SELECT * FROM vendor WHERE id = '1' ";
+$result2 = mysqli_query($conn, $sql3);
 ?>
 
 <!DOCTYPE html>
@@ -296,9 +298,8 @@ $result1 = mysqli_query($conn, $sql2);
                   <td> <span id="company_name_1" class="company_name_info"><?php echo $row2['vendor_name']?></span> </td>
                   <!-- use display none to hide -->
                   <td style="display:none;" id="status_name_1">testing</td>
-                  <td>
-
-
+                  </tr>
+                  
                     <!--redirect Pop-up-->
                      <div id="redirected<?php echo $row2['id']?>" class="overlay">
                       <div class="popup5">
@@ -437,6 +438,22 @@ $result1 = mysqli_query($conn, $sql2);
                              <td><?php echo $row3['ip_address']; ?></td>
                            </tr>
                            <?php } ?>
+                           <tr>
+                    <?php foreach($result2 as $row4){   ?>    
+                    <td style="padding:3px;">
+                   <div class="form">
+                    <form id="form_120" action="" method="post">
+                     <span class="HelpToolTip SPAN_1">
+                      <a href="addvendoredit.php?id=<?php echo $id;?>&vendor_id=<?php echo $row4['id']?>">Edit</a>
+                     </span>
+                     </form>
+                     </div>
+                    </td>
+                    <td><?php echo $row4['id']?></td>
+                    <td> <span id="company_name_1" class="company_name_info"><?php echo $row4['vendor_name']?></span> </td>
+                    <!-- use display none to hide -->
+                     <td style="display:none;" id="status_name_1">testing</td> 
+                    </tr>    
                            
                           </table> 
                          </div>
