@@ -6,9 +6,9 @@ include('includes/imp/conn.php');
 ?>
 
 <?php 
-
+if(isset($_GET['project_id'])){
 $project_id = $_GET['project_id'];
-
+}
 $sql = "select id, vendor_name from vendor";
 $result = mysqli_query($conn, $sql);
 ?>

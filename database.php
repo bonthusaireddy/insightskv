@@ -60,6 +60,7 @@ if(isset($_POST['addcompany']) && isset($_POST['company_type'])) {
   header('refresh:1; url=dashboard.php');
 }
 
+
 if(isset($_POST['addproject']) ) {
 
   if(isset($_POST['parent_project']) && $_POST['parent_project'] == '0'){
@@ -96,20 +97,54 @@ if(isset($_POST['addproject']) ) {
     $sql = "INSERT INTO projects(project_name, project_friendly_name, client_name, parent_project, project_manager, country, client_contact, sales_person, req_complete, cpc, ir, survey_link, status, max_complete,loi, note, points_to_award, completion_link, disqualify_link, quotafull_link) VALUES ('$project_name', '$project_friendly_name', '$client_name', '$parent_project', '$project_manager', '$country', '$client_contact', '$sales_person', '$req_complete', '$cpc', '$ir', '$survey_link', '$status', '$max_complete', '$loi', '$note', '$points_to_award', '$completion_link','$disqualify_link','$quotafull_link')";
     if(mysqli_query($conn, $sql)){
       echo 'addproject <br>';
-      header('refresh:1; url = manageproject.php');
+      adddefaultvendor($conn,$id);
     } 
     else{
 			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
-		}    
-}
-    function get_id_of_project($conn){
-      $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";
-      $result = mysqli_query($conn, $sql);
-      while($row = mysqli_fetch_array($result)){
-        $id = $row['id'];
-        return $id + 1;
-      }
+		}  
+
+    function adddefaultvendor($conn,$id)
+    {
+      $project_id =  $id;
+      $vendor_id = 1;
+      $redirects = 0;
+      $completed = 0;
+      $disqualified = 0;
+      $qf =  0;
+      $ir = 0;
+      $cpc = 0;
+      $cost_per_complete = 999;
+      $req_complete = 0;
+      $max_complete = 0;
+      $max_redirects = 0;
+      $completion_link = 'http://www.insightskv.ml/complete.php?pid={{panellist_id}}';
+      $disqualify_link =  'http://www.insightskv.ml/terminate.php?pid={{panellist_id}}';
+      $quotafull_link = "http://www.insightskv.ml/quotafull.php?pid={{panellist_id}}";
+      $project_status = 'running';
+      $notes = 1;
+      $survey_link = 'http://insightskv.ml/capture.php?gid='.$project_id.'&vid='.$vendor_id.'&pid=';
+      // $timestamp = $_REQUEST[''];
+      
+      $sql = "INSERT INTO project_vendors(project_id, vendor_id, redirects, completed, disqualified, qf, ir, cpc,cost_per_complete, req_complete, max_complete, max_redirects, completion_link, disqualify_link, quotafull_link, project_status, notes, survey_link) VALUES (' $project_id','1','$redirects','$completed','$disqualified','$qf','$ir','$cpc','$cost_per_complete','$req_complete','$max_complete','$max_redirects','$completion_link','$disqualify_link','$quotafull_link','$project_status','$notes','$survey_link')";
+       if(mysqli_query($conn, $sql)){
+            $_POST = array();
+            echo 'add_project_vendors <br>';
+            header('refresh:1; url = manageproject.php');
+         } else{
+            echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
+         }
+
     }
+}
+
+function get_id_of_project($conn){
+  $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";
+  $result = mysqli_query($conn, $sql);
+  while($row = mysqli_fetch_array($result)){
+    $id = $row['id'];
+    return $id + 1;
+  }
+}   
 
 if(isset($_POST['add_project_vendors'])){
   // $id = 
