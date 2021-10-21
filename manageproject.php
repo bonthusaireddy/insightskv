@@ -72,7 +72,7 @@ $mysqli->close();
                         <td><?php echo $row['country']; ?></td>
                         <td><?php echo $row['status']; ?></td>
 
-                    
+                        
                         <td>
                                 <!-- <form action="editproject.php" method="post">
                                     <input type="hidden" name="edits_id" value="">

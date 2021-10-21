@@ -607,8 +607,7 @@ $result1 = mysqli_query($conn, $sql2);
                        <!-- <a class="class-link" href="#">0</a> -->
                       </form>
                      </div>
-                     
-                     
+                                        
 
                      </td>
                      <td style=color:#1278E0; id="vendor_cpc_1"> IR : 0.00 % <br />N.A </td> 
@@ -653,22 +652,40 @@ $result1 = mysqli_query($conn, $sql2);
                     </div>
                 </div>
 
+                       
+                <table border="1" style="">
+                <tr>
+                <th><h6 style="padding-top: 12px;">Links & Options</h6></th>
+                </tr>
+                <tr>
+                 <td>
+                <a href="#" id="myBtn">Link Variable</a>
+                </td>
+                </tr>
+                </table>
 
-            
+              <div id="myModal" class="modal">
+              <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4>Link Variables</h4>
+              <p>ID	: {{id}}</p>
+              <p>Panellist ID	: {{panellist_id}}</p>
+              </div>
+              </div>            
+           
                 <section>
                     <h1>Redirects links</h1>
                     <div class="container">
                         <div class="row">
-                            <div><div id="p1">http://insightskv.ml/endcapture.php?st=1</div> <button onclick="copyToClipboard('#p1')">Copy</button></div>
+                            <div><div id="p1">http://insightskv.ml/endcapture.php?st=1</div><button onclick="copyToClipboard('#p1')">Copy</button></div>
                             <div><div id="p2">http://insightskv.ml/endcapture.php?st=2</div><button onclick="copyToClipboard('#p2')">Copy</button></div>
                             <div><div id="p3">http://insightskv.ml/endcapture.php?st=3</div><button onclick="copyToClipboard('#p3')">Copy</button></div>
                         </div>
                     </div>
                 </section>
-                
 
 
-                <script>
+<script>
 function copyToClipboard(element) {
   var $temp = $("<input>");
   $("body").append($temp);
@@ -676,7 +693,6 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
 }
-
 </script>
 
 
@@ -926,7 +942,71 @@ function copyToClipboard(element) {
                     width: 70%;
                 }
             }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
             </style>
+ <script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>           
            
             <?php } ?>
 </body>
