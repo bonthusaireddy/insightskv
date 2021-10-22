@@ -97,7 +97,7 @@ if(isset($_POST['addproject']) ) {
     $sql = "INSERT INTO projects(project_name, project_friendly_name, client_name, parent_project, project_manager, country, client_contact, sales_person, req_complete, cpc, ir, survey_link, status, max_complete,loi, note, points_to_award, completion_link, disqualify_link, quotafull_link) VALUES ('$project_name', '$project_friendly_name', '$client_name', '$parent_project', '$project_manager', '$country', '$client_contact', '$sales_person', '$req_complete', '$cpc', '$ir', '$survey_link', '$status', '$max_complete', '$loi', '$note', '$points_to_award', '$completion_link','$disqualify_link','$quotafull_link')";
     if(mysqli_query($conn, $sql)){
       echo 'addproject <br>';
-      adddefaultvendor($conn,$id);
+     
     } 
     else{
 			echo "ERROR: Hush! Sorry $sql. " .mysqli_error($conn);
@@ -136,6 +136,7 @@ if(isset($_POST['addproject']) ) {
 
     }
 }
+adddefaultvendor($conn,$id);
 
 function get_id_of_project($conn){
   $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";
