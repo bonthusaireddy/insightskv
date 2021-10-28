@@ -5,7 +5,6 @@
 
 $status = $_GET['st'];
 
-
 $isCookieSet = true;
 // check variables
 if(true){

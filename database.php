@@ -135,8 +135,8 @@ if(isset($_POST['addproject']) ) {
          }
 
     }
+    adddefaultvendor($conn,$id);
 }
-adddefaultvendor($conn,$id);
 
 function get_id_of_project($conn){
   $sql = "SELECT id FROM projects ORDER BY id DESC LIMIT 1";

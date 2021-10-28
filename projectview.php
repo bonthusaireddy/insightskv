@@ -714,8 +714,12 @@ function copyToClipboard(element) {
                                     <td colspan=11 style="text-align: left;" class="header">Project Research Statistics
                                     </td>
                                 </tr>
+<?php
+ $sql = "SELECT * FROM project_vendors WHERE id = $id";
+ $result7 = $conn->query($sql);
+ $count_quotafull = mysqli_num_rows($result7);
 
-
+?>
                                 <!--text here-->
                                 <tr class="odd">
                                     <td style="text-align: left">Redirects</td>
@@ -735,6 +739,7 @@ function copyToClipboard(element) {
 
                                 <!--code here-->
                                 <tr class="even">
+                                <?php  foreach($result7 as $row7){?>
                                     <td style="text-align: center">129 / <span style="color: #1278E0;">80.6%</span></td>
                                     <td style="text-align: center">5 / <span style="color: #1278E0;">3.1%</span></td>
                                     <td style="text-align: center">81 / <span style="color: #1278E0;">62.8%</span></td>
@@ -756,7 +761,7 @@ function copyToClipboard(element) {
                                             value="" checked /></td>
                                     <td style="text-align: center">-</td>
                                     <td style="text-align: center">-</td>
-
+                                    <?php }?>
                                 </tr>
 
                             </tbody>
