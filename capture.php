@@ -49,10 +49,27 @@
   $start_time = date("d-m-Y H:i:s a");
   // echo $date;
  }
+
+ if(true){
+  if(!$stop){
+                           $sql2 = "SELECT status FROM projects WHERE id = '$gid' ";
+                           $result = mysqli_query($conn, $sql2);
+                           foreach($result as $row){
+                              $status2 = $row['status'];
+                           }
+                           if($status2 == "Hold"){
+                             echo "survey is in hold";
+                             $stop = true;
+                           }
+            }
+  // echo $survey . '<br>';                    
+ }
+
  // get status
  if(true){
   $status = '0';
  }
+
  // get survey link
  if(true){
   if(!$stop){
@@ -65,7 +82,7 @@
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
    }
   }
-  // echo $survey . '<br>';
+  // echo $survey . '<br>';                    
  }
  // set cookie
  if(true){

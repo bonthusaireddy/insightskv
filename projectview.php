@@ -242,7 +242,7 @@ $result1 = mysqli_query($conn, $sql2);
                      <option value="Hold" name="status">Hold</option>
                      <option value="Complete" name="status">Complete</option>
                      <option value="Closed" name="status">Closed</option>
-                             </select>
+                     </select>
     		        </div>
                 </div>
 		</div>
@@ -638,6 +638,7 @@ $result1 = mysqli_query($conn, $sql2);
                   </tbody>
                </table>
               </div>
+              
 
 
                     <div style="margin-bottom: 15px;margin-top: 80px;">
@@ -651,27 +652,37 @@ $result1 = mysqli_query($conn, $sql2);
                         </span>
                     </div>
                 </div>
+                 </div>
+                 
+                   <div id="variable" class="container">
+                   <table style="margin-left: 1%;width: 38%;border:groove" class="">
+                    <thead>
+                    <th><h5 class="text-dark pl-3">Links And Variables</h5></th>    
+                    </thead>
+                   <tr>
+                   <td><a class="pl-3" data-toggle="modal" data-target="#myModal" href="#">Link Variables</a></td>
+                   </tr>
+                   </table>
+                   </div>    
+ 
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
-                       
-                <table border="1" style="">
-                <tr>
-                <th><h6 style="padding-top: 12px;">Links & Options</h6></th>
-                </tr>
-                <tr>
-                 <td>
-                <a href="#" id="myBtn">Link Variable</a>
-                </td>
-                </tr>
-                </table>
-
-              <div id="myModal" class="modal">
-              <div class="modal-content">
-              <span class="close">&times;</span>
-              <h4>Link Variables</h4>
-              <p>ID	: {{id}}</p>
-              <p>Panellist ID	: {{panellist_id}}</p>
-              </div>
-              </div>            
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="text-secondary">ID:      {{id}} </p>
+        <p class="text-secondary">PanelListID:      {{panellist_id}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>                 
            
                 <section>
                     <h1>Redirects links</h1>
@@ -683,7 +694,6 @@ $result1 = mysqli_query($conn, $sql2);
                         </div>
                     </div>
                 </section>
-
 
 <script>
 function copyToClipboard(element) {
@@ -715,9 +725,7 @@ function copyToClipboard(element) {
                                     </td>
                                 </tr>
 <?php
- $sql = "SELECT * FROM project_vendors WHERE id = $id";
- $result7 = $conn->query($sql);
- $count_quotafull = mysqli_num_rows($result7);
+ 
 
 ?>
                                 <!--text here-->
@@ -739,11 +747,11 @@ function copyToClipboard(element) {
 
                                 <!--code here-->
                                 <tr class="even">
-                                <?php  foreach($result7 as $row7){?>
-                                    <td style="text-align: center">129 / <span style="color: #1278E0;">80.6%</span></td>
-                                    <td style="text-align: center">5 / <span style="color: #1278E0;">3.1%</span></td>
-                                    <td style="text-align: center">81 / <span style="color: #1278E0;">62.8%</span></td>
-                                    <td style="text-align: center">9 / <span style="color: #1278E0;">7%</span></td>
+                                
+                                    <td style="text-align: center"><?php echo $count_redirects;?> / <span style="color: #1278E0;"><?php echo $count_redirects/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_completed; ?> / <span style="color: #1278E0;"><?php echo $count_completed/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_disqualified; ?> / <span style="color: #1278E0;"><?php echo $count_disqualified/1000*100;?>%</span></td>
+                                    <td style="text-align: center"><?php echo $count_quotafull; ?> / <span style="color: #1278E0;"><?php echo $count_quotafull/1000*100;?>%</span></td>
                                     <td style=color:red; style="text-align: center">5.81 %</td>
                                     <td style=color:red; style="text-align: center">26.36 %</td>
                                     <td style="text-align: center;background: #81BFFF;">
@@ -761,7 +769,7 @@ function copyToClipboard(element) {
                                             value="" checked /></td>
                                     <td style="text-align: center">-</td>
                                     <td style="text-align: center">-</td>
-                                    <?php }?>
+                                 
                                 </tr>
 
                             </tbody>
@@ -947,71 +955,11 @@ function copyToClipboard(element) {
                     width: 70%;
                 }
             }
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+         #variable{
+                   
+                  }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-            </style>
- <script>
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>           
+            </style>           
            
             <?php } ?>
 </body>
