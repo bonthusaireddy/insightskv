@@ -8,11 +8,23 @@ include('includes/imp/conn1.php');
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
 // SQL query to select data from database
-$sql = "SELECT * FROM projects ORDER BY id DESC ";
+$sql = "SELECT * FROM projects WHERE active_status=1 ORDER BY id DESC ";
 $result = $mysqli->query($sql);
 $mysqli->close();
 ?>
-
+<?php
+ if(isset($_POST['deletes'])){
+	 $id = $_REQUEST['id'];
+	 $sql = "UPDATE projects SET active_status='0' WHERE id='$id'";
+	 if (mysqli_query($conn, $sql)) {
+	
+             echo "<script>location.href='manageproject.php'</script>";		
+                                    } 
+     else {
+             echo "Error occured while updating Record: " . $sql . "<br>" . mysqli_error($conn);
+          }
+                             }
+?>
 <div class="container-fluid">
 
     <!-- DataTales Example -->
@@ -44,7 +56,8 @@ $mysqli->close();
                         <th>Country</th>
                         <th>Status</th>
                         <th>EDIT </th>
-                        <th>VIEW </th>
+                        <th>DELETE </th>
+						
                     </tr>
                 </thead>
                 <tbody>
@@ -87,14 +100,15 @@ $mysqli->close();
                             
                             </td>
                             <td>
-                                <form action="projectview.php" method="get">
-                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
-                                    <button type="submit" class="btn btn-danger"> VIEW</button>
+                                <form action="manageproject.php?id=<?php echo $row['id'];?>" method="post">                               
+                                    <input type="submit" name="deletes" value="DELETE" onclick="myFunction()" class="btn btn-danger"> 
                                 </form>
                             </td>
+							 
                     </tr>
 
                     <?php	
+					                         
                     	}
 			}
 		?>
@@ -106,7 +120,19 @@ $mysqli->close();
     </div>
 
 </div>
-
+<script>
+function myFunction() 
+{
+  var txt;
+  var r = confirm("Are You Sure Want to DELETE!");
+  if (r == true) {
+     
+  } else {
+	event.preventDefault()  
+    return false;
+  }
+}
+</script>
 
 <?php
 include('includes/scripts.php');
