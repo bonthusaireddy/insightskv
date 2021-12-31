@@ -26,13 +26,13 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Project name:</span>
-    			        <input class="form-control"type="text" name="project_name" require/>
+    			        <input class="form-control"type="text" name="project_name" required/>
     		        </div>  
                 </div>
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Project Friendly Name:</span>
-    			        <input class="form-control" id="project_friendly_name" type="text" name="project_friendly_name"/>
+    			        <input class="form-control" id="project_friendly_name" type="text" required name="project_friendly_name"/>
     		        </div>
                 </div>
 	       </div>
@@ -45,7 +45,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Parent Project:</span>
-                        <select name="parent_project">
+                        <select  name="parent_project">
             <option value="0" name="parent_project">Select Parent Project</option>
             <option value="0" name="parent_project">No parent project</option>
             <?php 
@@ -96,7 +96,7 @@ $result2 = mysqli_query($conn, $sql);
                          <option value="" name="project_manager">Select Project Manager</option>
                          <option value="default" name="project_manager">default</option>
                           </select> -->
-                    <input type="text" name="project_manager" class="form-control"/>
+                    <input type="text" require name="project_manager" class="form-control"/>
     		        </div>
                 </div>
 	       </div>
@@ -120,7 +120,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Client Contact</span>
-            <input type="text" name="client_contact" class="form-control">
+            <input type="text"  require name="client_contact" class="form-control">
                     <!-- <select name="client_contact" class="form-control">
                         <option value="0">Select Contact</option>
                         <option value="default" name="client_contact">default</option>
@@ -137,7 +137,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Sales Person:</span>
-               <input type="text" name="sales_person" class="form-control">
+               <input type="text" require name="sales_person" class="form-control">
                         <!-- <select name="sales_person" id="cars"   class="form-control">
             <option value="0" name="sales_person">Select Sales Person</option>
             <option value="default" name="sales_person">default</option>
@@ -166,7 +166,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Req.Complete</span>
-    			        <input class="form-control" type="text" name="req_complete"/>
+    			        <input class="form-control" required type="text" name="req_complete"/>
                         <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;(Must be between 1 to 99,999)</p>
                         
     		        </div>  
@@ -174,7 +174,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			     <span class="input-group-text">Max Completes</span>
-                     <input type="text" name="max_complete" class="form-control"/>
+                     <input type="text" required name="max_complete" class="form-control"/>
     		        </div>
                 </div>
 	       </div>
@@ -187,7 +187,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text"> &emsp;&emsp;CPC $</span>
-    			        <input class="form-control" type="text" name="cpc"/>
+    			        <input class="form-control" required type="text" name="cpc"/>
                         <p>&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;(Must be between $0.1 to $1,000)</p>
                         
     		        </div>  
@@ -195,7 +195,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">LOI:</span>
-    			        <input class="form-control" type="text" name="loi"/> 
+    			        <input class="form-control" type="text" required name="loi"/> 
                 </div>
 	       </div>
 		</div>
@@ -208,7 +208,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">IR:</span>
-    			        <input class="form-control" type="text" name="ir"/>
+    			        <input class="form-control" type="text" required name="ir"/>
                         <p> &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;(Must be between 1 to 100)</p>
                         
     		        </div>  
@@ -225,7 +225,7 @@ $result2 = mysqli_query($conn, $sql);
                 <div class="col-sm-6">
                     <div class="input-group">
     			        <span class="input-group-text">Survey Link =</span> 
-                        <textarea name="survey_link" id="survey_link" cols="60" rows="5" ></textarea>
+                        <textarea name="survey_link" required id="survey_link" cols="60" rows="5" ></textarea>
     		        </div>  
                 </div>
 	       </div>

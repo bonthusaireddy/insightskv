@@ -12,6 +12,7 @@ $sql = "SELECT * FROM projects WHERE active_status=1 ORDER BY id DESC ";
 $result = $mysqli->query($sql);
 $mysqli->close();
 ?>
+
 <?php
  if(isset($_POST['deletes'])){
 	 $id = $_REQUEST['id'];
@@ -25,6 +26,7 @@ $mysqli->close();
           }
                              }
 ?>
+
 <div class="container-fluid">
 
     <!-- DataTales Example -->

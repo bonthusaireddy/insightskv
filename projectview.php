@@ -307,9 +307,9 @@ $result1 = mysqli_query($conn, $sql2);
                          <div class="container">
                           <br>
                           <div class="download">
-                           <button class="download">Download</button>
+                          <a href="exportexcel.php?id=<?php echo $id;?>&vendorid=<?php echo $row2['id'];?>"><button class="download">Download</button></a>
                           </div>
-                          <br>
+                          <br>      
                           <table class="table table-bordered">
                             <thead>
                             <tr class="th1">
@@ -386,7 +386,7 @@ $result1 = mysqli_query($conn, $sql2);
                           <div class="container">
                            <br>
                            <div class="download">
-                            <button class="download">Download</button>
+                           <a href="exportexcel 2.php?id=<?php echo $id;?>&vendorid=<?php echo $row2['id'];?>"><button class="download">Download</button></a>
                            </div>
                            <br>
                            <table class="table table-bordered">
@@ -461,7 +461,7 @@ $result1 = mysqli_query($conn, $sql2);
                           <div class="container">
                            <br>
                             <div class="download">
-                             <button class="download">Download</button>
+                             <a href="exportexcel 3.php?id=<?php echo $id;?>&vendorid=<?php echo $row2['id'];?>"><button class="download">Download</button></a>
                             </div>
                             <br>
                             <table class="table table-bordered">
@@ -537,7 +537,7 @@ $result1 = mysqli_query($conn, $sql2);
                           <div class="container">
                           <br>
                            <div class="download">
-                            <button class="download">Download</button>
+                            <a href="exportexcel 4.php?id=<?php echo $id;?>&vendorid=<?php echo $row2['id'];?>"><button class="download">Download</button></a>
                            </div>
                            <br>
                            <table class="table table-bordered">
