@@ -20,7 +20,19 @@ $sql = "SELECT * FROM client ORDER BY id DESC ";
 $result = $mysqli->query($sql);
 $mysqli->close();
 ?>
-
+<?php
+ if(isset($_POST['deletes'])){
+	 $id = $_REQUEST['id'];
+	 $sql = "DELETE FROM client WHERE id='$id'";
+	 if (mysqli_query($conn, $sql)) {
+	
+             echo "<script>location.href='client.php'</script>";		
+                                    } 
+     else {
+             echo "Error occured while updating Record: " . $sql . "<br>" . mysqli_error($conn);
+          }
+                             }
+?>
 
 
 <div class="container-fluid">
@@ -52,7 +64,7 @@ $mysqli->close();
                             <th scope="col">Display Name </th>
                             <th scope="col">Phone Number </th>                           
                             <th>EDIT </th>
-                            <th>VIEW </th>
+                            <th>DELETE </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -81,9 +93,8 @@ $mysqli->close();
                                 </form>
                             </td>
                             <td>
-                                <form action="clientedit.php" method="get">
-                                    <input type="hidden" name="id" value="<?php echo $rows['id'];?>">
-                                    <button type="submit" class="btn btn-danger">VIEW </button>
+                                <form action="client.php?id=<?php echo $rows['id'];?>" method="post">                               
+                                    <input type="submit" name="deletes" value="DELETE" onclick="myFunction()" class="btn btn-danger"> 
                                 </form>
                             </td>
                             </tr>
@@ -101,12 +112,19 @@ $mysqli->close();
     </div>
 
 </div>
-
-
-
-
-
-
+<script>
+function myFunction() 
+{
+  var txt;
+  var r = confirm("Are You Sure Want to DELETE!");
+  if (r == true) {
+     
+  } else {
+	event.preventDefault()  
+    return false;
+  }
+}
+</script>
 <?php
 include('includes/scripts.php');
 include('includes/footer.php');
