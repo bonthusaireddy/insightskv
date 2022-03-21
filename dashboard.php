@@ -153,7 +153,19 @@ $rest_projects =  $result->num_rows;
     <div class="card-header py-3">
     <h6 class="m-0 font-weight-bold text-primary">Top 5 Vendor</h6>
      </div>
+     <?php
+     $sql5 = "SELECT * FROM vendor ORDER BY id DESC ";
+     $result = $conn->query($sql5);
+     
+     ?>
     <div class="card-body">
+        <?php
+        if ($result->num_rows > 0) {
+            //output data of each row
+            // LOOP TILL END OF DATA 
+            while($rows=$result->fetch_assoc())
+            {
+        ?>
         <div class="list-group-item list-group-item-action">
             <div class="media">
                 <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
@@ -161,7 +173,7 @@ $rest_projects =  $result->num_rows;
                     <div class="media-body text-truncate">
                     <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
                         <strong class="text-primary">
-                             <span>Vendor 1</span>
+                             <span><?php echo $rows['vendor_name'];?></span>
                         </strong>
                     </p>
                     </div>
@@ -171,79 +183,9 @@ $rest_projects =  $result->num_rows;
                         <small class="text-muted ml-2 text-secondary">  Completes</small></p>
                 </div>
             </div>
+           
         </div>
-        <div class="list-group-item list-group-item-action">
-            <div class="media">
-                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
-                <div class="media-body text-truncate">
-                    <div class="media-body text-truncate">
-                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
-                        <strong class="text-primary">
-                             <span>Vendor 2</span>
-                        </strong>
-                    </p>
-                    </div>
-                </div>
-                <div class="ml-auto">
-                    <p class="text-primary" style="padding: 0px;margin: 0px;">100 
-                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="list-group-item list-group-item-action">
-            <div class="media">
-                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
-                <div class="media-body text-truncate">
-                    <div class="media-body text-truncate">
-                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
-                        <strong class="text-primary">
-                             <span>Vendor 3</span>
-                        </strong>
-                    </p>
-                    </div>
-                </div>
-                <div class="ml-auto">
-                    <p class="text-primary" style="padding: 0px;margin: 0px;">23 
-                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="list-group-item list-group-item-action">
-            <div class="media">
-                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
-                <div class="media-body text-truncate">
-                    <div class="media-body text-truncate">
-                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
-                        <strong class="text-primary">
-                             <span>Vendor 4</span>
-                        </strong>
-                    </p>
-                    </div>
-                </div>
-                <div class="ml-auto">
-                    <p class="text-primary" style="padding: 0px;margin: 0px;">56 
-                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="list-group-item list-group-item-action">
-            <div class="media">
-                <i class="fa fa-user fa-1x" aria-hidden="true"></i> &nbsp;
-                <div class="media-body text-truncate">
-                    <div class="media-body text-truncate">
-                    <p class="mb-1 text-left" style="margin: 0px !important;padding: 0px !important;">
-                        <strong class="text-primary">
-                             <span>Vendor 5</span>
-                        </strong>
-                    </p>
-                    </div>
-                </div>
-                <div class="ml-auto">
-                    <p class="text-primary" style="padding: 0px;margin: 0px;">36
-                        <small class="text-muted ml-2 text-secondary">  Completes</small></p>
-                </div>
-            </div>
-        </div>
+        <?php }} ?>
         <div class="list-group-item list-group-item-action">
             <div class="media">
                 <div class="media-body text-truncate">
