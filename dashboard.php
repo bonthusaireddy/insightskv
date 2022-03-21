@@ -5,10 +5,15 @@ include('includes/navbar.php');
 ?>
 <?php
 include "includes/imp/conn.php";
-$sql = "SELECT * FROM projects";
+$sql = "SELECT * FROM projects WHERE active_status=1 ORDER BY id DESC ";
 $result = $conn->query($sql);
 $total_projects =  $result->num_rows;
-
+$sql2 = "SELECT * FROM projects WHERE active_status=1 AND status='Running' ";
+$result = $conn->query($sql2);
+$live_projects =  $result->num_rows;
+$sql3 = "SELECT * FROM projects WHERE active_status=1 AND status='Hold' ";
+$result = $conn->query($sql3);
+$rest_projects =  $result->num_rows;
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <!-- Begin Page Content -->
@@ -96,7 +101,7 @@ $total_projects =  $result->num_rows;
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">TOTAL</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">1014 / 1014</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_projects; ?> / <?php echo $total_projects; ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -114,19 +119,19 @@ $total_projects =  $result->num_rows;
             <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
         </div>
         <div class="card-body">
-            <h4 class="small font-weight-bold">Live Projects <span class="float-right">20%</span></h4>
+            <h4 class="small font-weight-bold">Live Projects <span class="float-right"><?php echo $live_projects/$total_projects*100; ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20"
+                <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $live_projects/$total_projects*100; ?>%" aria-valuenow="20"
                     aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">Rest Projects <span class="float-right">40%</span></h4>
+            <h4 class="small font-weight-bold">Rest Projects <span class="float-right"><?php echo $rest_projects/$total_projects*100; ?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40"
+                <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $rest_projects/$total_projects*100; ?>%" aria-valuenow="40"
                     aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <h4 class="small font-weight-bold">ALL Projects <span class="float-right"><?php echo $total_projects?>%</span></h4>
+            <h4 class="small font-weight-bold">ALL Projects <span class="float-right"><?php echo $total_projects/$total_projects*100?>%</span></h4>
             <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: <?php echo $total_projects/10?>0%" aria-valuenow="60" aria-valuemin="0"
+                <div class="progress-bar" role="progressbar" style="width:<?php echo $total_projects/$total_projects*100?>%" aria-valuenow="60" aria-valuemin="0"
                     aria-valuemax="100"></div>
             </div>
             <!-- <h4 class="small font-weight-bold">Payout Details <span
